@@ -33,7 +33,7 @@ Bekijk en bespreek al het gemaakte werk, maak afspraken met je team en een [plan
 In de analysefase bespreek je als team welke werkzaamheden er zijn, wie wat gaat doen en maak je een planning. 
 Er is veel werk aan de winkel deze sprint, maak afspraken om elke dag aan het project te werken en hoe jullie elkaar op de hoogte houden van de vorderingen.
 
-1. Één teamlid forkt de leertaak, de hoofd-repo, en voegt teamleden toe als 'collaborators'
+1. Één teamlid forkt de leertaak en voegt teamleden toe als 'collaborators'
 2. De andere teamleden clonen de geforkte-repo, zo kun je makkelijk wijzigingen doorvoeren en ophalen
 3. Maak een _project board_ aan en koppel het aan de gezamenlijke _repository_ om bij te kunnen houden wie wat doet
 4. Plan voor de aankomende weken de reviews en noteer de planning in jullie _project board_.
@@ -73,8 +73,6 @@ Maak voor elke pagina, of onderdeel, een ontwerp op basis van de huisstijl. (Bij
 Maak code afspraken met je team over de Node-code, (semantische) HTML, gestructureerde CSS en conventies.
 Denk na over de HTML structuur, en het voorkomen van layout shifts, toepassen van perceived performance en loading hints aan de browser en het toepassen van responsive images. Maak afspraken over de volgorde van de CSS, van generiek-naar-specifiek. Bedenk een goede volgorde in de Node en de routing. Maak afspraken over het schrijven van comments. Etc ..
 
-
-
 ### Bouwen
 In de bouwfase realiseer je de beslissingen uit de ontwerpfase. 
 Met het team werk je op 1 code base. 
@@ -82,7 +80,7 @@ Zet je code [Mobile First](#mobile-first) op en werk met [Progressive Enhancemen
 In je team werken jullie met de [feature branches](#feature-branches).
 
 #### Feature branches
-Met je team ga je allemaal aan features werken, jullie maken verschillende variaties van dezelfde features, of je verdeeld de werkzaamheden en werkt an verschillende features. 
+Met je team ga je allemaal aan features werken, jullie maken verschillende variaties van dezelfde features, of je verdeelt de werkzaamheden en werkt aan verschillende features. 
 
 Als je aan een feature gaat werken maak je eerst op GitHub een nieuwe _branch_ aan vanaf de main branch, vervolgens _pull_ je deze naar je lokale systeem. Je maakt regelmatig commits en implementeert de 'feature'. Als je klaar bent push je alles naar github en doe je vanaf de feature-branch een pull-request naar main. In het pull-request wordt jouw code bekeken, getest en goedgekeurd door jouw teamleden. 
 
@@ -92,8 +90,6 @@ Pas de code afspraken toe en en doe een code-review met je team voordat je de co
 
 - [Using branches](https://www.atlassian.com/git/tutorials/using-branches)
 - [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-
-
 
 #### Mobile first
 Zorg dat je met je team Mobile First bouwt. Zet eerst de (semantische) HTML van de pagina's en/of onderdelen op. Pas daarna CSS toe om de huisstijl goed toe te passen. Voeg daarna media-queries of andere responsive CSS technieken toe voor M, L en of XL schermen. 
@@ -109,17 +105,13 @@ In de integratiefase voer je de aanpassingen door zodat iedereen ze kan zien en 
 3. Handel het *pull-request* af, zorg voor een helder gedocumenteerd *pull-request* door bij de afhandeling relevante berichten te typen. 
 4. Zorg dat je teamgenoten de nieuwe code integreren
 
-
 #### Materiaal
 
 - [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Feature Branch: A Quick Walk Through Git Workflow](https://blog.mergify.com/feature-branch-a-quick-walk-through-git-workflow/)
 
-
 ### Testen
 In de testfase controleer je of jouw aanpassingen werken zoals bedoeld. 
-
-
 
 ## Criteria
 *Definitions of done*
