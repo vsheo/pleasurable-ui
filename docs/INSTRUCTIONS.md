@@ -37,7 +37,8 @@ Er is veel werk aan de winkel deze sprint, maak afspraken om elke dag aan het pr
 2. De andere teamleden clonen de geforkte-repo, zo kun je makkelijk wijzigingen doorvoeren en ophalen
 3. Maak een _project board_ aan en koppel het aan de gezamenlijke _repository_ om bij te kunnen houden wie wat doet
 4. Plan voor de aankomende weken de reviews en noteer de planning in jullie _project board_.
-5. Doe dagelijks een standup, bespreek met je team welke werkzaamheden er zijn en wie wat heeft gedaan. Gebruik het project board om grip te houden op de planning, sleep taken naar _done_ als ze klaar zijn, schrijf nieuwe taken als dat nodig is. 
+5. Doe dagelijks een standup, bespreek met je team welke werkzaamheden er zijn en wie wat heeft gedaan.
+6. Gebruik het project board om grip te houden op de planning, sleep taken naar _done_ als ze klaar zijn, schrijf nieuwe taken als dat nodig is. 
 
 ### Materiaal voor samenwerken
 
