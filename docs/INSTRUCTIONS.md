@@ -37,17 +37,16 @@ Er is veel werk aan de winkel deze sprint, maak afspraken om elke dag aan het pr
 2. De andere teamleden clonen de geforkte-repo, zo kun je makkelijk wijzigingen doorvoeren en ophalen
 3. Maak een _project board_ aan en koppel het aan de gezamenlijke _repository_ om bij te kunnen houden wie wat doet
 4. Plan voor de aankomende weken de reviews en noteer de planning in jullie _project board_.
-5. Bespreek regelmatig met je team welke werkzaamheden er zijn, **wie wat wanneer** gaat doen. Gebruik het project board om grip te houden op de planning, sleep taken naar _done_ als ze klaar zijn, schrijf nieuwe taken als dat nodig is. 
+5. Doe dagelijks een standup, bespreek met je team welke werkzaamheden er zijn en wie wat heeft gedaan. Gebruik het project board om grip te houden op de planning, sleep taken naar _done_ als ze klaar zijn, schrijf nieuwe taken als dat nodig is. 
 
 ### Materiaal voor samenwerken
 
 - [About Github Projects, quickstart en best practices](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 <!-- - [Making a pull-request](https://www.atlassian.com/git/tutorials/making-a-pull-request) (nb. wij gebruiken de feature-branch workflow) -->
-
 <!-- - [How to Collaborate on GitHub](https://code.tutsplus.com/tutorials/how-to-collaborate-on-github--net-34267) -->
 <!-- - [download het Team Canvas](https://github.com/fdnd-task/performance-matters-fast-website/blob/main/docs/Teamcanvas.pdf) -->
 <!-- - [Lees instructies over het gebruik van het Teamcanvas in de deeltaak uit sprint 1](https://github.com/fdnd-task/your-tribe-team-canvas) -->
-
+- [De Daily standup meeting: uitleg en tips](https://scrumguide.nl/daily-standup-meeting/)
 
 ## Ontwerpen
 In de ontwerpfase bepaal je met je team wat je gaat maken. 
