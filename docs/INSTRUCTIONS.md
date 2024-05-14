@@ -43,11 +43,11 @@ Er is veel werk aan de winkel deze sprint, maak afspraken om elke dag aan het pr
 ### Materiaal voor samenwerken
 
 - [About Github Projects, quickstart en best practices](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+- [De Daily standup meeting: uitleg en tips](https://scrumguide.nl/daily-standup-meeting/)
 <!-- - [Making a pull-request](https://www.atlassian.com/git/tutorials/making-a-pull-request) (nb. wij gebruiken de feature-branch workflow) -->
 <!-- - [How to Collaborate on GitHub](https://code.tutsplus.com/tutorials/how-to-collaborate-on-github--net-34267) -->
 <!-- - [download het Team Canvas](https://github.com/fdnd-task/performance-matters-fast-website/blob/main/docs/Teamcanvas.pdf) -->
 <!-- - [Lees instructies over het gebruik van het Teamcanvas in de deeltaak uit sprint 1](https://github.com/fdnd-task/your-tribe-team-canvas) -->
-- [De Daily standup meeting: uitleg en tips](https://scrumguide.nl/daily-standup-meeting/)
 
 ## Ontwerpen
 In de ontwerpfase bepaal je met je team wat je gaat maken. 
