@@ -67,6 +67,7 @@ Bepaal welke pagina's jullie gaan ontwerpen en bouwen, welke url's daarbij horen
 ### Wireframe, Wireflow & Breakdown
 Schets per pagina en onderdelen gezamenlijk een wireframe en/of wireflow en maak een breakdown van de HTML, CSS en Client-side JS. Het is belangrijk om dit gezamenlijk te doen, nu maak je met het team afspraken over code, semantiek en naamgeving. 
 
+### Ontwerp
 Maak voor elke pagina, of onderdeel, een ontwerp op basis van de huisstijl. (Bijvoorbeeld in Figma) Dit wordt het ontwerp dat jullie gaan realiseren. Het ontwerp zal tijdens de werkzaamheden veranderen. Dat is prima. Soms zal je de veranderingen bijhouden in het Figma file, soms is dat niet nodig. 
 
 ### Code afspraken
