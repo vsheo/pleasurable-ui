@@ -71,7 +71,7 @@ Maak voor elke pagina, of onderdeel, een ontwerp op basis van de huisstijl. (Bij
 
 ### Code afspraken
 Maak code afspraken met je team over de Node-code, (semantische) HTML, gestructureerde CSS en conventies.
-Denk na over de HTML structuur, en het voorkomen van layout shifts, toepassen van perceived performance en loading hints aan de browser en het toepassen van responsive images. Maak afspraken over de volgorde van de CSS, van generiek-naar-specifiek. Bedenk een goede volgorde in de Node en de routing. Maak afspraken over het schrijven van comments. Etc ..
+Denk na over de HTML structuur en nesting van elementen, en het voorkomen van layout shifts, toepassen van perceived performance en loading hints aan de browser en het toepassen van responsive images. Maak afspraken over de volgorde van de CSS, van generiek-naar-specifiek. Bedenk een goede volgorde in de Node en de routing. Maak afspraken over het schrijven van comments. Etc ..
 
 ## Bouwen
 In de bouwfase realiseer je de beslissingen uit de ontwerpfase. 
