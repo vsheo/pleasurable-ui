@@ -1,7 +1,10 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+# Pleasurable User Interface
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden
+
+De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
+
+
 
 ## Inhoudsopgave
 
