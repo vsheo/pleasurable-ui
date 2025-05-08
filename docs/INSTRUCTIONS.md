@@ -32,9 +32,9 @@ Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van
 Deze opdracht is done als:
 
 - [ ]  Je hebt je website samen ontworpen en gemaakt en de website is online gepubliceerd 
-- [ ]  Je hebt gestructureerd samengewerkt met een projectboard (issues, moscow, assignes) 
-- [ ]  Je hebt client-side scripting technieken gebruikt om een interface te ontwerpen en maken waar gebruikers blij van worden
+- [ ]  Je hebt met Pull Requests gestructureerd samengewerkt met een projectboard (issues, moscow, assignes)
 - [ ]  Je hebt met een team met feature branches verschillende versies gemaakt en gemerged
+- [ ]  Je hebt client-side scripting technieken gebruikt om een interface te ontwerpen en maken waar gebruikers blij van worden
 - [ ]  Je hebt feedback en taken van de vorige sprints opgepakt en verwerkt
 - [ ]  Je hebt het eindresultaat gepresenteerd aan de opdrachtgever en ontwerpkeuzes beschreven in de Readme
 
