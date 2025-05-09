@@ -37,6 +37,6 @@ Deze opdracht is done als:
 - [ ]  Je hebt feedback gegeven en gekregen via Pull Request en de feedback verwerkt
 - [ ]  Je hebt feedback en taken van de vorige sprints opgepakt en verwerkt
 - [ ]  Je hebt het eindresultaat gepresenteerd aan de opdrachtgever en ontwerpkeuzes beschreven in de Readme
-- [ ]  Je hebt client-side scripting technieken gebruikt om een interface te ontwerpen en maken waar gebruikers blij van worden
+- [ ]  Je hebt client-side scripting technieken gebruikt voor een 'Pleasurable User Interface'
 
 
