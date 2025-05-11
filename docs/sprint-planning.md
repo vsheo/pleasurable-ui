@@ -46,6 +46,8 @@ MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* em *Won'
 
 Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project veranderen; elke vrijdag gaan jullie gezamenlijk het project board bespreken en bijwerken. Dit is ook een mooi moment om nog een paar *Could haves* te bedenken, wat zou echt vet zijn om te maken? Misschien lukt het wel...
 
+Een aantal *Must haves* in week 1 zijn belangrijk om ervoor te zorgen dat niemand hoef te wachten. Bijvoorbeeld het server.js file netjes opzetten. En de stylguide stylesheet die iedereen nodig heeft.
+
 #### Bronnen
 
 - [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
@@ -56,7 +58,7 @@ Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw s
 
 Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of NodeJS. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
 
-Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan.
+Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan. Zet daar dan een strakke eind datum op, of doe deze meteen vandaag.
 
 Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen. 
 Pak jullie learnings over samenwerken uit Sprint 7 er nog eens bij, wat kon je toen beter doen? 
@@ -95,7 +97,7 @@ Nu jullie de repo goed hebben staan, het project board hebben ingevuld, en een e
 
 Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en maak een breakdown. Hou in het issue de voortgang bij en vraag elkaar regelmatig om feedback. 
 
-💡 Top tip: Het is verstandig (en goed voor de samenwerking) als je met het hele team de breakdown van een wireflow en pagina's gaat bespreken voordat je gaat coderen, zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gelijk.
+💡 Top tip: Het is verstandig en goed voor de samenwerking als jullie met het hele team de breakdown van een wireflow en pagina's gaan bespreken voordat je gaat coderen. Zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gelijk.
 
 Maak een _Feature Branch_ als je gaat coderen. En laat je werk reviewen door teamleden met een _Pull Request_ als je het wil toevoegen aan de _main_ branch.
 

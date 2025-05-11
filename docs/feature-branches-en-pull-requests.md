@@ -7,15 +7,23 @@ Hoe je met een team kan samenwerken op een code base met branches
 
 <!--
 ## Aanpak
-Je werkt in een team aan de website voor een opdrachtgever. 
-Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van vorderingen. Samen met jouw team ben je verantwoordelijk voor de planning, het samenwerkingsproces én het eindresultaat.
-
 
 Werken met features
 feature branches aanmaken op de main
-Leren hoe je dit kan mergen
+Leren hoe je dit kan mergen met een pull request en review
+Hoe schrijf je een nette pull request?
 
-Features branches bedenken met het team voor aanstaande vrijdag
 
+-------  
+
+Dus eerst deze week lekker stoeien zelf
+ 
+Woensdag het hele concept van pull requests aanmaken helemaal uitkleden
+Vrijdag het concept van pull requests reviewen helemaal uitkleden
+ 
+Woensdag -> vraagt begeleiding waar nodig
+Vrijdag -> geeft feedback aan teamleden + verwerkt ontvangen feedback
+
+ 
 
 -->
