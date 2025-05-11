@@ -20,12 +20,12 @@ Laat eerst aan elkaar zien wat jullie de vorige sprints hebben gemaakt.
 
 Bespreek de feedback van de opdrachtgever die jullie tijdens de Sprint Review hebben gekregen. 
 
-#### Sitemap en pagina's
+### Sitemap en pagina's
 Maak daarna gezamenlijk een sitemap van het hele project op het whiteboard. Deze sprint ga je met een team een website ontwerpen en maken, als jullie taken gaan verdelen kun je de hele website maken... en misschien nieuwe dingen verzinnen?
 
 Schrijf of teken Lo-fi per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeën toe als je die hebt. 
 
-#### Figma designs en styleguide
+### Figma designs en styleguide
 Bekijk jullie Hi-fi Figma designs en vergelijk het met de sitemap die jullie hebben gemaakt. Hebben jullie van alle pagina's en onderdelen een design? 
 En wat is de status van de styleguide?
 
@@ -52,6 +52,8 @@ Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project ver
 
 ### Plannen
 
+Deze sprint 
+
 Start en eind datum voor de issues bedenken.
 
 Taken toekennen aan teamleden. 
@@ -61,7 +63,7 @@ Stand-ups plannen.
 Afspraken maken. 
 
 ### Planning bespreken met een docent
-Bespreek jullie ideeen, planning en afspraken met een docent.
+Bespreek jullie ideeen, planning, MoSCoW en afspraken met een docent.
 
 
 ## Feature branch workflow
@@ -73,10 +75,18 @@ Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in j
 Deze sprint gaan we leren om te werken met _branches_. Een branch is een afgeleide van de _main_, de backbone van jullie project met de code die uiteindelijk live gaat. 
 Als de teamleden in een _branches_ werken, kan je code aanpassen, toevoegen en verwijderen zonder dat de anderen daar last van hebben. Zo kan je tegelijk aan onderdelen van een website werken. Als een _branch_ af is en goed bevonden, kan je deze _mergen_ naar de _main_.
 
+### Collaborators aanmaken
 Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als 'Collaborators' Nu kunnen alle teamleden samenwerken op die repository, door deze allemaal te clonen (downloaden).
 
+### Branches maken
 Ga nu met je team uitproberen hoe je met branches moet werken en met een pull request code naar de main kan mergen. 
 
+### Aan de slag
+Nu jullie de repo goed hebben staan, het projectboard hebben aangemaakt en ingevuld, en een eerste planning hebben gemaakt kunnen jullie aan de slag. 
+
+Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en schrijf pseudo code. Maak een _feature_branch_ als je gaat coderen. 
+
+Have fun!
 
 ### Bronnen
 
@@ -98,41 +108,15 @@ Werken in branches, vrijdag bepqlen hoe ver iedereen is gekkmen, project board b
 
 In de samenwerking learnings meenemen uit sprint 7. En het nu wel/weer doen.
 Dezelfde stappen doorlopen maar dan met een team, wat ga je opleveren bij de sprint review met MoSCoW. Per week bekijken hoe dat gaat en daar op plannen/sturen. Project board bijwerken.
+
 Sitemap met url’s en routes, snelle wireframes met functionaliteiten
 Nog meer routes. Welke data uitschrijven.
+
 Taken verdelen en die hifi wireflows in figma maken met alles states en uitwerken.
 Per pagina/onderdeel/component responsive hifi uitwerken. Met het team HTML breakdown maken.
-Styleguide en code conve ties toepassen. sprint 4 herhalen, maar nu inclusief fallback, baseline en cut the mustard
+
+Styleguide en code conventies toepassen. sprint 4 herhalen, maar nu inclusief fallback, baseline en cut the mustard
 Learnings van sprint 10 meenemen in taken. Waar ben je al aan toe gekomen, wat wil je nog leren?
-Eerst project plannen. Een uur. Dan project board bespreken en MoSCow en assign. (Elke vrijdag gaan ze dan hun taak “opleveren” dmv een tests, beschrijven in issues en testers “zoeken”)
-Dan oefening met branches.
-
-Sprint 11
-Visuele hierarchie toepassen met Ui principles van Joshua Porter.
-Gestalt principes toepassen met
-Ui principles. Toepassen en testen en varieren in Figma en in branches.
-Verschillende versies uitwerken bijvoorbeeld menu met animatie, carousel,  videoplay layout met reacties plaatsen, …
-Code conventies + met performance dingen.
-Voor de code/design reviews plannen en beschrijven waarop gereviewed moet worden. Daarna
-
-
-Retro sprint 11
-Reflecteren op samenwerken. Zoals we dat ook hebben gedaan in sprint 4 en 7.
-
-
-
-Convergeren - divergeren laten zien in de planning. Teams een tekening laten maken van wat er wannner qua werkzaamhebden en code samenvoegen aan komt deze sprint.
- 
-Werk beoordelen. Sitemal maken. Wat zit er op elke pagina? Code bekijken. Plannen en planning maken.
-
-Moscow labels
-
-Elke vrijdag check ad hand van het porjectboard
- 
-
-Maandag met een coach de moscow bespreken
- 
-Vrijdagen verplicht met een coach naar de vorderingen kijken (zoals in de minor)
  
 
 -->
