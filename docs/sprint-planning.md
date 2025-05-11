@@ -48,7 +48,7 @@ Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project ver
 
 #### Bronnen
 
- - [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
+- [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
 
 ### Taakverdeling
 
@@ -70,7 +70,7 @@ Bespreek jullie ideeën, planning, MoSCoW en afspraken vandaag nog met een docen
 
 Nu gaan jullie de ontwikkelomgeving inrichten. 
 
-Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Die doe je door met je team 1 gezamenlijke repository te gebruiken.
+Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Dit doe je door met je team 1 gezamenlijke repository te gebruiken.
 
 Deze sprint gaan we leren om te werken met verschillende _branches_. Een branch is een _vertakking_ van de _main_ branch, de backbone van jullie project met de code die uiteindelijk live gaat.
 
