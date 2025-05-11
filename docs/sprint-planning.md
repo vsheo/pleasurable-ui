@@ -97,7 +97,7 @@ Nu jullie de repo goed hebben staan, het project board hebben ingevuld, en een e
 
 Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en maak een breakdown. Hou in het issue de voortgang bij en vraag elkaar regelmatig om feedback. 
 
-💡 Top tip: Het is verstandig (en goed voor de samenwerking) als je met het hele team de breakdown van een wireflow en pagina's gaat bespreken voordat je gaat coderen, zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gelijk.
+💡 Top tip: Het is verstandig en goed voor de samenwerking als jullie met het hele team de breakdown van een wireflow en pagina's gaan bespreken voordat je gaat coderen. Zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gelijk.
 
 Maak een _Feature Branch_ als je gaat coderen. En laat je werk reviewen door teamleden met een _Pull Request_ als je het wil toevoegen aan de _main_ branch.
 
