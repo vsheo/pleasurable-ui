@@ -59,6 +59,8 @@ Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw s
 Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of NodeJS. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
 
 Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan. Zet daar dan een strakke eind datum op, of doe deze meteen vandaag.
+We gaan deze week volle kracht van start zodat jullie aanstaande vrijdag een werkende versie van de volledige site hebben. Zo kunnen we volgende week met nieuwe experimenten en _pleasurables_ aan de slag.
+
 
 Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen. 
 Pak jullie learnings over samenwerken uit Sprint 7 er nog eens bij, wat kon je toen beter doen? 
