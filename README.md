@@ -1,6 +1,6 @@
 # Pleasurable User Interface
 
-Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden
+Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden.
 
 De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
 
