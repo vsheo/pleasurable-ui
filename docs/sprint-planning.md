@@ -88,6 +88,13 @@ Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als _Collaborator
 ### 🛠️ Branches maken
 Ga nu met je team uitproberen hoe je met branches moet werken en via een pull request en een code review van andere teamleden nieuwe features naar de main branch kunt mergen.
 
+- Clone allemaal de gezamenlijke repo
+- Maak een feature branch aan met een logische naam
+- Maak een eigen Route en een bijhorende View aan in jouw Feature Branch
+- Maak daarna een Pull Request naar _main_
+- Assign je teamgenoten om jouw Pull Request te reviewen
+- Merge naar Main !
+
 ### Bronnen
 
 - [About branches - Github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
