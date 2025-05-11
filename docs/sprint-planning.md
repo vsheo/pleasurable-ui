@@ -1,27 +1,66 @@
 # Pleasurable User Interface
 
+## Sprint Planning
+
+Repo klaarzetten, taken plannen en afspraken maken met je team.
+
+### Aanpak
+Deze sprint werk je in een team aan de website voor een opdrachtgever. Jullie gaan op 1 repository werken met de *Feature branch Workflow*; issue oppakken, feature branch maken, pull-request, checken, mergen...
+
+Eerst ga je de planning van deze sprint bekijken en bedenken wat jullie deze sprint gaan realiseren. Daarna met je team een projectboard inrichten, taken plannen en MoSCoW bepalen. Tot slot ga je met het team de repository klaarzetten. Deze sprint ga je leren werken met branches, zodat jullie tegelijk aan code kunnen werken.
 
 ## Sprint Planning
 
-Repo klaarzetten, plannen en afspraken maken met je team.
+Bekijk het programma van sprint 11 op de programma-website. Deze sprint ga je met een team samenwerken. Let op de verplichte voortgangsgesprekken op vrijdag.
 
-## Aanpak
-Je werkt in een team aan de website voor een opdrachtgever. 
-Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van vorderingen. Samen met jouw team ben je verantwoordelijk voor de planning, het samenwerkingsproces én het eindresultaat.
+In het programma is nog niet alles ingevuld. Wat voor practicum willen jullie woensdag? En volgende week? Waar is behoefte aan? Wat voor JS challenge willen jullie donderdagen? Schrijf dit op het *whiteboard*.
 
+### Sprint review verwerken
+Laat eerst aan elkaar zien wat jullie de vorige sprints hebben gemaakt. 
 
-## Sprint Planning
-Met het team?
+Bespreek de feedback van de opdrachtgever die jullie tijdens Sprint Review hebben gekregen. 
 
-Let op: verplicht voortgangsgesprekken op vrijdag. 
+#### Sitemap en pagina's
+Maak daarna gezamenlijk een sitemap van het hele project op het whiteboard. Deze sprint ga je met een team een website ontwerpen en maken, als jullie taken gaan verdelen kun je de hele website maken... en misschien nieuwe dingen verzinnen?
 
-Wat voor practicum willen jullie woensdag? En volgende week? Waar is behoefte aan?
-Wat voor JS challenge willen jullie donderdagen? 
+Schrijf of teken low-fi per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeen toe als je die hebt. 
 
+#### Figma designs en styleguide
+Bekijk jullie Hi-fi Figma designs en vergelijk het met de sitemap die jullie hebben gemaakt. Hebben jullie van alle pagina's en onderdelen een design? 
+En wat is de status van de styleguide?
 
-## MoSCoW
+Geef op het whiteboard aan welke onderdelen wel en welke nog geen design hebben.
 
+## Taken plannen en MoSCoW bepalen
 
+Omdat je met een team gaat samenwerken is het verstandig om een nieuw projectboard aan te maken. Dat moet één van de teamleden doen en de anderen toegang geven.
+
+Dezelfde persoon moet deze leertaak Forken om het projectboard en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
+
+Maak issues van de taken waar jullie mee aan de slag willen deze sprint. Schrijf voor een issue een (korte) uitleg wat het issuse inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
+
+### MoSCoW
+Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig?
+
+Hier kan je de MoSCoW methode voor gebruiken.
+
+MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* em *Won't haves*. Dit is een methode waarmee je taken kan prioriteren. Wat moet er sowieso zijn voor de oplevering? Welke onderdelen zijn belangrijk maar niet noodzakelijk voor de oplevering? Welke onderdelen of pagina's zijn niet perse nodig en doe je alleen als er genoeg tijd is? En welke onderdelen zijn nu niet nodig.
+
+Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project veranderen; elke vrijdag gaan jullie gezamenlijk het projectboard bespreken en bijwerken. Dit is ook een mooi moment om nog een paar *Coud haves* te bedenken, wat zou echt vet zijn om te maken? Misschien lukt het wel ...
+
+#### Bronnen
+
+ -[MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
+
+### Plannen
+
+Start en eind datum voor de issues bedenken.
+
+Taken toekennen aan teamleden. 
+
+Stand-ups plannen.
+
+Afspraken maken. 
 
 
 ## Feature branch workflow
@@ -33,13 +72,15 @@ Wat voor JS challenge willen jullie donderdagen?
 <!--
 Sprint 11
 Bovenste laag van de pyramide.
-Laatste sprint het genaakte werk samenvoegen.
+
+Laatste sprint het gemaakte werk samenvoegen.
 Keuzes maken (convergeren divergeren)
 Projectboard aanmaken en issues assignen.
 Zo nodig Figma bijwerken
 Code conventies afspreken
 Styleguide gebruiken
 Werken in branches, vrijdag bepqlen hoe ver iedereen is gekkmen, projectboard bijwerken.
+
 In de samenwerking learnings meenemen uit sprint 7. En het nu wel/weer doen.
 Dezelfde stappen doorlopen maar dan met een team, wat ga je opleveren bij de sprint review met MoSCoW. Per week bekijken hoe dat gaat en daar op plannen/sturen. Projectboard bijwerken.
 Sitemap met url’s en routes, snelle wireframes met functionaliteiten
