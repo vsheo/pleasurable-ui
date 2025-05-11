@@ -2,12 +2,8 @@
 
 Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden
 
-
-
 ## Context
-
 Deze leertaak hoort bij sprint 11 "Pleasurable UI". Dit is een leertaak die je in een team uitvoert voor een opdrachtgever.
-
 
 ## Doel van deze opdracht
 Je leert hoe je met een team een interactieve website kan ontwerpen en maken.
@@ -26,14 +22,13 @@ Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van
 - [Ontwerpkeuzes overbrengen](ontwerpkeuzes.md)
 - [Wrap-Up](wrap-up.md)
 
-
 ## Definitions of done
 
 Deze opdracht is done als:
 
 - [ ]  Je hebt je website samen ontworpen en gemaakt en de website is online gepubliceerd
 - [ ]  Je hebt met een team met feature branches verschillende versies gemaakt en gemerged
-- [ ]  Je hebt gestructureerd samengewerkt met een projectboard, issues, moscow, assignes en pull requests
+- [ ]  Je hebt gestructureerd samengewerkt met een projectboard, issues, MoSCoW, assignes en pull requests
 - [ ]  Je hebt feedback gegeven en gekregen via Pull Request en de feedback verwerkt
 - [ ]  Je hebt feedback en taken van de vorige sprints opgepakt en verwerkt
 - [ ]  Je hebt het eindresultaat gepresenteerd aan de opdrachtgever en ontwerpkeuzes beschreven in de Readme
