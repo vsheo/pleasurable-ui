@@ -90,12 +90,12 @@ Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als _Collaborator
 ### 🛠️ Branches maken
 Ga nu met je team uitproberen hoe je met branches moet werken en via een pull request en een code review van andere teamleden nieuwe features naar de main branch kunt mergen.
 
-0. Clone allemaal de gezamenlijke repo
-1. Maak een Feature Branch aan met een logische naam
-2. Maak een eigen Route en een bijhorende View aan in jouw Feature Branch
-3. Maak daarna een Pull Request naar de _main_ van jullie repo
+0. Clone de gezamenlijke repo
+1. Maak een Feature Branch aan met een logische naam (dit kan zowel in Visual Studio Code, in de GitHub Desktop app, of op github.com)
+2. Maak een eigen Route en een bijhorende View aan in jouw Feature Branch en _commit_ en _push_ je code
+3. Maak daarna een Pull Request naar de _main_ van jullie repo (Dit doe je op github.com)
 4. Assign je teamgenoten om jouw Pull Request te reviewen
-5. Merge naar Main !
+5. Merge naar Main en kijk wat er gebeurt ...
 
 ### Bronnen
 
