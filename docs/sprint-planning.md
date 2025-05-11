@@ -37,33 +37,33 @@ Omdat je met een team gaat samenwerken is het verstandig om een nieuw project bo
 
 Dezelfde persoon moet deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
 
-Maak issues van de taken waar jullie mee aan de slag willen deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
+Maak samen issues van de taken waar jullie mee aan de slag willen deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
 
 ### MoSCoW
-Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig? Hier kan je de MoSCoW methode voor gebruiken.
+Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig? Hier kan je de _MoSCoW methode_ voor gebruiken.
 
-MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* em *Won't haves (this time)*. Dit is een methode waarmee je taken kan prioriteren. Wat moet er sowieso zijn voor de oplevering? Welke onderdelen zijn belangrijk maar niet noodzakelijk voor de oplevering? Welke onderdelen of pagina's zijn niet per se nodig en doe je alleen als er genoeg tijd is? En welke onderdelen zijn nu niet nodig?
+MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* em *Won't haves (this time)*. Dit is een methode waarmee je taken kan _prioriteren_. Wat moet er sowieso zijn voor de oplevering? Welke onderdelen zijn belangrijk, maar niet noodzakelijk voor de oplevering? Welke onderdelen of pagina's zijn niet per se nodig en doen jullie alleen als er genoeg tijd is? En welke onderdelen zijn nu niet nodig?
 
 Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project veranderen; elke vrijdag gaan jullie gezamenlijk het project board bespreken en bijwerken. Dit is ook een mooi moment om nog een paar *Could haves* te bedenken, wat zou echt vet zijn om te maken? Misschien lukt het wel...
 
 #### Bronnen
 
- -[MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
+ - [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
 
 ### Taakverdeling
 
 Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw schrijven. En alles (!) wat je de afgelopen sprints hebt geleerd over performance, user experience en progressive enhancement toepassen!
 
-Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of Nodejs. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
+Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of NodeJS. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
 
 Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan.
 
 Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen. 
-Pak jullie learnings over samenwerken uit sprint 7 er nog eens bij, wat kon je toen beter doen? 
+Pak jullie learnings over samenwerken uit Sprint 7 er nog eens bij, wat kon je toen beter doen? 
 
 
 ### 🧑‍🏫 Planning bespreken met een docent
-Bespreek jullie ideeen, planning, MoSCoW en afspraken met een docent.
+Bespreek jullie ideeën, planning, MoSCoW en afspraken vandaag nog met een docent.
 
 
 ## Feature branch workflow
@@ -72,14 +72,17 @@ Nu gaan jullie de ontwikkelomgeving inrichten.
 
 Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Die doe je door met je team 1 gezamenlijke repository te gebruiken.
 
-Deze sprint gaan we leren om te werken met _branches_. Een branch is een afgeleide van de _main_, de backbone van jullie project met de code die uiteindelijk live gaat. 
-Als de teamleden in een _branches_ werken, kan je code aanpassen, toevoegen en verwijderen zonder dat de anderen daar last van hebben. Zo kan je tegelijk aan onderdelen van een website werken. Als een _branch_ af is en goed bevonden, kan je deze met een _Pull Request_ _mergen_ naar de _main_.
+Deze sprint gaan we leren om te werken met verschillende _branches_. Een branch is een _vertakking_ van de _main_ branch, de backbone van jullie project met de code die uiteindelijk live gaat.
+
+Als de teamleden in een _branch_ werken, kun je code aanpassen, toevoegen en verwijderen zonder dat de anderen daar last van hebben. Zo kan je tegelijk aan onderdelen van een website werken. Als een _branch_ af is en goed bevonden, kan je deze met een _Pull Request_ _mergen_ naar de _main_ branche.
+
+Het idee is dus dat niemand in de main branch werkt, maar dat jullie in verschillende onafhankelijke branches werken en deze steeds samenbrengen in de main branch.
 
 ### Collaborators aanmaken
-Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als _Collaborators_ Nu kunnen alle teamleden samenwerken op dezelfde repository, door deze allemaal te clonen (downloaden).
+Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als _Collaborators_. Nu kunnen alle teamleden samenwerken op dezelfde repository, door deze allemaal te clonen (downloaden).
 
 ### 🛠️ Branches maken
-Ga nu met je team uitproberen hoe je met branches moet werken en met een pull request code naar de main kan mergen.
+Ga nu met je team uitproberen hoe je met branches moet werken en via een pull request en een code review van andere teamleden nieuwe features naar de main branch kunt mergen.
 
 ### Bronnen
 
@@ -88,13 +91,13 @@ Ga nu met je team uitproberen hoe je met branches moet werken en met een pull re
 
 
 ## 👷 Aan de slag
-Nu jullie de repo goed hebben staan, het projectboard hebben ingevuld, en een eerste planning hebben gemaakt kunnen jullie aan de slag. 
+Nu jullie de repo goed hebben staan, het project board hebben ingevuld, en een eerste planning hebben gemaakt, kunnen jullie aan de slag. 
 
-Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en maak een break-down. Hou in het issue de voortgang bij en vraag elkaar regelmatig om feedback. 
+Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en maak een breakdown. Hou in het issue de voortgang bij en vraag elkaar regelmatig om feedback. 
 
-💡 Top tip: Het is verstandig (en goed voor de samenwerking) als je met het hele team de break-down van een wireflow en pagina's gaat bespreken voordat je gaat coderen, zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gekijk.
+💡 Top tip: Het is verstandig (en goed voor de samenwerking) als je met het hele team de breakdown van een wireflow en pagina's gaat bespreken voordat je gaat coderen, zo komen jullie tot goede code afspraken en hou je de kwaliteit van het gemaakte werk gelijk.
 
-Maak een _Feature Branch_ als je gaat coderen. En laat je code checken door teamleden met een _Pull Request_ als je het wil toevoegen aan de _main_. 
+Maak een _Feature Branch_ als je gaat coderen. En laat je werk reviewen door teamleden met een _Pull Request_ als je het wil toevoegen aan de _main_ branch.
 
 Have fun!
 
