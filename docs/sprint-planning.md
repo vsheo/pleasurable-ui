@@ -5,7 +5,9 @@
 Repo klaarzetten, taken plannen en afspraken maken met je team.
 
 ### Aanpak
-Deze sprint werk je in een team aan de website voor een opdrachtgever. Jullie gaan op 1 repository werken met de *Feature Branch Workflow*; issue oppakken, feature branch maken, pull request maken, code laten reviewen, mergen...
+Deze sprint werk je in een team aan de website voor een opdrachtgever. Jullie gaan de beste ideeen en het werk samen brengen in 1 complete website. 
+
+Jullie gaan op 1 repository werken met de *Feature Branch Workflow*; issue oppakken, feature branch maken, pull request maken, code laten reviewen, mergen...
 
 Eerst ga je de planning van deze sprint bekijken en bedenken wat jullie deze sprint gaan realiseren. Daarna ga je met je team een project board inrichten, taken plannen en MoSCoW bepalen. Tot slot ga je met het team de repository klaarzetten. Deze sprint ga je leren werken met branches, zodat jullie tegelijk aan code kunnen werken.
 
