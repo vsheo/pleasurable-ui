@@ -1,11 +1,15 @@
 # Pleasurable User Interface
 
 
-## Code/Design review - Feature branches
-Beoordeel en vergelijk verschillende experimenten en variaties van features waar het team aan heeft gewerkt, en merge code met een pull request
+## Code/Design review - Week 2
+beoordeel en vergelijk verschillende experimenten en variaties van features waar het team aan heeft gewerkt.
 
 
-<!-->
+## Voortgangsgesprek 
+Met een coach bespreek je met je team jullie vorderingen
+
+
+<!--
 ## Aanpak
 
 
