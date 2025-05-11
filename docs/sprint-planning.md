@@ -82,9 +82,11 @@ Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als 'Collaborator
 Ga nu met je team uitproberen hoe je met branches moet werken en met een pull request code naar de main kan mergen. 
 
 ### Aan de slag
-Nu jullie de repo goed hebben staan, het projectboard hebben aangemaakt en ingevuld, en een eerste planning hebben gemaakt kunnen jullie aan de slag. 
+Nu jullie de repo goed hebben staan, het projectboard hebben ingevuld, en een eerste planning hebben gemaakt kunnen jullie aan de slag. 
 
-Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en schrijf pseudo code. Maak een _feature_branch_ als je gaat coderen. 
+Pak een issue op dat aan jou is toegewezen. Werk zo nodig het Figma design bij, schets in een Wireflow de user flow als je aan een interactie gaat werken en schrijf pseudo code. Hou in het issue de voortgang bij en vraag elkaar regelmatig om feedback. 
+
+Maak een _feature_branch_ als je gaat coderen. En laat je code checken door teamleden met een Pull Request als je het wil toevoegen aan de _main_. 
 
 Have fun!
 
