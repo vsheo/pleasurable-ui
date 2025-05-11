@@ -2,7 +2,11 @@
 
 
 ## Code/Design review - Pull request
-Bespreek de samenwerking, het gemaakte werk en leer hoe je een nette pull request schrijft.
+bespreek de samenwerking en het gemaakte werk.
+
+
+## Voortgangsgesprek 
+Met een coach bespreek je met je team jullie vorderingen
 
 
 <!--
