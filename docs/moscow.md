@@ -1,64 +1,15 @@
 # Pleasurable User Interface
 
+## MoSCoW
 
-## Sprint Planning
-
-Repo klaarzetten, plannen en afspraken maken met je team.
+Plannen en afspraken maken met je team.
 
 ## Aanpak
 Je werkt in een team aan de website voor een opdrachtgever. 
 Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van vorderingen. Samen met jouw team ben je verantwoordelijk voor de planning, het samenwerkingsproces én het eindresultaat.
 
-<!--
-Sprint 11
-Bovenste laag van de pyramide.
-Laatste sprint het genaakte werk samenvoegen.
-Keuzes maken (convergeren divergeren)
-Projectboard aanmaken en issues assignen.
-Zo nodig Figma bijwerken
-Code conventies afspreken
-Styleguide gebruiken
-Werken in branches, vrijdag bepqlen hoe ver iedereen is gekkmen, projectboard bijwerken.
-In de samenwerking learnings meenemen uit sprint 7. En het nu wel/weer doen.
-Dezelfde stappen doorlopen maar dan met een team, wat ga je opleveren bij de sprint review met MoSCoW. Per week bekijken hoe dat gaat en daar op plannen/sturen. Projectboard bijwerken.
-Sitemap met url’s en routes, snelle wireframes met functionaliteiten
-Nog meer routes. Welke data uitschrijven.
-Taken verdelen en die hifi wireflows in figma maken met alles states en uitwerken.
-Per pagina/onderdeel/component responsive hifi uitwerken. Met het team HTML breakdown maken.
-Styleguide en code conve ties toepassen. sprint 4 herhalen, maar nu inclusief fallback, baseline en cut the mustard
-Learnings van sprint 10 meenemen in taken. Waar ben je al aan toe gekomen, wat wil je nog leren?
-Eerst project plannen. Een uur. Dan projectboard bespreken en MoSCow en assign. (Elke vrijdag gaan ze dan hun taak “opleveren” dmv een tests, beschrijven in issues en testers “zoeken”)
-Dan oefening met branches.
+Werken met het projecttboard, afspraken maken, planning maken, MoSCoW toepassen, taken maken, taken toewijzen. 
 
-Sprint 11
-Visuele hierarchie toepassen met Ui principles van Joshua Porter.
-Gestalt principes toepassen met
-Ui principles. Toepassen en testen en varieren in Figma en in branches.
-Verschillende versies uitwerken bijvoorbeeld menu met animatie, carousel,  videoplay layout met reacties plaatsen, …
-Code conventies + met performance dingen.
-Voor de code/design reviews plannen en beschrijven waarop gereviewed moet worden. Daarna
-
-
-Retro sprint 11
-Reflecteren op samenwerken. Zoals we dat ook hebben gedaan in sprint 4 en 7.
-
-
-
-Convergeren - divergeren laten zien in de planning. Teams een tekening laten maken van wat er wannner qua werkzaamhebden en code samenvoegen aan komt deze sprint.
- 
-Werk beoordelen. Sitemal maken. Wat zit er op elke pagina? Code bekijken. Plannen en planning maken.
-
-Moscow labels
-
-Elke vrijdag check ad hand van het porjectboard
- 
-
-Maandag met een coach de moscow bespreken
- 
-Vrijdagen verplicht met een coach naar de vorderingen kijken (zoals in de minor)
- 
-
--->
 
 <!--
 ## Analyseren
