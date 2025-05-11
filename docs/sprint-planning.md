@@ -50,7 +50,7 @@ Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project ver
 
  -[MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method)
 
-### Plannen
+### Taakverdeling
 
 Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw schrijven. En alles (!) wat je de afgelopen sprints hebt geleerd over performance, user experience en progressive enhancement toepassen!
 
