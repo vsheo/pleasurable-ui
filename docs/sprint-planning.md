@@ -58,7 +58,8 @@ Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In ee
 
 Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan.
 
-Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen.  
+Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen. 
+Pak jullie learnings over samenwerken uit sprint 7 er nog eens bij, wat kon je toen beter doen? 
 
 
 ### 🧑‍🏫 Planning bespreken met een docent
@@ -100,8 +101,7 @@ Have fun!
 
 
 <!--
-In de samenwerking learnings meenemen uit sprint 7. En het nu wel/weer doen.
-Dezelfde stappen doorlopen maar dan met een team, wat ga je opleveren bij de sprint review met MoSCoW. Per week bekijken hoe dat gaat en daar op plannen/sturen. Project board bijwerken.
+
 
 Taken verdelen en die hifi wireflows in figma maken met alles states en uitwerken.
 Per pagina/onderdeel/component responsive hifi uitwerken. Met het team HTML breakdown maken.
