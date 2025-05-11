@@ -1,7 +1,7 @@
 # Pleasurable User Interface
 
 
-## Code/Design review - Pull request
+## Code/Design review - Week 1
 bespreek de samenwerking en het gemaakte werk.
 
 
