@@ -18,7 +18,6 @@ Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van
 
 
 - [Sprint Planning](sprint-planning.md)
-- [MoSCoW](moscow.md)
 - [Feature brances & Pull requests](feature-branches-en-pull-requests.md)
 - [Code/Design review - Pull request](code-design-review-pull-request.md)
 - [Pleasurable is in the details](pleasurable-is-in-the-details.md)

@@ -9,6 +9,27 @@ Repo klaarzetten, plannen en afspraken maken met je team.
 Je werkt in een team aan de website voor een opdrachtgever. 
 Zorg dat je duidelijk afspraken maakt en elkaar dagelijks op de hoogte houdt van vorderingen. Samen met jouw team ben je verantwoordelijk voor de planning, het samenwerkingsproces én het eindresultaat.
 
+
+## Sprint Planning
+Met het team?
+
+Let op: verplicht voortgangsgesprekken op vrijdag. 
+
+Wat voor practicum willen jullie woensdag? En volgende week? Waar is behoefte aan?
+Wat voor JS challenge willen jullie donderdagen? 
+
+
+## MoSCoW
+
+
+
+
+## Feature branch workflow
+
+
+
+
+
 <!--
 Sprint 11
 Bovenste laag van de pyramide.
