@@ -40,9 +40,7 @@ Dezelfde persoon moet deze leertaak Forken om het projectboard en issues te kunn
 Maak issues van de taken waar jullie mee aan de slag willen deze sprint. Schrijf voor een issue een (korte) uitleg wat het issuse inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
 
 ### MoSCoW
-Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig?
-
-Hier kan je de MoSCoW methode voor gebruiken.
+Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig? Hier kan je de MoSCoW methode voor gebruiken.
 
 MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* em *Won't haves*. Dit is een methode waarmee je taken kan prioriteren. Wat moet er sowieso zijn voor de oplevering? Welke onderdelen zijn belangrijk maar niet noodzakelijk voor de oplevering? Welke onderdelen of pagina's zijn niet perse nodig en doe je alleen als er genoeg tijd is? En welke onderdelen zijn nu niet nodig.
 
@@ -62,11 +60,28 @@ Stand-ups plannen.
 
 Afspraken maken. 
 
+### Planning bespreken met een docent
+Bespreek jullie ideeen, planning en afspraken met een docent.
+
 
 ## Feature branch workflow
 
+Nu gaan jullie de ontwikkelomgeving inrichten. 
+
+Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Die doe je door met je team 1 gezamenlijke repository te gebruiken.
+
+Deze sprint gaan we leren om te werken met _branches_. Een branch is een afgeleide van de _main_, de backbone van jullie project met de code die uiteindelijk live gaat. 
+Als de teamleden in een _branches_ werken, kan je code aanpassen, toevoegen en verwijderen zonder dat de anderen daar last van hebben. Zo kan je tegelijk aan onderdelen van een website werken. Als een _branch_ af is en goed bevonden, kan je deze _mergen_ naar de _main_.
+
+Slechts één teamlid forkt de leertaak. Voeg de teamleden toe als 'Collaborators' Nu kunnen alle teamleden samenwerken op die repository, door deze allemaal te clonen (downloaden).
+
+Ga nu met je team uitproberen hoe je met branches moet werken en met een pull request code naar de main kan mergen. 
 
 
+### Bronnen
+
+- [About branches - Github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+- [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)
 
 
 <!--
