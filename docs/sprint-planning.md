@@ -101,36 +101,18 @@ Have fun!
 
 
 <!--
-
-
-Taken verdelen en die hifi wireflows in figma maken met alles states en uitwerken.
-Per pagina/onderdeel/component responsive hifi uitwerken. Met het team HTML breakdown maken.
-
-Styleguide en code conventies toepassen. sprint 4 herhalen, maar nu inclusief fallback, baseline en cut the mustard
-Learnings van sprint 10 meenemen in taken. Waar ben je al aan toe gekomen, wat wil je nog leren?
- 
-
--->
-
-
-<!--
 ### Samenwerken & planning
 In de analysefase bespreek je als team welke werkzaamheden er zijn, wie wat gaat doen en maak je een planning. 
 Er is veel werk aan de winkel deze sprint, maak afspraken om elke dag aan het project te werken en hoe jullie elkaar op de hoogte houden van de vorderingen.
-
-1. Één teamlid forkt de leertaak en voegt teamleden toe als 'collaborators'
-2. De andere teamleden clonen de geforkte-repo, zo kun je makkelijk wijzigingen doorvoeren en ophalen
-3. Maak een _project board_ aan en koppel het aan de gezamenlijke _repository_ om bij te kunnen houden wie wat doet
-4. Plan voor de aankomende weken de reviews en noteer de planning in jullie _project board_.
-5. Doe dagelijks een standup, bespreek met je team welke werkzaamheden er zijn en wie wat heeft gedaan.
-6. Gebruik het project board om grip te houden op de planning, sleep taken naar _done_ als ze klaar zijn, schrijf nieuwe taken als dat nodig is. 
 
 ### Materiaal voor samenwerken
 
 - [About Github Projects, quickstart en best practices](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 - [De Daily standup meeting: uitleg en tips](https://scrumguide.nl/daily-standup-meeting/)
-<!-- - [Making a pull-request](https://www.atlassian.com/git/tutorials/making-a-pull-request) (nb. wij gebruiken de feature-branch workflow) -->
-<!-- - [How to Collaborate on GitHub](https://code.tutsplus.com/tutorials/how-to-collaborate-on-github--net-34267) -->
-<!-- - [download het Team Canvas](https://github.com/fdnd-task/performance-matters-fast-website/blob/main/docs/Teamcanvas.pdf) -->
-<!-- - [Lees instructies over het gebruik van het Teamcanvas in de deeltaak uit sprint 1](https://github.com/fdnd-task/your-tribe-team-canvas) -->
 
+- [Making a pull-request](https://www.atlassian.com/git/tutorials/making-a-pull-request) (nb. wij gebruiken de feature-branch workflow)
+- [How to Collaborate on GitHub](https://code.tutsplus.com/tutorials/how-to-collaborate-on-github--net-34267)
+- [download het Team Canvas](https://github.com/fdnd-task/performance-matters-fast-website/blob/main/docs/Teamcanvas.pdf)
+- [Lees instructies over het gebruik van het Teamcanvas in de deeltaak uit sprint 1](https://github.com/fdnd-task/your-tribe-team-canvas)
+
+-->
