@@ -52,15 +52,14 @@ Label jullie taken met de MoSCoW labels. Labels kunnen gedurende het project ver
 
 ### Plannen
 
-Deze sprint 
+Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw schrijven. En alles (!) wat je de afgelopen sprints hebt geleerd over performance, user experience en progressive enhancement toepassen!
 
-Start en eind datum voor de issues bedenken.
+Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of Nodejs. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
 
-Taken toekennen aan teamleden. 
+Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan.
 
-Stand-ups plannen.
+Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen.  
 
-Afspraken maken. 
 
 ### 🧑‍🏫 Planning bespreken met een docent
 Bespreek jullie ideeen, planning, MoSCoW en afspraken met een docent.
