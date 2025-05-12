@@ -41,3 +41,6 @@ app.listen(app.get('port'), function () {
 app.get('/viresh', async function (request, response) {
   response.render('index.liquid')
 })
+app.get('nadia', async function (request, response) {
+  response.render('nadia.liquid')
+})
