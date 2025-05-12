@@ -20,12 +20,12 @@ In het programma is nog niet alles ingevuld. Wat voor practicum willen jullie wo
 ### Sprint review verwerken
 Laat eerst aan elkaar zien wat jullie de vorige sprints hebben gemaakt.
 
-Bespreek de feedback van de opdrachtgever die jullie tijdens de Sprint Review hebben gekregen. 
+Bespreek ook de feedback van de opdrachtgever die jullie tijdens de Sprint Review hebben gekregen. 
 
 ### Sitemap en pagina's
-Maak daarna gezamenlijk een sitemap van het hele project op het whiteboard. Deze sprint ga je met een team een website ontwerpen en maken, als jullie taken gaan verdelen kun je de hele website maken... en misschien nieuwe dingen verzinnen?
+Maak gezamenlijk een sitemap van het hele project op het whiteboard. Deze sprint ga je met een team een website ontwerpen en maken, als jullie taken gaan verdelen kun je de hele website maken... en misschien nieuwe dingen verzinnen?
 
-Schrijf of teken Lo-fi per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeën toe als je die hebt. 
+Schrijf of teken per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeën toe als je die hebt. 
 
 ### Figma designs en styleguide
 Bekijk jullie Hi-fi Figma designs en vergelijk het met de sitemap die jullie hebben gemaakt. Hebben jullie van alle pagina's en onderdelen een design? 
@@ -39,7 +39,7 @@ Omdat je met een team gaat samenwerken is het verstandig om een nieuw project bo
 
 Dezelfde persoon moet deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
 
-Maak samen issues van de taken waar jullie mee aan de slag willen deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
+Maak samen issues van alle taken waar jullie mee aan de slag gaan deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
 
 ### MoSCoW
 Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig? Hier kan je de _MoSCoW methode_ voor gebruiken.
