@@ -36,3 +36,8 @@ app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
   console.log(`Project draait via http://localhost:${app.get('port')}/\n\nSucces deze sprint. En maak mooie dingen! 🙂`)
 })
+
+
+app.get('/viresh', async function (request, response) {
+  response.render('index.liquid')
+})
