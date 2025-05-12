@@ -25,7 +25,9 @@ app.set('views', './views')
 
 
 app.get('/', async function (request, response) {
-  response.render('index.liquid')
+  const giftResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id&filter={"img":{"_nnull":"null"}}')
+  const giftResponseJSON = await giftResponse.json()
+  response.render('index.liquid', {giftData: giftResponseJSON.data})
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
@@ -35,12 +37,4 @@ app.set('port', process.env.PORT || 8000)
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
   console.log(`Project draait via http://localhost:${app.get('port')}/\n\nSucces deze sprint. En maak mooie dingen! 🙂`)
-})
-
-
-app.get('/viresh', async function (request, response) {
-  response.render('index.liquid')
-})
-app.get('nadia', async function (request, response) {
-  response.render('nadia.liquid')
 })
