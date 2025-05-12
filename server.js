@@ -42,6 +42,10 @@ app.listen(app.get('port'), function () {
   console.log(`Project draait via http://localhost:${app.get('port')}/\n\nSucces deze sprint. En maak mooie dingen! 🙂`)
 })
 
+
+app.get('/viresh', async function (request, response) {
+  response.render('index.liquid')
+})
 app.get('nadia', async function (request, response) {
   response.render('nadia.liquid')
 })
