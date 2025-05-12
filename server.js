@@ -76,7 +76,21 @@ app.post("/:id", async function (request, response) {
 });
 
 
+// dit is een functie die een array maakt met alle bookmarked cadeau's
+async function getBookmarks(listId) {
+	// haal alle items uit een lijst op
+	const yourList = `https://fdnd-agency.directus.app/items/milledoni_users/?fields=id,liked_products.milledoni_products_id&filter={"id":"${listId}"}`;
+	const yourListResponse = await fetch(yourList);
+	const yourListResponseJSON = await yourListResponse.json();
 
+	// alle milledoni_products_id's uit "liked_products" maken tot een array
+	const productIdArray = yourListResponseJSON.data[0].liked_products.map(
+		product => product.milledoni_products_id
+	);
+
+	// return een array met alle milledoni_products_id's, dit zijn de bookmarked cadeau's
+	return productIdArray;
+}
 
 
 
