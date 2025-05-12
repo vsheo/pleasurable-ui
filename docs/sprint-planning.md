@@ -5,7 +5,9 @@
 Repo klaarzetten, taken plannen en afspraken maken met je team.
 
 ### Aanpak
-Deze sprint werk je in een team aan de website voor een opdrachtgever. Jullie gaan het beste werk en ideeen samen brengen in 1 complete website. 
+Deze sprint werk je in een team aan de website voor de opdrachtgever. Jullie gaan het beste werk en ideeen samen brengen in 1 complete website.
+
+
 
 Jullie gaan op 1 repository werken met de *Feature Branch Workflow*; issue oppakken, feature branch maken, pull request maken, code laten reviewen, mergen...
 
@@ -15,17 +17,20 @@ Eerst ga je de planning van deze sprint bekijken en bedenken wat jullie deze spr
 
 Bekijk het programma van Sprint 11 op de programma-website. Deze sprint ga je met een team samenwerken. Let op de verplichte voortgangsgesprekken op vrijdag.
 
-In het programma is nog niet alles ingevuld. Wat voor practicum willen jullie woensdag? En volgende week? Waar is behoefte aan? Wat voor JS challenge willen jullie donderdagen? Schrijf dit op het *whiteboard*.
+![Iteratief werken met een team](experimenteren-varieren.png) 
+*Je gaat met een team iteratief werken, verschillende ideeen uitproberen, testen en samenvoegen.*
+
+In het programma is nog niet alles ingevuld. Wat voor practicum willen jullie woensdag? En volgende week? Waar is behoefte aan? Wat voor JS challenge willen jullie donderdagen? Schrijf dit op het whiteboard.
 
 ### Sprint review verwerken
 Laat eerst aan elkaar zien wat jullie de vorige sprints hebben gemaakt.
 
-Bespreek ook de feedback van de opdrachtgever die jullie tijdens de Sprint Review hebben gekregen. 
+Bespreek ook de feedback van de opdrachtgever die jullie tijdens de Sprint Review hebben gekregen.
 
 ### Sitemap en pagina's
 Maak gezamenlijk een sitemap van het hele project op het whiteboard. Deze sprint ga je met een team een website ontwerpen en maken, als jullie taken gaan verdelen kun je de hele website maken... en misschien nieuwe dingen verzinnen?
 
-Schrijf of teken per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeën toe als je die hebt. 
+Schrijf of teken per pagina wat er ongeveer op een pagina komt. Geef aan welke pagina's of onderdelen al door jullie zijn gemaakt en welke nog niet. Voeg ook nieuwe ideeën toe als je die hebt.
 
 ### Figma designs en styleguide
 Bekijk jullie Hi-fi Figma designs en vergelijk het met de sitemap die jullie hebben gemaakt. Hebben jullie van alle pagina's en onderdelen een design? 
@@ -35,9 +40,10 @@ Geef op het whiteboard aan welke onderdelen wel en welke nog geen design hebben.
 
 ## Taken plannen en MoSCoW bepalen
 
-Omdat je met een team gaat samenwerken is het verstandig om een nieuw project board aan te maken. Dat moet één van de teamleden doen en de anderen toegang geven.
+Omdat je met een team gaat samenwerken is het verstandig om een nieuw project board aan te maken. Dat moet één van de teamleden doen en de anderen toegang geven. Laat een teamlid deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
 
-Dezelfde persoon moet deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
+![](ghprojects-example-roadmap.webp)
+*Github projects geeft een duidelijk overzicht van taken en planning.*
 
 Maak samen issues van alle taken waar jullie mee aan de slag gaan deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
 
@@ -67,16 +73,16 @@ We gaan deze week volle kracht van start zodat jullie aanstaande vrijdag een wer
 Maak afspraken over aanwezigheid en plan hoe laat jullie elke dag de Stand-up doen. 
 Pak jullie learnings over samenwerken uit Sprint 7 er nog eens bij, wat kon je toen beter doen? 
 
-
 ### 🧑‍🏫 Planning bespreken met een docent
 Bespreek jullie ideeën, planning, MoSCoW en afspraken vandaag nog met een docent.
 
 
 ## Feature branch workflow
 
-Nu gaan jullie de ontwikkelomgeving inrichten. 
+Nu gaan jullie de ontwikkelomgeving inrichten. Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Dit doe je door met je team 1 gezamenlijke repository te gebruiken.
 
-Jullie gaan als team 1 website maken. Jullie maken 1 ontwerp, je werkt soms in je eigen code en soms zullen jullie de code gaan samenvoegen. Dit doe je door met je team 1 gezamenlijke repository te gebruiken.
+![Feature branch workflow](feature-branch.png) 
+*Met een team werken aan 1 project doe je  met de Feature Branch Workflow*
 
 Deze sprint gaan we leren om te werken met verschillende _branches_. Een branch is een _vertakking_ van de _main_ branch, de backbone van jullie project met de code die uiteindelijk live gaat.
 
