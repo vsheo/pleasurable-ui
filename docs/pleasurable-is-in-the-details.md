@@ -5,12 +5,16 @@
 Over de pleasurable laag van interactie
 
 
-<!-->
+<!--
 ## Aanpak
 
 Convergeren - divergeren laten zien in de planning. Teams een tekening laten maken van wat er wannner qua werkzaamhebden en code samenvoegen aan komt deze sprint.
 
 
+
+Voorbeelden pleasurables
+- design patterns: filter systeem, pagination (ook lekker om PE te bouwen)
+- JOyfull animations. Interacties die zo fijn zijn dat je ze blijft doen. Wat zegt Norman hierover?
 
 
 
