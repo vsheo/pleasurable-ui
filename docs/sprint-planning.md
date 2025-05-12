@@ -58,7 +58,7 @@ Een aantal *Must haves* in week 1 zijn belangrijk om ervoor te zorgen dat nieman
 
 Omdat jullie deze sprint in een team gaan werken gaan jullie alle code opnieuw schrijven. En alles (!) wat je de afgelopen sprints hebt geleerd over performance, user experience en progressive enhancement toepassen!
 
-Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen en bouwen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of NodeJS. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
+Iedereen werkt aan taken waarvoor je moet analyseren, ontwerpen, bouwen, testen. In een frontend team ga je niet verdelen wie de CSS doet, en wie de HTML of NodeJS. Je verdeelt functionaliteiten, onderdelen van een website en componenten.
 
 Verdeel de taken door issues te assignen aan teamleden. Probeer als het kan een start en eind datum voor de issues bedenken. Sommige taken zijn afhankelijk van andere taken, dus die moeten eerst worden gedaan. Zet daar dan een strakke eind datum op, of doe deze meteen vandaag.
 We gaan deze week volle kracht van start zodat jullie aanstaande vrijdag een werkende versie van de volledige site hebben. Zo kunnen we volgende week met nieuwe experimenten en _pleasurables_ aan de slag.
