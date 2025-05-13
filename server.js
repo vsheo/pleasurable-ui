@@ -45,35 +45,8 @@ app.post("/:id", async function (request, response) {
     // url waar het cadeau opgeslagen moet worden
     const postURL = "https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products_1/";
 
-    // filter om te zoeken naar het cadeau,
-    const checkGift = await fetch(postURL + `?filter={"milledoni_users_id":"2","milledoni_products_id":"${giftId}"}`);
-    const checkGiftResponseJSON = await checkGift.json();
+    await changeBookmark(postURL,2,giftId)
 
-    // if statement om te kijken als het cadeau al in de lijst staat
-    if (checkGiftResponseJSON.data.length > 0) {
-        // als dat het geval is dan hebben we de id nodig om het met delete uit de lijst te haalen
-		// postURL + id geeft alle data van het cadeau in de bookmarks lijst terug
-        await fetch(postURL + checkGiftResponseJSON.data[0].id, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            }
-        );
-    }
-    // Voeg de nieuwe waarde toe aan de bookmark list in directus
-    else {
-        await fetch(postURL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                milledoni_users_id: 2,
-                milledoni_products_id: giftId,
-            }),
-        });
-    }
     // Redirect terug naar de index pagina
     response.redirect("/");
 });
@@ -105,6 +78,41 @@ async function getBookmarks(listId) {
 
 	// return een array met alle milledoni_products_id's, dit zijn de bookmarked cadeau's
 	return productIdArray;
+}
+
+// Deze functie controleert of een cadeau in de bookmarklijst staat.
+// Als het cadeau al in de lijst staat, voert het een DELETE uit.
+// Als het cadeau nog niet in de lijst staat, wordt het toegevoegd via POST.
+async function changeBookmark(postURL,listId,giftId) {
+    // filter om te zoeken naar het cadeau,
+    const checkGift = await fetch(postURL + `?filter={"milledoni_users_id":"${listId}","milledoni_products_id":"${giftId}"}`);
+    const checkGiftResponseJSON = await checkGift.json();
+
+    // if statement om te kijken als het cadeau al in de lijst staat
+    if (checkGiftResponseJSON.data.length > 0) {
+        // als dat het geval is dan hebben we de id nodig om het met delete uit de lijst te haalen
+        // postURL + id geeft alle data van het cadeau in de bookmarks lijst terug
+        await fetch(postURL + checkGiftResponseJSON.data[0].id, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+    }
+    // Voeg de nieuwe waarde toe aan de bookmark list in directus
+    else {
+        await fetch(postURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                milledoni_users_id: 2,
+                milledoni_products_id: giftId,
+            }),
+        });
+    }
 }
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
