@@ -58,7 +58,17 @@ app.get("/favorieten/:id", async function (request, response) {
     const bookmarksFilter = await fetch(baseGiftURL + `&filter={"id":{"_in":"${allBookmarks}"}}`)
     const bkmResponseJSON = await bookmarksFilter.json()
 
-    response.render("favorieten.liquid", { bkmgifts: bkmResponseJSON.data });
+    response.render("favorieten.liquid", { bkmgifts: bkmResponseJSON.data, bookmarks: allBookmarks });
+});
+
+// favorieten POST
+app.post("/:id", async function (request, response) {
+    const giftId = request.params.id;
+
+    await changeBookmark(2,giftId)
+
+    // Redirect terug naar de index pagina
+    response.redirect("/favorieten/:id");
 });
 
 // dit is een functie die een array maakt met alle bookmarked cadeau's
