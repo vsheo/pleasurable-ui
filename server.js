@@ -75,6 +75,15 @@ app.post("/:id", async function (request, response) {
     response.redirect("/");
 });
 
+// favorieten GET
+app.get("/favorieten/:id", async function (request, response) {
+    const listId = request.params.id;
+
+    // alle bookmarked items
+	const allBookmarks = await getBookmarks(listId)
+
+    response.render("favorieten.liquid", { bookmarks: allBookmarks });
+});
 
 // dit is een functie die een array maakt met alle bookmarked cadeau's
 async function getBookmarks(listId) {
@@ -91,8 +100,6 @@ async function getBookmarks(listId) {
 	// return een array met alle milledoni_products_id's, dit zijn de bookmarked cadeau's
 	return productIdArray;
 }
-
-
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
