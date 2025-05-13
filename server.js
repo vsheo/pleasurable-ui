@@ -42,10 +42,7 @@ app.get("/", async function (request, response) {
 app.post("/:id", async function (request, response) {
     const giftId = request.params.id;
 
-    // url waar het cadeau opgeslagen moet worden
-    const postURL = "https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products_1/";
-
-    await changeBookmark(postURL,2,giftId)
+    await changeBookmark(2,giftId)
 
     // Redirect terug naar de index pagina
     response.redirect("/");
@@ -83,7 +80,10 @@ async function getBookmarks(listId) {
 // Deze functie controleert of een cadeau in de bookmarklijst staat.
 // Als het cadeau al in de lijst staat, voert het een DELETE uit.
 // Als het cadeau nog niet in de lijst staat, wordt het toegevoegd via POST.
-async function changeBookmark(postURL,listId,giftId) {
+async function changeBookmark(listId,giftId) {
+    // url waar het cadeau opgeslagen moet worden
+    const postURL = "https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products_1/";
+
     // filter om te zoeken naar het cadeau,
     const checkGift = await fetch(postURL + `?filter={"milledoni_users_id":"${listId}","milledoni_products_id":"${giftId}"}`);
     const checkGiftResponseJSON = await checkGift.json();
