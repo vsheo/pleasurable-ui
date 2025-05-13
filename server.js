@@ -108,7 +108,7 @@ async function changeBookmark(listId,giftId) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                milledoni_users_id: 2,
+                milledoni_users_id: listId,
                 milledoni_products_id: giftId,
             }),
         });
