@@ -3,4 +3,19 @@
 <title>Sprint 11</title>
 <h1>Welkom in Sprint 11!</h1>
 
-{{bookmarks | json}}
+{% comment %} {{bkmgifts | json}} {% endcomment %}
+
+{% for gift in bkmgifts %}
+    <article>
+        <h2>{{gift.name}}</h2>
+        <img src="{{gift.image}}" alt="Afbeeling niet gevonden"><br>
+        <span>slug: {{gift.slug}}</span><br>
+        <span>id: {{gift.id}}</span><br>
+        <span>img: {{gift.img.id}}</span><br>
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{gift.img.id}}?format=avif&width=343&height=295">
+            <img src="{{gift.image}}" width="343px" height="295px" alt="Afbeeling niet gevonden" loading="lazy">
+        </picture>
+        <source>
+    </article>
+{% endfor %}

@@ -82,7 +82,10 @@ app.get("/favorieten/:id", async function (request, response) {
     // alle bookmarked items
 	const allBookmarks = await getBookmarks(listId)
 
-    response.render("favorieten.liquid", { bookmarks: allBookmarks });
+    const bookmarkedData = await fetch(`https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id&filter={"id":{"_in":"${allBookmarks}"}}`)
+    const bkmDataResponseJSON = await bookmarkedData.json()
+
+    response.render("favorieten.liquid", { bkmgifts: bkmDataResponseJSON.data });
 });
 
 // dit is een functie die een array maakt met alle bookmarked cadeau's
