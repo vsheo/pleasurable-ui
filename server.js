@@ -33,7 +33,7 @@ app.get("/", async function (request, response) {
     const giftResponseJSON = await imgFilterResponse.json();
 
     // alle bookmarked items
-	const allBookmarks = await getBookmarks(2)
+	const allBookmarks = await getBookmarks("viresh")
 
     response.render("index.liquid", { giftData: giftResponseJSON.data, bookmarks: allBookmarks });
 });
@@ -49,11 +49,11 @@ app.post("/:id", async function (request, response) {
 });
 
 // favorieten GET
-app.get("/favorieten/:id", async function (request, response) {
-    const listId = request.params.id;
+app.get("/favorieten/:name", async function (request, response) {
+    const listName = request.params.name;
 
     // alle bookmarked items
-	const allBookmarks = await getBookmarks(listId)
+	const allBookmarks = await getBookmarks(listName)
 
     const bookmarksFilter = await fetch(baseGiftURL + `&filter={"id":{"_in":"${allBookmarks}"}}`)
     const bkmResponseJSON = await bookmarksFilter.json()
@@ -62,19 +62,19 @@ app.get("/favorieten/:id", async function (request, response) {
 });
 
 // favorieten POST
-app.post("/:id", async function (request, response) {
-    const giftId = request.params.id;
+app.post("/favorieten/:name", async function (request, response) {
+    const listName = request.params.name;
 
     await changeBookmark(2,giftId)
 
-    // Redirect terug naar de index pagina
-    response.redirect("/favorieten/:id");
+    // Redirect terug naar de favoriete lijst pagina
+    response.redirect(`/favorieten/${listName}`);
 });
 
 // dit is een functie die een array maakt met alle bookmarked cadeau's
-async function getBookmarks(listId) {
+async function getBookmarks(listName) {
 	// haal alle items uit een lijst op
-	const yourList = `https://fdnd-agency.directus.app/items/milledoni_users/?fields=id,liked_products.milledoni_products_id&filter={"id":"${listId}"}`;
+	const yourList = `https://fdnd-agency.directus.app/items/milledoni_users/?fields=id,liked_products.milledoni_products_id&filter={"name":{"_icontains":"${listName}"}}`;
 	const yourListResponse = await fetch(yourList);
 	const yourListResponseJSON = await yourListResponse.json();
 
