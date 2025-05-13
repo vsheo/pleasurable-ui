@@ -23,11 +23,14 @@ app.engine("liquid", engine.express());
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set("views", "./views");
 
+// de base fetch URL die alle fileds heeft om cadeau kaartjes te maken, op index, favorieten en de details pagina
+const baseGiftURL = 'https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id'
+
 // index GET
 app.get("/", async function (request, response) {
     // alle gift data
-    const giftResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id&filter={"img":{"_nnull":"null"}}');
-    const giftResponseJSON = await giftResponse.json();
+    const imgFilterResponse = await fetch(baseGiftURL + '&filter={"img":{"_nnull":"null"}}');
+    const giftResponseJSON = await imgFilterResponse.json();
 
     // alle bookmarked items
 	const allBookmarks = await getBookmarks(2)
@@ -82,10 +85,10 @@ app.get("/favorieten/:id", async function (request, response) {
     // alle bookmarked items
 	const allBookmarks = await getBookmarks(listId)
 
-    const bookmarkedData = await fetch(`https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id&filter={"id":{"_in":"${allBookmarks}"}}`)
-    const bkmDataResponseJSON = await bookmarkedData.json()
+    const bookmarksFilter = await fetch(baseGiftURL + `&filter={"id":{"_in":"${allBookmarks}"}}`)
+    const bkmResponseJSON = await bookmarksFilter.json()
 
-    response.render("favorieten.liquid", { bkmgifts: bkmDataResponseJSON.data });
+    response.render("favorieten.liquid", { bkmgifts: bkmResponseJSON.data });
 });
 
 // dit is een functie die een array maakt met alle bookmarked cadeau's
