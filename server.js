@@ -62,8 +62,9 @@ app.get("/favorieten/:name", async function (request, response) {
 });
 
 // favorieten POST
-app.post("/favorieten/:name", async function (request, response) {
+app.post("/favorieten/:name/:id", async function (request, response) {
     const listName = request.params.name;
+    const giftId = request.params.id;
 
     await changeBookmark(2,giftId)
 
