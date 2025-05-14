@@ -1,0 +1,49 @@
+<article class="gift-card">
+    <div class="wrapper-img-bookmark">
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=150&height=150">
+            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=150&height=150">
+            <img class="img-gift" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
+                width="150" height="150" alt="{{ gift.name }}">
+        </picture>
+        <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+            {% if bookmarks contains gift.id %}
+            <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
+                <picture>
+                    <source type="image/avif" srcset="/assets/saved.avif">
+                    <source type="image/webp" srcset="/assets/saved.webp">
+                    <img class="bookmark-img" src="/assets/saved.svg" width="150" height="150" alt="opgeslagen">
+                </picture>
+            </button>
+            {% else %}
+            <button class="bookmark-icon" aria-label="voeg toe aan bookmarks lijst">
+                <picture>
+                    <source type="image/avif" srcset="/assets/notsaved.avif">
+                    <source type="image/webp" srcset="/assets/notsaved.webp">
+                    <img class="bookmark-img" src="/assets/notsaved.svg" width="150" height="150" alt="niet opgeslagen">
+                </picture>
+            </button>
+            {% endif %}
+        </form>
+    </div>
+    <h3 class="gift-name">
+        <a class="slug" href="/cadeau/{{ gift.slug | url_encode }}">{{ gift.name }}</a>
+    </h3>
+    <div class="container-saved-given">
+        <div class="container-gift-extra">
+            <picture>
+                <source type="image/webp" srcset="/assets/spotters-card.webp">
+                <img class="img-saved" src="/assets/spotters-card.svg" width="60" height="40" alt="spotters">
+            </picture>
+            <p class="gift-saved">+30 saved</p>
+        </div>
+        <div class="container-gift-extra">
+            <picture>
+                <source type="image/avif" srcset="/assets/cadeau.avif">
+                <source type="image/webp" srcset="/assets/cadeau.webp">
+                <img class="img-given" src="/assets/cadeau.svg" width="40" height="40" alt="cadeau">
+            </picture>
+            <p class="gift-given">+4 given</p>
+        </div>
+    </div>
+</article>
