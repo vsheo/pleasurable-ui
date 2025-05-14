@@ -1,3 +1,135 @@
 
+/*MARK: @FONT-FACE*/
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-Regular.woff2')format('woff2');
+    font-weight: 400;
+    font-display: swap
+}
 
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-Medium.woff2')format('woff2');
+    font-weight: 500;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-Bold.woff2')format('woff2');
+    font-weight: 600;
+    font-display: swap
+}
+
+
+/*MARK: BODY*/
+
+body{
+    font-family: 'Parkinsans', sans-serif;
+    letter-spacing: 0px;
+}
+
+:root {
+
+/*MARK: COLOR*/
+/*BG*/
+--bg-primary-color:#FBF7F6;
+--bg-secundary-color:#eec8e1;
+
+/*TEXT*/
+--text-primary-color:#212121;
+--text-secundary-color:#eec8e1;
+--text-primary-input-color:#898A8D;
+--text-primary-button-color:#212121; /*create list*/
+--text-secundary-button-color:#FEFCFA; /*add-button*/
+
+/*CONTAINER*/
+--container-primary-color:#EBE5E0;
+--card-primary-color:#FFFFFF;
+
+/*BORDER*/
+--border-primary-spotters-img-color:#FFFFFF;
+--border-primary-form-color:#A3A3A3;
+--border-primary-button-list-color:#CBCBCB;
+
+/*BUTTON*/
+--button-add-color:#FEFCFA;
+
+/*BUTTON CREATE LIST*/
+--button-primary-color:#FFFFFF; /*create list*/
+--box-shadow-create-list:0px 2px 8px 0px #0000001A;
+
+/*BUTTON CREATE LIST*/
+--button-secundary-color: #212121; /*add-button*/
+--box-shadow-add:0px 2.42px 9.69px 0px #0000001A;
+
+
+/*MARK: TEXT*/
+
+/*HOMEPAGINA*/
+/*Ik ben op zoek naar een cadeau voor...*/
+--font-size-title1-home:68px;
+--font-weight-title1-home:500;
+--line-height-title1-home:1.16;
+
+/*tekst in de searchbar*/
+--font-size-title2-home:22px;
+--font-weight-title2-home:400;
+--line-height-title2-home:1.0;
+/*forms search bar*/
+--border-radius-search:52px;
+--border-search:1px solid #A3A3A3;
+
+/*spotters tekst*/
+--font-size-title3-home:19px;
+--font-weight-title3-home:400;
+--line-height-title3-home:1.13;
+
+
+/*DETAILPAGINA*/
+/*Naam van het cadeau*/
+--font-size-title1-detail:40px;
+--font-weight-title1-detail:500;
+--line-height-title1-detail:1.12;
+
+/*beschrijving*/
+--font-size-text1-detail:20px;
+--font-weight-text1-detail:500;
+--line-height-text1-detail:1.0;
+
+/*add to lijst*/
+--font-size-button-detail:16px;
+--font-weight-button-detail:500;
+--line-height-button-detail:1.0;
+
+/*extra info (woooow suprise factor)*/
+--font-size-button-detail:18px;
+--font-weight-button-detail:600;
+--line-height-button-detail:1.55;
+
+/*Kopjes*/
+--font-size-button-detail:30px;
+--font-weight-button-detail:500;
+--line-height-button-detail:1.55;
+
+
+/*FAVOURIETEN*/
+--font-size-title1-fav:37px;
+--font-weight-title1-fav:400;
+--line-height-title1-fav:0.59;
+
+
+/*HEADER*/
+--font-size-button-header:21px;
+--font-weight-button-header:500;
+--line-height-button-header:1.0;
+/*button create list*/
+--border-radius-button-create-list:30px;
+--box-shadow-button-create-list: 0 2px 8px #0000001a;
+
+
+/*MARK: :BORDER-RADIUS*/
+/*BUTTON VOOR CIRCLE*/
+--border-radius-circle: 50%;
+}
 
