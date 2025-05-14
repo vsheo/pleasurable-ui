@@ -58,7 +58,7 @@ app.get("/favorieten/:name", async function (request, response) {
     const bookmarksFilter = await fetch(baseGiftURL + `&filter={"id":{"_in":"${allBookmarks}"}}`)
     const bkmResponseJSON = await bookmarksFilter.json()
 
-    response.render("favorieten.liquid", { bkmgifts: bkmResponseJSON.data, bookmarks: allBookmarks });
+    response.render("favorieten.liquid", { bkmgifts: bkmResponseJSON.data, bookmarks: allBookmarks, listName: listName });
 });
 
 // favorieten POST

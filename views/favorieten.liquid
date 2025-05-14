@@ -16,7 +16,7 @@
             <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{gift.img.id}}?format=avif&width=343&height=295">
             <img src="{{gift.image}}" width="343px" height="295px" alt="Afbeeling niet gevonden" loading="lazy">
         </picture>
-        <form method="post" action="/favorieten/Viresh/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+        <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
         {% if bookmarks contains gift.id %}
             <!-- als het cadeau in de bookmark list zit, dan is de bookmark icon zwart -->
             <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst"><svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M23.2051 56.1046V18.5052H52.3476V56.1046L38.3445 50.0956L37.7764 49.8518L37.2082 50.0956L23.2051 56.1046Z" fill="black" stroke="black" stroke-width="2.88143" /> </svg></button>
