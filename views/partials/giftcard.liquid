@@ -1,8 +1,8 @@
 <article class="gift-card">
     <div class="wrapper-img-bookmark">
         <picture>
-            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif">
-            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp">
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=150&height=150">
+            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=150&height=150">
             <img class="img-gift" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
                 width="150" height="150" alt="{{ gift.name }}">
         </picture>
@@ -43,7 +43,7 @@
                 <source type="image/webp" srcset="/assets/cadeau.webp">
                 <img class="img-given" src="/assets/cadeau.svg" width="40" height="40" alt="cadeau">
             </picture>
-            <p class="product-gived">+4 gived</p>
+            <p class="gift-given">+4 given</p>
         </div>
     </div>
 </article>
