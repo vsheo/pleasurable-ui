@@ -29,7 +29,7 @@ const baseGiftURL = 'https://fdnd-agency.directus.app/items/milledoni_products/?
 // index GET
 app.get("/", async function (request, response) {
     // alle gift data
-    const imgFilterResponse = await fetch(baseGiftURL + '&filter={"img":{"_nnull":"null"}}');
+    const imgFilterResponse = await fetch(baseGiftURL + '&sort=img');
     const giftResponseJSON = await imgFilterResponse.json();
 
     // alle bookmarked items
