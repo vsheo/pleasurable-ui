@@ -72,7 +72,7 @@ body{
 }
 
 /*tekst in de searchbar*/
-.subtitle-header{
+.subtitle-search-bar{
 --font-size-title2-home:22px;
 --font-weight-title2-home:400;
 --line-height-title2-home:1.0;
@@ -147,6 +147,11 @@ body{
 --box-shadow-button-create-list: 0 2px 8px #0000001a;
 }
 
+.subtitle-header{
+--font-size-subtitle2-header:24px;
+--font-weight-subtitle2-header:500;
+--line-height-subtitle2-header:1.25;
+}
 
 /*MARK: :BORDER-RADIUS*/
 /*BUTTON VOOR CIRCLE*/
