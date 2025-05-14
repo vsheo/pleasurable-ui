@@ -24,7 +24,7 @@ app.engine("liquid", engine.express());
 app.set("views", "./views");
 
 // de base fetch URL die alle fileds heeft om cadeau kaartjes te maken, op index, favorieten en de details pagina
-const baseGiftURL = 'https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,slug,id,img,img.id'
+const baseGiftURL = 'https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,slug,id,img,img.id'
 
 // index GET
 app.get("/", async function (request, response) {

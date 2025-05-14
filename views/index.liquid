@@ -9,16 +9,10 @@
 {% for gift in giftData %}
     <article>
         <h3>{{gift.name}}</h3>
-        {% if gift.img %}
-            <h1>img tag</h1>
-            <picture>
-                <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{gift.img.id}}?format=avif&width=343&height=295">
-                <img src="{{gift.image}}" width="343px" height="295px" alt="Afbeeling niet gevonden" loading="lazy">
-            </picture>
-        {% else %}
-            <h3>geen img tag</h3>
-            <img src="{{gift.image}}" alt="Afbeeling niet gevonden"><br>
-        {% endif %}
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{gift.img.id}}?format=avif&width=343&height=295">
+            <img class="img-gift" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}" width="343px" height="295px"alt="Afbeeling niet gevonden">
+        </picture>
 
         <span>slug: {{gift.slug}}</span><br>
         <span>id: {{gift.id}}</span><br>
