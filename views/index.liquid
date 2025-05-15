@@ -31,6 +31,7 @@
         Pas filters aan
     </section>
 
+    <div class="cards-wrapper">
     {% for gift in giftData %}
     {% if forloop.index == 2 %}
     <a class="register-login-card" href="#"><div class="container-register">
@@ -48,6 +49,7 @@
     {% include 'partials/giftcard.liquid' %}
     {% endfor %}
 </section>
+</div>
 
 </main>
 
