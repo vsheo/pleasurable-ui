@@ -1,5 +1,4 @@
 .container-search {
-    border: 2px solid black;
     display: grid;
     grid-template-columns: 1fr;
     margin: .5em;
