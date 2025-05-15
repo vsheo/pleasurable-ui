@@ -1,0 +1,30 @@
+.container-search {
+    .svg {
+    }
+
+    .section-title {
+        font-size: var(--font-size-title1-home);
+        font-weight: var(--font-weight-title1-home);
+        line-height: var(--line-height-title1-home);
+    }
+
+    .search-bar {
+        input {
+        }
+
+        .placeholder {
+            font-size: var(--font-size-title2-home);
+            font-weight: var(--font-weight-title2-home);
+            line-height: var(--line-height-title2-home);
+        }
+    }
+
+    .img-spotters {
+    }
+
+    .spotters-text {
+        font-size: var(--font-size-title3-home);
+        font-weight: var(--font-weight-title3-home);
+        line-height: var(--line-height-title3-home);
+    }
+}
