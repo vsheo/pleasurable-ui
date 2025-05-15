@@ -13,7 +13,6 @@
         line-height: var(--line-height-title1-home);
         margin-bottom: .3em;
         padding: .3em;
-        margin-right: 2em;
         width: 11ch;
 
         @media (min-width: 1250px) {
@@ -30,7 +29,7 @@
         max-width: 30em;
         height: 4.5em;
 
-        position: absolute;
+        position: fixed;
         bottom: 1em;
 
         @media (min-width: 540px) {
@@ -81,7 +80,7 @@
     .section-spotters {
         display: flex;
         flex-direction: column;
-        padding: .5em;
+        width: min-content;
 
         @media (min-width: 540px) {
             flex-direction: row;
