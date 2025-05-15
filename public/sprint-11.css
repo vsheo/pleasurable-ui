@@ -4,7 +4,7 @@
     margin: .5em;
 
     .svg-gift {
-        width: clamp(7em, 50vw, 15em);
+        width: clamp(5em, 40vw, 10em);
     }
 
     .section-title {
