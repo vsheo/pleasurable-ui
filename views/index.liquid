@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="nl">
 
-{% comment %} {% render 'partials/head.liquid', title: 'Home' %} {% endcomment %}
+{% render 'partials/head.liquid', title: 'Home' %}
 
 <main class="homepage">
 
@@ -9,19 +9,19 @@
 
 <section class="container-search">
     <img src="/assets/cadeau.svg" alt="afbeelding van een cadeau geven">
-    <span>I'm looking for a gift for...</span>
+    <span class="section-title">I'm looking for a gift for...</span>
+
     <div class="subtitle-search-bar">
         <input type="search" placeholder=""/>
-        <span>Describe me the person</span>
+        <span class="search-bnar-text">Describe me the person</span>
     </div>
-    
 
-    <picture>
+    <picture class="img-spotters">
         <source type="image/avif" srcset="/assets/search-spotters.avif">
         <source type="image/webp" srcset="/assets/search-spotters.webp">
-        <img class="register-img" src="/assets/search-spotters.png" alt="">
+        <img src="/assets/search-spotters.png" alt="">
     </picture>
-    <span class="spotters-community">Sluit je aan bij onze community van spotters</span>
+    <span class="spotters-community-text">Sluit je aan bij onze community van spotters</span>
 </section>
 
 <section class="gift-homepage">
