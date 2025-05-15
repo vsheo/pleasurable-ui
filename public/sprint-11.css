@@ -30,11 +30,12 @@
         max-width: 30em;
         height: 4.5em;
 
-        /* position: absolute;
+        position: absolute;
         bottom: 1em;
+
         @media (min-width: 540px) {
             justify-self: center;
-        } */
+        }
 
         .btn-mic {
             grid-area: search;
