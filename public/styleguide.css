@@ -31,11 +31,11 @@ body{
 /*MARK: COLOR*/
 /*BG*/
 --bg-primary-color:#FBF7F6;
---bg-secundary-color:#eec8e1;
+--bg-secundary-color:#772b94;
 
 /*TEXT*/
 --text-primary-color:#212121;
---text-secundary-color:#eec8e1;
+--text-secundary-color:#772b94;
 --text-primary-input-color:#898A8D;
 --text-primary-button-color:#212121; /*create list*/
 --text-secundary-button-color:#FEFCFA; /*add-button*/
@@ -43,6 +43,7 @@ body{
 /*CONTAINER*/
 --container-primary-color:#EBE5E0;
 --card-primary-color:#FFFFFF;
+--card-secundary-color:#fafafa;
 
 /*BORDER*/
 --border-primary-spotters-img-color:#FFFFFF;
@@ -91,6 +92,20 @@ body{
 --line-height-title3-home:1.13;
 }
 
+/*gift card tekst*/
+.slug{
+    --font-size-card:16px;
+    --font-weight-card:500;
+    --line-height-card:1.1;
+    --border-radius-card:20px;
+}
+
+/*saved en given tekst in card*/
+.gift-saved-given{
+    --font-size-saved-given-home:16px;
+    --font-weight-saved-given-home:400;
+    --line-height-saved-given-home:1.0;
+}
 
 /*DETAILPAGINA*/
 /*Naam van het cadeau*/
@@ -116,16 +131,16 @@ body{
 
 /*extra info (woooow suprise factor)*/
 .review-gift{
---font-size-button-detail:18px;
---font-weight-button-detail:600;
---line-height-button-detail:1.55;
+--font-size-review-detail:18px;
+--font-weight-review-detail:600;
+--line-height-review-detail:1.55;
 }
 
 /*Kopjes*/
 .subheading-detail{
---font-size-button-detail:30px;
---font-weight-button-detail:500;
---line-height-button-detail:1.55;
+--font-size-subheading-detail:30px;
+--font-weight-subheading-detail:500;
+--line-height-subheading-detail:1.55;
 }
 
 
