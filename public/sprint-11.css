@@ -15,7 +15,7 @@
         padding: .3em;
         width: 11ch;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1050px) {
             font-size: var(--font-size-title1-home);
         }
     }
@@ -34,6 +34,11 @@
 
         @media (min-width: 540px) {
             justify-self: center;
+        }
+
+        @media (min-width: 1050px) {
+            position: static;
+            justify-self: start;
         }
 
         .btn-mic {
