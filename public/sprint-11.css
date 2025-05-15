@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 1fr;
     margin: .5em;
-    padding: .5em;
 
     .svg-gift {
         width: clamp(7em, 50vw, 15em);
@@ -14,9 +13,8 @@
         line-height: var(--line-height-title1-home);
         margin-bottom: .3em;
         padding: .3em;
-        max-width: 12ch;
-        min-width: 7ch;
-        width: auto;
+        margin-right: 2em;
+        width: 11ch;
 
         @media (min-width: 1250px) {
             font-size: var(--font-size-title1-home);
@@ -72,6 +70,10 @@
             border: none;
             background-color: inherit;
             margin-right: .5em;
+
+            img {
+                width: 4em;
+            }
         }
     }
 
