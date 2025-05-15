@@ -36,7 +36,7 @@
             justify-self: center;
         }
 
-        @media (min-width: 1050px) {
+        @media (min-width: 1000px) {
             position: static;
             justify-self: start;
         }
