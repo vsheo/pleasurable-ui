@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* Logo */
+
+header {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10px 0 16px;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    margin: 0;
+}
+
+.logo {
+    width: 46px;
+    height: 54px;
+    object-fit: cover;
+}
+
+.logo-tekst {
+    display: none;
+    margin: 0;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (min-width: 768px) {
+    .logo {
+        width: auto;
+        content: url('/assets/Milledoni-logo-lang.svg');
+    }
+
+    .logo-tekst {
+        display: inline-block;
+        font-size: 26px;
+    }
+
+    .nav-icons {
+        width: 66px;
+        height: 66px;
+    }
+
+}
