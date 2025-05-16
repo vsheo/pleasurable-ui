@@ -1,11 +1,21 @@
 <article class="gift-card">
     <div class="wrapper-img-bookmark">
+        {% if gift.img %}
         <picture>
             <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=150&height=150">
             <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=150&height=150">
             <img class="img-gift" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
                 width="150" height="150" alt="{{ gift.name }}">
         </picture>
+        {% else %}
+        <picture>
+            <source type="image/avif" srcset="/assets/landscape-placeholder-svgrepo-com.avif">
+            <source type="image/webp" srcset="/assets/landscape-placeholder-svgrepo-com.webp">
+            <img class="product-img" src="/assets/landscape-placeholder-svgrepo-com.svg" width="150" height="150"
+                alt="geen afbeelding gevonden">
+        </picture>
+    {% endif %}
+
         <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
             {% if bookmarks contains gift.id %}
             <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
@@ -20,7 +30,7 @@
                 <picture>
                     <source type="image/avif" srcset="/assets/notsaved.avif">
                     <source type="image/webp" srcset="/assets/notsaved.webp">
-                    <img class="bookmark-img" src="/assets/notsaved.svg" width="150" height="150" alt="niet opgeslagen">
+                    <img class="bookmark-img" src="/assets/notsaved.svg" width="50" height="50" alt="niet opgeslagen">
                 </picture>
             </button>
             {% endif %}
@@ -41,7 +51,7 @@
             <picture>
                 <source type="image/avif" srcset="/assets/cadeau.avif">
                 <source type="image/webp" srcset="/assets/cadeau.webp">
-                <img class="img-given" src="/assets/cadeau.svg" width="40" height="40" alt="cadeau">
+                <img class="img-given" src="/assets/cadeau.svg" width="40" height="30" alt="cadeau">
             </picture>
             <p class="gift-given">+4 given</p>
         </div>
