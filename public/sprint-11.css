@@ -54,7 +54,6 @@ header {
 }
 
 .homepage {
-    border: 2px solid;
     display: flex;
     flex-direction: column;
     padding: 0px 0px 10px 0px;
@@ -68,7 +67,6 @@ header {
 }
 
 .container-search {
-    border: 2px solid;
     grid-area: search;
     display: grid;
     grid-template-columns: 1fr;
@@ -76,7 +74,8 @@ header {
 
     @media (min-width: 1280px) {
         position: fixed;
-        margin: 10.5em .5em .5em 1em;
+        bottom: 3%;
+        margin: .5em .5em .5em 1em;
     }
 
     .svg-gift {
@@ -181,7 +180,6 @@ header {
 
 .gift-homepage {
     grid-area: gifts;
-    border: 2px solid;
 
     display: flex;
     flex-direction: column;
@@ -226,8 +224,8 @@ header {
     @media screen and (min-width: 1280px) {
         grid-area: cards;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(var(--gift-container-width), 1fr));
+        gap: 1em;
         justify-items: center;
     }
 }
@@ -243,7 +241,8 @@ header {
     background-color: var(--card-primary-color);
     margin: 1em;
     height: 20em;
-    width: 17em;
+    /* width: clamp(17em, 50%, 23em); */
+    width: var(--gift-width);
     box-shadow: var(--box-shadow-create-list);
     display: flex;
     flex-direction: column;
@@ -311,6 +310,7 @@ header {
     display: flex;
     gap: 1em;
     align-items: center;
+    justify-content: center;
     margin-bottom: .5em;
     margin-top: auto;
 }
@@ -336,7 +336,7 @@ header {
     background-color: var(--card-primary-color);
     margin: 1em;
     height: 20em;
-    width: 17em;
+    width: var(--gift-width);
     box-shadow: var(--box-shadow-create-list);
     display: flex;
     flex-direction: column;
