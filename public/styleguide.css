@@ -153,7 +153,8 @@ body{
 
 /*HEADER*/
 .my-list{
---font-size-button-header:21px;
+--bg-create-list-color-header:#ffffff;
+--font-size-button-header:18px;
 --font-weight-button-header:500;
 --line-height-button-header:1.0;
 /*button create list*/
@@ -162,7 +163,7 @@ body{
 }
 
 .subtitle-header{
---font-size-subtitle2-header:24px;
+--font-size-subtitle2-header:20px;
 --font-weight-subtitle2-header:500;
 --line-height-subtitle2-header:1.25;
 }

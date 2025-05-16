@@ -1,124 +1,7 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <title>Sprint 11</title>
-  <h1>Welkom in Sprint 11!</h1>
 
-  {% comment %} test/voorbeeld van data verwerken {% endcomment %}
-  {% for gift in giftData limit: 2 %}
-    <article>
-      <h2>{{ gift.name }}</h2>
-      <img src="{{gift.image}}" alt="Afbeeling niet gevonden"><br>
-      <span>slug: {{ gift.slug }}</span><br>
-      <span>id: {{ gift.id }}</span><br>
-      <span>img: {{ gift.img.id }}</span><br>
-      <picture>
-        <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{gift.img.id}}?format=avif&width=343&height=295">
-        <img
-          src="{{gift.image}}"
-          width="343px"
-          height="295px"
-          alt="Afbeeling niet gevonden"
-          loading="lazy">
-      </picture>
-      <source>
-    </article>
-  {% endfor %}
-
-
-  {% comment %} post test {% endcomment %}
-  {% for gift in giftData limit: 1 %}
-    <form
-      method="post"
-      action="/{{ gift.id }}"
-      data-enhanced="form-{{ gift.id }}">
-      {% if bookmarks contains gift.id %}
-        <!-- als het cadeau in de bookmark list zit, dan is de bookmark icon zwart -->
-        <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
-          <svg
-            width="75"
-            height="75"
-            viewBox="0 0 75 75"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M23.2051 56.1046V18.5052H52.3476V56.1046L38.3445 50.0956L37.7764 49.8518L37.2082 50.0956L23.2051 56.1046Z"
-              fill="black"
-              stroke="black"
-              stroke-width="2.88143" />
-          </svg>
-        </button>
-      {% else %}
-        <button class="bookmark-icon" aria-label="voeg toe aan bookmarks lijst">
-          <svg
-            width="75"
-            height="75"
-            viewBox="0 0 75 75"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <ellipse
-              cx="37.7846"
-              cy="37.7846"
-              rx="34.7846"
-              ry="34.7846"
-              fill="white" /> <path
-              d="M37.7842 1.84766C57.6316 1.84766 73.7215 17.9369 73.7217 37.7842C73.7217 57.6317 57.6317 73.7217 37.7842 73.7217C17.9369 73.7215 1.84766 57.6316 1.84766 37.7842C1.84788 17.937 17.937 1.84787 37.7842 1.84766Z"
-              stroke="#C9C9C9"
-              stroke-opacity="0.3"
-              stroke-width="2.30504" />
-            <g clip-path="url(#clip0_3571_4304)">
-              <path
-                d="M32 20.584C37.1347 20.3385 42.4489 20.1996 47.7051 21.0801L48.3389 21.1865L48.2295 21.8203L47.8838 23.8301L47.7754 24.459L47.1465 24.3525C42.2339 23.5223 37.1552 23.6537 32.1338 23.9014L29.9863 24.0117C25.1058 24.27 20.0037 24.5388 14.9365 24.0215L14.2998 23.9561L14.3652 23.3193L14.5713 21.292L14.6367 20.6553L15.2734 20.7197L16.1738 20.8027C20.6827 21.1748 25.2923 20.9307 29.8096 20.6934H29.8105L32 20.584Z"
-                fill="#212121"
-                stroke="#212121"
-                stroke-width="1.28058" /> <path
-                d="M15.5273 30.2041C20.1915 31.4181 24.8384 31.0654 29.8955 30.667H29.8965L32.29 30.4873C34.7091 30.3186 37.1938 30.2069 39.6689 30.3535L40.3086 30.3916L40.2705 31.0312L40.1494 33.0645L40.1113 33.7041L39.4717 33.665C37.1787 33.5275 34.8306 33.6329 32.4922 33.7959L30.1592 33.9717C27.7716 34.1578 25.3171 34.3525 22.8408 34.3525C20.1463 34.3525 17.4165 34.1272 14.6816 33.4111L14.0605 33.248L14.2246 32.6279L14.7471 30.6602L14.9102 30.0439L15.5273 30.2041Z"
-                fill="#212121"
-                stroke="#212121"
-                stroke-width="1.28058" /> <path
-                d="M14.2803 41.5801C17.6933 39.6485 21.1393 40.0013 24.3311 40.5752L25.6826 40.8281L25.6836 40.8291L26.7129 41.0234C29.0821 41.4606 31.2206 41.7381 33.3086 41.1533H33.3096L33.6875 41.0527C37.622 40.0558 42.2638 40.3786 46.6104 40.6738H46.6113L48.0957 40.7734C49.5546 40.867 50.9355 40.9375 52.2324 40.9375H52.9521V44.252H52.2324C50.8469 44.2519 49.3982 44.176 47.8994 44.0801L46.3838 43.9795C42.0006 43.6823 37.624 43.3918 34.2119 44.3428H34.2109C33.1319 44.6424 32.0631 44.7706 31.0088 44.7891L31 44.7988H30.7363C29.2667 44.7988 27.8206 44.5919 26.4248 44.3418L25.0479 44.084C21.6317 43.4314 18.6942 42.8898 15.9326 44.4629L15.3789 44.7783L15.0615 44.2266L14.041 42.457L13.7188 41.8984L14.2803 41.5801Z"
-                fill="#212121"
-                stroke="#212121"
-                stroke-width="1.28058" /> <path
-                d="M48.0879 50.5703V53.8848H14.4648V50.5703H48.0879Z"
-                fill="#212121"
-                stroke="#212121"
-                stroke-width="1.28058" /> <path
-                d="M58.2842 24.3711V25.0117C58.2842 26.0648 58.3265 27.4543 58.3691 28.9688L58.4004 30.1475H59.6016L59.6074 30.1533H64.1982V33.4678H58.4717C58.4945 35.5561 58.4655 37.5194 58.2646 38.8613L58.1709 39.4912L57.54 39.3994L55.5059 39.1045L54.8682 39.0127L54.9639 38.376C55.1314 37.266 55.1611 35.4588 55.1387 33.4678C53.348 33.4679 51.6526 33.4687 50.2588 33.4795L49.6191 33.4844L49.6133 32.8457L49.5947 30.8115L49.5889 30.1709L50.2305 30.166C51.6117 30.1553 53.2958 30.1534 55.0664 30.1533C55.0565 29.7876 55.0476 29.4277 55.0361 29.0762V29.0723C54.9938 27.5372 54.9512 26.1059 54.9512 25.0117V24.3711H58.2842Z"
-                fill="#212121"
-                stroke="#212121"
-                stroke-width="1.28058" />
-            </g>
-            <defs>
-              <clipPath id="clip0_3571_4304">
-                <rect
-                  width="48.9561"
-                  height="32.208"
-                  fill="white"
-                  transform="translate(14.5957 21.0391)" />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-      {% endif %}
-    </form>
-  {% endfor %}
-  bookmarked items: {{ bookmarks | json }}
-
-  <br><a href="/favorieten/viresh">favorieten pagina: viresh</a>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milledoni</title>
-    <link rel="stylesheet" href="/sprint-11.css">
-    <link rel="stylesheet" href="/styleguide.css">
-</head>
-
-{% comment %} {% render 'partials/head.liquid', title: 'Home' %} {% endcomment %}
+{% render 'partials/head.liquid', title: 'Home' %} 
 
 <main class="homepage">
-
-    <a href="/favorieten/viresh">Mijn lijst</a>
 
     <section class="container-search">
         <img class="svg-gift" src="/assets/cadeau.svg" alt="afbeelding van een cadeau geven">
@@ -179,7 +62,7 @@
 
 </main>
 
-{% comment %} {% render 'partials/footer.liquid' %} {% endcomment %}
+{% render 'partials/footer.liquid' %}
 
 
 
