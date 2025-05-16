@@ -92,7 +92,7 @@ header {
         padding: .3em;
         width: 12.5ch;
 
-        @media (min-width: 1050px) {
+        @media (min-width: 1200px) {
             font-size: var(--font-size-title1-home);
         }
     }
