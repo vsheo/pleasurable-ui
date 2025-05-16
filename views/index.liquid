@@ -118,62 +118,64 @@
 
 <main class="homepage">
 
-<a href="/favorieten/viresh">Mijn lijst</a>
+    <a href="/favorieten/viresh">Mijn lijst</a>
 
-<section class="container-search">
-    <img class="svg-gift" src="/assets/cadeau.svg" alt="afbeelding van een cadeau geven">
+    <section class="container-search">
+        <img class="svg-gift" src="/assets/cadeau.svg" alt="afbeelding van een cadeau geven">
 
-    <h2 class="section-title subtitle-home">Ik zoek een cadeau voor...</h2>
+        <h2 class="section-title subtitle-home">Ik zoek een cadeau voor...</h2>
 
-    <div class="search-bar">
-        <input type="search" placeholder=""/>
-        <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="afbeelding van een cadeau geven"></button>
-        <span class="placeholder subtitle-search-bar">Beschrijf de persoon</span>
-        <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="afbeelding van een cadeau geven"></button>
-    </div>
+        <div class="search-bar">
+            <input type="search" placeholder=""/>
+            <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="afbeelding van een cadeau geven"></button>
+            <span class="placeholder subtitle-search-bar">Beschrijf de persoon</span>
+            <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="afbeelding van een cadeau geven"></button>
+        </div>
 
-    <div class="section-spotters">
-        <picture class="img-spotters">
-            <source type="image/avif" srcset="/assets/spotters-search.avif">
-            <source type="image/webp" srcset="/assets/spotters-search.webp">
-            <img src="/assets/spotters-search.png" alt="abeelding van spotters" width="160px" height="66">
-        </picture>
+        <div class="section-spotters">
+            <picture class="img-spotters">
+                <source type="image/avif" srcset="/assets/spotters-search.avif">
+                <source type="image/webp" srcset="/assets/spotters-search.webp">
+                <img src="/assets/spotters-search.png" alt="abeelding van spotters" width="160px" height="66">
+            </picture>
 
-        <span class="spotters-text spotters-community">Sluit je aan bij onze community van spotters</span>
-    </div>
-</section>
-
-<section class="gift-homepage">
-
-    <button class="filter-popover" popovertarget="my-popover">
-        <picture>
-            <source type="image/avif" srcset="/assets/filter.avif">
-            <source type="image/webp" srcset="/assets/filter.webp">
-            <img class="filter-homepage-img" src="/assets/filter.svg" width="50" height="50" alt="">
-        </picture>
-        FILTER PER
-    </button>
-    <section class="filter-homepage" popover id="my-popover">
-        Pas filters aan
+            <span class="spotters-text spotters-community">Sluit je aan bij onze community van spotters</span>
+        </div>
     </section>
 
-    {% for gift in giftData %}
-    {% if forloop.index == 2 %}
-    <a href="#"><div class="container-register">
-        <p class="heading-register" href="#">maak een lijst</p>
-        
-        <picture>
-            <source type="image/avif" srcset="/assets/register-login.avif">
-            <source type="image/webp" srcset="/assets/register-login.webp">
-            <img class="register-img" src="/assets/register-login.png" width="150" height="150" alt="">
-        </picture>
+    <section class="gift-homepage">
 
-        <p class="text-register">Maak een lijst voor je beste vriend(in)</p>
-    </div></a>
-    {% endif %}
-    {% include 'partials/giftcard.liquid' %}
-    {% endfor %}
-</section>
+        <button class="filter-popover" popovertarget="my-popover">
+            <picture>
+                <source type="image/avif" srcset="/assets/filter.avif">
+                <source type="image/webp" srcset="/assets/filter.webp">
+                <img class="filter-homepage-img" src="/assets/filter.svg" width="40" height="40" alt="">
+            </picture>
+            FILTER PER
+        </button>
+        <section class="filter-homepage" popover id="my-popover">
+            Pas filters aan
+        </section>
+
+        <div class="cards-wrapper">
+        {% for gift in giftData %}
+        {% if forloop.index == 2 %}
+        <a class="register-login-card" href="#"><div class="container-register">
+            <p class="text-register">Maak een cadeau lijst en deel het! </p>
+            
+            <picture>
+                <source type="image/avif" srcset="/assets/register-login.avif">
+                <source type="image/webp" srcset="/assets/register-login.webp">
+                <img class="register-img" src="/assets/register-login.png" width="160" height="160" alt="">
+            </picture>
+
+            <p class="heading-register" href="#">maak een lijst!</p>
+        </div></a>
+        {% endif %}
+        {% include 'partials/giftcard.liquid' %}
+        {% endfor %}
+    </section>
+    </div>
 
 </main>
 
