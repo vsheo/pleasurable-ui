@@ -1,12 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milledoni</title>
+    <link rel="stylesheet" href="/sprint-11.css">
+    <link rel="stylesheet" href="/styleguide.css">
+</head>
 
 {% comment %} {% render 'partials/head.liquid', title: 'Home' %} {% endcomment %}
 
 <main class="homepage">
 
-<a href="/favorieten/viresh">My list</a>
+<a href="/favorieten/viresh">Mijn lijst</a>
 
+<section class="container-search">
+    <img class="svg-gift" src="/assets/cadeau.svg" alt="afbeelding van een cadeau geven">
+
+    <h2 class="section-title subtitle-home">Ik zoek een cadeau voor...</h2>
+
+    <div class="search-bar">
+        <input type="search" placeholder=""/>
+        <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="afbeelding van een cadeau geven"></button>
+        <span class="placeholder subtitle-search-bar">Beschrijf de persoon</span>
+        <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="afbeelding van een cadeau geven"></button>
+    </div>
+
+    <div class="section-spotters">
+        <picture class="img-spotters">
+            <source type="image/avif" srcset="/assets/spotters-search.avif">
+            <source type="image/webp" srcset="/assets/spotters-search.webp">
+            <img src="/assets/spotters-search.png" alt="abeelding van spotters" width="160px" height="66">
+        </picture>
+
+        <span class="spotters-text spotters-community">Sluit je aan bij onze community van spotters</span>
+    </div>
+</section>
 
 <section class="gift-homepage">
 
