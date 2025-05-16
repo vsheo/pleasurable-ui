@@ -6,51 +6,105 @@
 
 /* Logo */
 header {
-   display: flex;
-   justify-content: space-between;
-   padding: 0 10px 0 16px;
-}
-
-.logo-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
-    margin: 0;
+    justify-content: space-between;
+    background-color: var(--bg-primary-color);
+    /* position: sticky; */
+    top: 0;
+    z-index: 20;
+    padding: 1em;
+
+    @media screen and (min-width:1000px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.logo {
-    width: 46px;
-    height: 54px;
-    object-fit: cover;
+@media screen and (min-width:550px) {
+    .branding {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+    }
 }
 
-.logo-tekst {
+@media screen and (min-width:550px) {
+    .logo-mobile-img{
     display: none;
-    margin: 0;
+    }
 }
 
-.nav-icons {
+.logo-desktop-img {
+    display: none;
+
+    @media screen and (min-width:550px) {
+        display: block;
+    }
+}
+
+.subtitle-header{
+    display: none;
+    font-size: var(--font-size-subtitle2-header);
+    font-weight: var(--font-weight-subtitle2-header);
+    line-height: var(--line-height-subtitle2-header);
+    text-wrap: nowrap;
+
+    @media screen and (min-width:550px) {
+        display: block;
+    }
+}
+
+.nav-icons{
     display: flex;
     justify-content: flex-end;
+    gap: 1em;
+
 }
 
+.your-list {
+    background-color: var(--bg-create-list-color-header);
+    padding: 1em;
+    border-radius: var(--border-radius-button-create-list);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    box-shadow: var(--box-shadow-add);
 
-@media (min-width: 768px) {
-    .logo {
-        width: auto;
-        content: url('/assets/Milledoni-logo-lang.svg');
+    @media screen and (min-width:650px) {
+        text-decoration: none;
+        gap: 1em;
+        width: 11em;
     }
+}
 
-    .logo-tekst {
-        display: inline-block;
-        font-size: 26px;
-    }
+.create-list-img {
+    display: flex;
+}
 
-    .nav-icons {
-        width: 66px;
-        height: 66px;
+.create-list {
+    display: none;
+
+    @media screen and (min-width:650px) {
+        display: block;
+        color: var(--text-primary-color);
+        font-size: var(--font-size-button-header);
+        font-weight: var(--font-weight-button-header);
+        line-height: var(--line-height-button-header);
     }
+}
+
+.to-profile {
+    background-color: var(--bg-create-list-color-header);
+    padding: 1em;
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    height: fit-content;
+    box-shadow: var(--box-shadow-add);
+}
+
+.profile-img {
+    display: flex;
 }
 
 .homepage {
