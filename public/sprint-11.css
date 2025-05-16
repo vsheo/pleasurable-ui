@@ -185,7 +185,7 @@
     background-color: var(--card-primary-color);
     margin: 1em;
     height: 23em;
-    width: 20em;
+    width: clamp(17em, 50%, 20em);
     box-shadow: var(--box-shadow-create-list);
     display: flex;
     flex-direction: column;
