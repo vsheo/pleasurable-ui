@@ -13,7 +13,7 @@
         line-height: var(--line-height-title1-home);
         margin-bottom: .3em;
         padding: .3em;
-        width: 11ch;
+        width: 12ch;
 
         @media (min-width: 1050px) {
             font-size: var(--font-size-title1-home);
