@@ -42,24 +42,25 @@
         </section>
 
         <div class="cards-wrapper">
-        {% for gift in giftData %}
-        {% if forloop.index == 2 %}
-        <a class="register-login-card" href="#"><div class="container-register">
-            <p class="text-register">Maak een cadeau lijst en deel het! </p>
-            
-            <picture>
-                <source type="image/avif" srcset="/assets/register-login.avif">
-                <source type="image/webp" srcset="/assets/register-login.webp">
-                <img class="register-img" src="/assets/register-login.png" width="160" height="160" alt="">
-            </picture>
+            {% for gift in giftData %}
+            {% if forloop.index == 2 %}
+            <a class="register-login-card" href="#"><div class="container-register">
+                <p class="text-register">Maak een cadeau lijst en deel het! </p>
+                
+                <picture>
+                    <source type="image/avif" srcset="/assets/register-login.avif">
+                    <source type="image/webp" srcset="/assets/register-login.webp">
+                    <img class="register-img" src="/assets/register-login.png" width="160" height="160" alt="">
+                </picture>
 
-            <p class="heading-register" href="#">maak een lijst!</p>
-        </div></a>
-        {% endif %}
-        {% include 'partials/giftcard.liquid' %}
-        {% endfor %}
+                <p class="heading-register" href="#">maak een lijst!</p>
+            </div></a>
+            {% endif %}
+            {% include 'partials/giftcard.liquid' %}
+            {% endfor %}
+        </div>
+
     </section>
-    </div>
 
 </main>
 
