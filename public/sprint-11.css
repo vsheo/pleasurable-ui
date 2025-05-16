@@ -168,7 +168,7 @@
     @media screen and (min-width: 1000px) {
         grid-area: cards;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         gap: 1.5rem;
         justify-items: center;
     }
@@ -184,8 +184,8 @@
 .gift-card {
     background-color: var(--card-primary-color);
     margin: 1em;
-    height: 23em;
-    width: clamp(17em, 50%, 20em);
+    height: 20em;
+    width: 17em;
     box-shadow: var(--box-shadow-create-list);
     display: flex;
     flex-direction: column;
