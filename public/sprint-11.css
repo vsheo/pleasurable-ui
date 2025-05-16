@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-/* Logo */
 
+  /* test we gaan deze code naar de branch:  index-layout-samen voegen brengen*/
+/* Logo */
 header {
    display: flex;
    justify-content: space-between;
