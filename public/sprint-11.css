@@ -1,3 +1,198 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 0px;
+
+    @media screen and (min-width:1000px) {
+        display: grid;
+        grid-template-columns: 35% 1fr;
+    }
+}
+
+.gift-homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-secundary-color);
+    border-radius: var(--border-radius-card);
+    border-radius: 20px;
+    gap: 1rem;
+
+    @media screen and (min-width:1000px) {
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-rows: max-content 1fr;
+        grid-template-areas:
+            "filter filter filter"
+            "cards cards cards";
+    }
+
+    /* @media screen and (min-width:1280px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    } */
+}
+
+.filter-popover {
+    grid-area: filter;
+    width: 10em;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-cards-homepage);
+    font-size: var(--xs-paragraph);
+    border-radius: var(--border-radius-m);
+    padding: .5em;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    @media screen and (min-width: 1000px) {
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+}
+
+.filter {
+    width: 15em;
+    height: 25em;
+    border: none;
+    border-radius: var(--border-radius-m);
+}
+
+.gift-card {
+    background-color: var(--card-primary-color);
+    margin: 1em;
+    height: 20em;
+    width: 17em;
+    box-shadow: var(--box-shadow-create-list);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-card);
+}
+
+.wrapper-img-bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12em;
+    width: 100%;
+    position: relative;
+}
+
+.img-gift {
+    display: flex;
+    justify-self: center;
+    margin: .5em;
+}
+
+.bookmark-icon {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1;
+    border: 1px solid #212121;
+    transition: transform 0.3s ease;
+}
+
+.bookmark-img .saved {
+    display: flex;
+    position: absolute;
+    left: 0em;
+    bottom: .2em;
+}
+
+.bookmark-img .saved {
+    position: absolute;
+    left: 0em;
+    bottom: .2em;
+}
+
+.slug {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-size: var(--font-size-card);
+    font-weight: var(--font-weight-card);
+    line-height: var(--line-height-card);
+}
+
+.container-saved-given {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: .5em;
+    margin-top: auto;
+}
+
+.container-gift-extra {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: .2em;
+}
+
+.gift-saved .gift-given {
+    font-size: var(--font-size-saved-given-home);
+    font-weight: var(--font-weight-saved-given-home);
+    line-height: var(--line-height-saved-given-home);
+}
+
+.register-login-card {
+    text-decoration: none;
+}
+
+.container-register {
+    background-color: var(--card-primary-color);
+    margin: 1em;
+    height: 20em;
+    width: 17em;
+    box-shadow: var(--box-shadow-create-list);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-card);
+}
+
+.text-register {
+    display: flex;
+    text-align: center;
+    color: var(--text-secundary-color);
+    font-size: var(--font-size-card);
+    font-weight: var(--font-weight-saved-given-home);
+}
+
+.register-img {
+    display: flex;
+    justify-self: center;
+}
+
+.heading-register {
+    display: flex;
+    align-self: center;
+    padding: .2em 1.2em .2em 1.2em;
+    background-color: var(--bg-secundary-color);
+    color: var(--text-secundary-button-color);
+    font-weight: var(--font-weight-button-header);
+    font-size: var(--font-size-title2-home);
+    transform: rotate(-2deg);
+=======
 .container-search {
     display: grid;
     grid-template-columns: 1fr;

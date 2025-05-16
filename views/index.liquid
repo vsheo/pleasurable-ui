@@ -43,7 +43,7 @@
         <picture>
             <source type="image/avif" srcset="/assets/filter.avif">
             <source type="image/webp" srcset="/assets/filter.webp">
-            <img class="filter-homepage-img" src="/assets/filter.svg" width="50" height="50" alt="">
+            <img class="filter-homepage-img" src="/assets/filter.svg" width="40" height="40" alt="">
         </picture>
         FILTER PER
     </button>
@@ -51,23 +51,25 @@
         Pas filters aan
     </section>
 
+    <div class="cards-wrapper">
     {% for gift in giftData %}
     {% if forloop.index == 2 %}
-    <a href="#"><div class="container-register">
-        <p class="heading-register" href="#">maak een lijst</p>
+    <a class="register-login-card" href="#"><div class="container-register">
+        <p class="text-register">Maak een cadeau lijst en deel het! </p>
         
         <picture>
             <source type="image/avif" srcset="/assets/register-login.avif">
             <source type="image/webp" srcset="/assets/register-login.webp">
-            <img class="register-img" src="/assets/register-login.png" width="150" height="150" alt="">
+            <img class="register-img" src="/assets/register-login.png" width="160" height="160" alt="">
         </picture>
 
-        <p class="text-register">Maak een lijst voor je beste vriend(in)</p>
+        <p class="heading-register" href="#">maak een lijst!</p>
     </div></a>
     {% endif %}
     {% include 'partials/giftcard.liquid' %}
     {% endfor %}
 </section>
+</div>
 
 </main>
 
