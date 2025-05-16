@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
+  /* test we gaan deze code naar de branch:  index-layout-samen voegen brengen*/
 /* Logo */
 header {
     display: flex;
