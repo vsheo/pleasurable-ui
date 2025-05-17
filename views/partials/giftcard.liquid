@@ -1,19 +1,19 @@
-<article class="gift-card">
+<article class="gift-card slug">
     <div class="wrapper-img-bookmark">
         {% if gift.img %}
         <picture>
             <source type="image/avif"
-                srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=150&height=150">
+                srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=180&height=180">
             <source type="image/webp"
-                srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=150&height=150">
+                srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=180&height=180">
             <img class="img-gift" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
-                width="150" height="150" alt="{{ gift.name }}">
+                width="180" height="180" alt="{{ gift.name }}">
         </picture>
         {% else %}
         <picture>
             <source type="image/avif" srcset="/assets/landscape-placeholder-svgrepo-com.avif">
             <source type="image/webp" srcset="/assets/landscape-placeholder-svgrepo-com.webp">
-            <img class="product-img" src="/assets/landscape-placeholder-svgrepo-com.svg" width="150" height="150"
+            <img class="product-img" src="/assets/landscape-placeholder-svgrepo-com.svg" width="180" height="180"
                 alt="geen afbeelding gevonden">
         </picture>
         {% endif %}

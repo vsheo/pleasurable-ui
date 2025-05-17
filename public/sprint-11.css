@@ -405,6 +405,7 @@ header {
     color: var(--text-secundary-color);
     font-size: var(--font-size-card);
     font-weight: var(--font-weight-saved-given-home);
+    margin: 0em 1em 1em 1em;
 }
 
 .register-img {
