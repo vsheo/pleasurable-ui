@@ -103,6 +103,29 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+- Download de nieuwste versie van Node.js (https://nodejs.org/en) op je laptop of computer.
+- Fork deze repository en Clone jouw fork naar je laptop
+- Open de repository in Visual Studio Code (of een andere code editor)
+- open de terminal in vscode en instaleer node in de repository:
+```
+npm install
+npm install -D nodemon
+```
+- controleer als de deze code hebt staan in package.json:"
+```
+"scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+```
+- Zodra de installatie klaar is, voer je het volgende commando uit om de website op localhost te starten
+    - Voor gewone start, met deze moet je handmatig de server opnieuw opstarten bij wijzigingen:
+    ``` npm start ```
+    - Als je de server start met nodemon, dan wordt de server automatisch opnieuw gestart bij wijzigingen in server.js:
+    ``` npm run dev ```
+- Na het starten zie je in de terminal een localhost-link. Klik erop of open deze in je browser
+- als je de server wilt stoppen dan kan dat met deze command:
+``` Ctrl + C ```
 
 ## Bronnen
 
