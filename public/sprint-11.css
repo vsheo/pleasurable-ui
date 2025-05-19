@@ -329,7 +329,8 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 1em;
+    /* top: 1em; */
+    top: 0;
     right: 1em;
     z-index: 1;
     border: 1px solid #212121;
@@ -353,8 +354,10 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0em 1em 0em 1em;
+    padding: 1em 0em 0em 0em;
+    /* margin-left: 1em;
+    margin-right: 1em; */
     text-decoration: none;
     color: var(--text-primary-color);
     font-size: var(--font-size-card);
@@ -367,8 +370,9 @@ header {
     gap: 1em;
     align-items: center;
     justify-content: center;
-    margin-bottom: .5em;
-    margin-top: auto;
+    margin: auto .5em .5em 0em ;
+    /* margin-bottom: .5em;
+    margin-top: auto; */
 }
 
 .container-gift-extra {
@@ -390,7 +394,7 @@ header {
 
 .container-register {
     background-color: var(--card-primary-color);
-    margin: 1em;
+    /* margin: 1em; */
     height: 20em;
     width: var(--gift-width);
     box-shadow: var(--box-shadow-create-list);
@@ -405,6 +409,7 @@ header {
     color: var(--text-secundary-color);
     font-size: var(--font-size-card);
     font-weight: var(--font-weight-saved-given-home);
+    margin: 0em 1em 1em 1em;
 }
 
 .register-img {
