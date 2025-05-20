@@ -125,10 +125,10 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
-
-
-app.get('/akiko', async function (request, response) {
-  response.render('akiko.liquid')
+app.get('/cadeau/:slug', async function (request, response) {
+    const cadeauResponse = await fetch(baseGiftURL + ',description,amount,spotter?filter={"slug":"${slug}"}&limit=1')
+    const cadeauResponseJSON = await cadeauResponse.json()
+    response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
