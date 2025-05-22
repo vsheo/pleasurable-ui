@@ -1,3 +1,15 @@
 {% render 'partials/head.liquid', title: gift.name %}
 
+<section>
+    <h3>You may also like</h3>
+
+    <ul>
+        {% for gift in allGifts limit: 6%}
+            <li>
+                {% include 'partials/giftcard.liquid' gift: gift %}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
 {% render 'partials/footer.liquid' %}
