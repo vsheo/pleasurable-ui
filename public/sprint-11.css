@@ -437,6 +437,8 @@ header {
     "indicator indicator indicator";
     margin: 0 5em;
 
+    height: 43em;
+
     .section-title {
         grid-area: title;
     }
@@ -453,12 +455,14 @@ header {
 .container-carrousel {
     grid-area: carrousel;
     display: flex;
+    align-items: center;
 
-    gap: 1em;
+    gap: 4em;
     list-style: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-marker-group: after;
+    scroll-behavior: smooth;
 
     &::scroll-button(left) {
         content: "◄";
@@ -499,6 +503,19 @@ header {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 
+    /* https://scroll-driven-animations.style/demos/cover-flow/css/ */
+    &> article {
+        /* scroll animation */
+        /* Track this element as it intersects the scrollport */
+        view-timeline-name: --scale-center-li;
+        view-timeline-axis: inline;
+        
+        /* Link an animation to the established view-timeline and have it run during the contain phase */
+        animation: linear center-scale both;
+        animation-timeline: --scale-center-li;
+    }
+
+
     &::scroll-marker {
         content: '';
         content: "";
@@ -538,4 +555,17 @@ header {
             color: #212121;
         }
     }
+}
+
+
+@keyframes center-scale {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 1.3;
+	}
+	100% {
+		scale: 1;
+	}
 }
