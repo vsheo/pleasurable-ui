@@ -435,7 +435,7 @@ header {
     "title title title"
     "left carrousel right"
     "indicator indicator indicator";
-    margin: 0 10em;
+    margin: 0 5em;
 
     .section-title {
         grid-area: title;
@@ -464,17 +464,23 @@ header {
         content: "◄";
         cursor: pointer;
         border: none;
-        background-color: gold;
+        background-color: #4d4d4d91;
         padding: 2em;
+        position: relative;
+        left: 100%;
+        z-index: 2;
     }
   
     &::scroll-button(right) {
         content: "►";
         cursor: pointer;
         border: none;
-        background-color: gold;
+        background-color: #4d4d4d91;
         padding: 2em;
         margin-left:1em;
+        position: relative;
+        right: 100%;
+        z-index: 2;
     }
 
     &::scroll-marker-group {
@@ -496,12 +502,40 @@ header {
     &::scroll-marker {
         content: '';
         content: "";
-        border: 1px solid red;
+        border: 2px solid #898A8D;
         height: 1em;
         width: 1em;
+        border-radius: 50%;
     }
     
     &::scroll-marker:target-current {
-        background: red;
+        background: #898A8D;
+    }
+}
+
+.placeholder-gift {
+    min-width: var(--gift-width);
+    height: 20em;
+    background-color: #898A8D;
+    border-radius: var(--border-radius-card);
+    color: #898A8D;
+    user-select: none;
+    position: relative;
+
+    .index-link {
+        color: white;
+        text-decoration: none;
+        font-size: var(--font-size-text1-detail);
+        /* hele height en width van de container(li) clickable */
+        position: absolute;
+        inset: 0;
+        /* text center */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: #212121;
+        }
     }
 }

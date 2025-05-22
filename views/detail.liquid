@@ -9,6 +9,12 @@
                 {% include 'partials/giftcard.liquid' gift: gift %}
             </li>
         {% endfor %}
+
+        <li class="item-carrousel placeholder-gift slug"><a href="/" class="index-link description-cadeau">Meer Resulaten</a></li>
+
+        {% for li in (1..2)%}
+            <li class="item-carrousel placeholder-gift slug"></li>
+        {% endfor %}
     </ul>
 </section>
 
