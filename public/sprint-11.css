@@ -508,7 +508,7 @@ header {
         /* scroll animation */
         /* Track this element as it intersects the scrollport */
         view-timeline-name: --scale-center-li;
-        view-timeline-axis: inline;
+        view-timeline-axis: x;
         
         /* Link an animation to the established view-timeline and have it run during the contain phase */
         animation: linear center-scale both;
