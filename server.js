@@ -129,7 +129,7 @@ app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
     const cadeauDetailsResponse = await fetch(baseGiftURL + `,description,amount,spotter&filter={"slug":"${slug}"}`)
     const cadeauDetailsResponseJSON = await cadeauDetailsResponse.json()
-    const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img')
+    const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6')
     const allCadeauResponseJSON = await allCadeauResponse.json()
     response.render('detail.liquid', { giftDetails: cadeauDetailsResponseJSON.data, allGifts: allCadeauResponseJSON.data })
 })

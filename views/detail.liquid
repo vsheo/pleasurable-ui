@@ -4,7 +4,7 @@
     <h3>You may also like</h3>
 
     <ul>
-        {% for gift in allGifts limit: 6%}
+        {% for gift in allGifts%}
             <li>
                 {% include 'partials/giftcard.liquid' gift: gift %}
             </li>
