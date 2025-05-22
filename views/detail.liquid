@@ -1,11 +1,11 @@
 {% render 'partials/head.liquid', title: gift.name %}
 
-<section>
-    <h3>You may also like</h3>
+<section class="section-also-like">
+    <h3 class="section-title">You may also like</h3>
 
-    <ul>
+    <ul class="container-carrousel">
         {% for gift in allGifts%}
-            <li>
+            <li class="item-carrousel">
                 {% include 'partials/giftcard.liquid' gift: gift %}
             </li>
         {% endfor %}

@@ -427,3 +427,81 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+/* details you may also like carrousel */
+.section-also-like {
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "left carrousel right"
+    "indicator indicator indicator";
+    margin: 0 10em;
+
+    .section-title {
+        grid-area: title;
+    }
+
+    &::scroll-button(inline-start) {
+        grid-area: left;
+    }
+
+    &::scroll-button(inline-end) {
+        grid-area: right;
+    }
+}
+
+.container-carrousel {
+    grid-area: carrousel;
+    display: flex;
+
+    gap: 1em;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+
+    &::scroll-button(left) {
+        content: "◄";
+        cursor: pointer;
+        border: none;
+        background-color: gold;
+        padding: 2em;
+    }
+  
+    &::scroll-button(right) {
+        content: "►";
+        cursor: pointer;
+        border: none;
+        background-color: gold;
+        padding: 2em;
+        margin-left:1em;
+    }
+
+    &::scroll-marker-group {
+        grid-area: indicator;
+        display: flex;
+        gap: 0.4em;
+        place-content: center;
+        margin-top: 1em;
+    }
+}
+
+.item-carrousel {
+    display: flex;
+    flex: 0 0 20%;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    &::scroll-marker {
+        content: '';
+        content: "";
+        border: 1px solid red;
+        height: 1em;
+        width: 1em;
+    }
+    
+    &::scroll-marker:target-current {
+        background: red;
+    }
+}
