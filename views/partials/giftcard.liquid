@@ -18,7 +18,7 @@
         </picture>
         {% endif %}
 
-        <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+        <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}" class="bookmark-form">
             {% if bookmarks contains gift.id %}
             <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
                 <picture>
@@ -36,6 +36,7 @@
                 </picture>
             </button>
             {% endif %}
+            <div class="bookmark-loader" hidden></div>
         </form>
     </div>
     <h3 class="gift-name">
