@@ -197,7 +197,6 @@ header {
             line-height: var(--line-height-title2-home);
             grid-area: search;
             align-self: center;
-            pointer-events: none;
             color: #A3A3A3;
         }
 
