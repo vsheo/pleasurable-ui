@@ -1,7 +1,12 @@
 // https://www.youtube.com/watch?v=2IbRtjez6ag&t=50s
 // alle article selecteren
 const sections = document.querySelectorAll(".container-details section")
-console.log(sections)
+// console.log(sections)
+
+sections.forEach(section => {
+    section.classList.add("JS-hidden")
+})
+
 
 // intersection observer aanmaken
 const observer = new IntersectionObserver(entries => {
