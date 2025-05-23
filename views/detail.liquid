@@ -3,16 +3,25 @@
 
 <main class="detail-page">
 
-  <h2 class="detail-title">{{ gift[0].name }}</h2>
+  <section class="detail-layout">
 
-  <picture>
-    <img src="https://fdnd-agency.directus.app/assets/{{ gift[0].img.id }}" alt="{{ gift[0].name }}">
-  </picture>
+    <h2 class="detail-title">{{ gift[0].name }}</h2>
 
-  <div class="detail-info">
-    <p class="detail-description">{{ gift[0].description }}</p>
-    <p class="detail-price">Prijs: €{{ gift[0].amount }}</p>
-  </div>
+    <picture>
+      <img
+        src="https://fdnd-agency.directus.app/assets/{{ gift[0].img.id }}"
+        alt="{{ gift[0].name }}"
+        class="detail-image">
+    </picture>
+
+
+    <div class="detail-info">
+      <h2 class="detail-title-desktop">{{ gift[0].name }}</h2>
+
+      <p class="detail-price">€{{ gift[0].amount }}</p>
+      <p class="detail-description">{{ gift[0].description }}</p>
+    </div>
+  </section>
 
 </main>
 

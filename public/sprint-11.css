@@ -439,6 +439,53 @@ header {
 
 /* detail */
 
+.detail-layout {  
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 .detail-title {
-    font-size: 2rem;
+    font-weight: var(--font-weight-title1-detail);
+    line-height: var(--line-height-title1-detail);
+    text-align: left;
+}
+
+.detail-info {
+    text-align: left;
+}
+
+.detail-description {
+    font-size: var(--font-size-text1-detail);
+    font-weight: var(--font-weight-text1-detail);
+}
+
+.detail-price {
+    font-size: var(--font-size-text1-detail);
+    font-weight: var(--font-weight-text1-detail);
+}
+
+@media (min-width: 768px) {
+    .detail-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-layout {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+      }
+
+    .detail-info {
+        max-width: 600px;
+      }
+
+      .detail-title {
+        display: none;
+      }
+
+      .detail-title-desktop {
+        display: block;
+      }
 }

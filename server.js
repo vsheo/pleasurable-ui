@@ -134,8 +134,8 @@ const cadeauResponseJSON = await cadeauResponse.json();
 
 console.log("Gevonden cadeau:", cadeauResponseJSON.data[0]);
 
-console.log("Slug uit URL:", slug);
-console.log("Response data:", cadeauResponseJSON.data);
+// console.log("Slug uit URL:", slug);
+// console.log("Response data:", cadeauResponseJSON.data);
 
 if (cadeauResponseJSON.data.length === 0) {
   return response.status(404).send("Cadeau niet gevonden of lege array");
