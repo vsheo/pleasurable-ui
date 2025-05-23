@@ -29,8 +29,8 @@ header {
 }
 
 @media screen and (min-width:550px) {
-    .logo-mobile-img{
-    display: none;
+    .logo-mobile-img {
+        display: none;
     }
 }
 
@@ -42,7 +42,7 @@ header {
     }
 }
 
-.subtitle-header{
+.subtitle-header {
     display: none;
     font-size: var(--font-size-subtitle2-header);
     font-weight: var(--font-weight-subtitle2-header);
@@ -54,7 +54,7 @@ header {
     }
 }
 
-.nav-icons{
+.nav-icons {
     display: flex;
     justify-content: flex-end;
     gap: 1em;
@@ -116,8 +116,8 @@ header {
     @media screen and (min-width:1280px) {
         display: grid;
         grid-template-columns: 36em 1fr;
-        grid-template-areas: 
-        "search gifts";
+        grid-template-areas:
+            "search gifts";
     }
 }
 
@@ -154,7 +154,7 @@ header {
     .search-bar {
         display: grid;
         grid-template-areas:
-        "search";
+            "search";
         margin-bottom: 1em;
         width: 85dvw;
         max-width: 30em;
@@ -370,7 +370,7 @@ header {
     gap: 1em;
     align-items: center;
     justify-content: center;
-    margin: auto .5em .5em 0em ;
+    margin: auto .5em .5em 0em;
     /* margin-bottom: .5em;
     margin-top: auto; */
 }
@@ -427,3 +427,67 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+
+.car {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-marker-group: after;
+}
+
+
+li{
+    scroll-snap-align: center;
+    scroll-snap-align: start;
+}
+
+li::scroll-marker {
+    content: "";
+    border: 1px solid rgb(134, 114, 151);
+    height: 1em;
+    width: 1em;
+  }
+
+  li::scroll-marker:target-current {
+    background: red;
+  }
+
+  li::scroll-marker-group {
+    display: flex;
+    gap: 0.4em;
+    place-content: center;
+  }
+
+    .car::scroll-button(right) {
+        content: "▶";
+    }
+
+    .car::scroll-button(left) {
+        content: "◀";
+    }
+
+    .car::scroll-button(*) {
+        border: 0;
+        background: rgb(205, 213, 247);
+        color: rgb(0 0 0 / 0.7);
+        cursor: pointer;
+        border-radius: 50%;
+        border: none;
+        width: 5em;
+        height: 5em;
+        display: block;
+    }
+
+    .car::scroll-button(*):hover,
+    .car::scroll-button(*):focus {
+        color: rgb(0 0 0 / 1);
+    }
+
+
+    /*laat zien welke niet kan gebruikt worden */
+    .car::scroll-button(*):disabled {
+        color: rgb(0 0 0 / 0.2);
+        cursor: unset;
+    }
