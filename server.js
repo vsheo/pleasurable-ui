@@ -128,14 +128,13 @@ async function changeBookmark(listId,giftId) {
 
 app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
-    //extra fields toevoegen door variabele aan te maken
-    const extraFields = 'description,amount,spotter,tags';
-    //de url voor de detailpagina haal de baseGiftURL op en voeg de extraFields toe 
-    const url = `${baseGiftURL},${extraFields}&filter={"slug":"${slug}"}&limit=1`;
-    const cadeauResponse = await fetch(url);
+    //de url voor de detailpagina haal de baseGiftURL op en voeg de extraFields toe en haalt maar 1 cadeau op
+    const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
     const cadeauResponseJSON = await cadeauResponse.json();
-    const gift = cadeauResponseJSON.data[0];
-    response.render('detail.liquid', { gift });
+    //haal de cadeau's op waar de img goed in de database staat en haalt er maar 6 op
+    const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6')
+    const allCadeauResponseJSON = await allCadeauResponse.json()
+    response.render('detail.liquid', { gift:cadeauResponseJSON.data[0], allGifts:allCadeauResponseJSON.data });
   });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
