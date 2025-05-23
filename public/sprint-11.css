@@ -458,33 +458,31 @@ header {
     align-items: center;
 
     gap: 4em;
+    margin: 0 .5em;
     list-style: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-marker-group: after;
     scroll-behavior: smooth;
 
-    &::scroll-button(left) {
-        content: "◄";
+    &::scroll-button(left), &::scroll-button(right) {
+        content: "";
         cursor: pointer;
         border: none;
-        background-color: #4d4d4d91;
         padding: 2em;
-        position: relative;
-        left: 100%;
-        z-index: 2;
+        width: 6.5em;
+        height: 6.5em;
+        border: 2px solid var(--text-primary-input-color);
+        border-radius: 50%;
+        align-self: center;
+        background-color: inherit;
+        background-image: url('assets/carrousel-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
     }
-  
-    &::scroll-button(right) {
-        content: "►";
-        cursor: pointer;
-        border: none;
-        background-color: #4d4d4d91;
-        padding: 2em;
-        margin-left:1em;
-        position: relative;
-        right: 100%;
-        z-index: 2;
+
+    &::scroll-button(left) {
+        rotate: 180deg;
     }
 
     &::scroll-marker-group {
@@ -504,7 +502,7 @@ header {
     scroll-snap-stop: always;
 
     /* https://scroll-driven-animations.style/demos/cover-flow/css/ */
-    &> article {
+    article {
         /* scroll animation */
         /* Track this element as it intersects the scrollport */
         view-timeline-name: --scale-center-li;
@@ -518,7 +516,6 @@ header {
 
     &::scroll-marker {
         content: '';
-        content: "";
         border: 2px solid #898A8D;
         height: 1em;
         width: 1em;
