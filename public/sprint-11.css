@@ -462,6 +462,7 @@ header {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(var(--gift-container-width), 1fr));
         place-content: center;
+        margin: 0 .5em;
 
         @media screen and (min-width: 1280px) {
             display: flex;
@@ -551,8 +552,12 @@ header {
             user-select: none;
             position: relative;
 
-            &:last-child {
-                @media screen and (min-width:300px) {
+            @media screen and (max-width:1280px) {
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
                     display: none;
                 }
             }

@@ -6,6 +6,8 @@
         <h3 class="section-title">You may also like</h3>
 
         <ul class="container-carrousel">
+            <li class="item-carrousel placeholder-gift slug"><article class=""></article></li>
+
             {% for gift in allGifts%}
                 <li class="item-carrousel">
                     {% include 'partials/giftcard.liquid' gift: gift %}
