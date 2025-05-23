@@ -1,17 +1,19 @@
 {% render 'partials/head.liquid'
   , title: gift.name %}
 
+<main class="detail-page">
 
-<h2>{{ gift[0].name }}</h2>
+  <h2 class="detail-title">{{ gift[0].name }}</h2>
 
-<img
-  src=""
-  width="100"
-  height="300">
+  <picture>
+    <img src="https://fdnd-agency.directus.app/assets/{{ gift[0].img.id }}" alt="{{ gift[0].name }}">
+  </picture>
 
+  <div class="detail-info">
+    <p class="detail-description">{{ gift[0].description }}</p>
+    <p class="detail-price">Prijs: €{{ gift[0].amount }}</p>
+  </div>
 
-<p>{{ gift[0].description }}</p>
-<p>Prijs: €{{ gift[0].amount }}</p>
-
+</main>
 
 {% render 'partials/footer.liquid' %}

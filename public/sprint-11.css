@@ -435,3 +435,10 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+
+/* detail */
+
+.detail-title {
+    font-size: 2rem;
+}
