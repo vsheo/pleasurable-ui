@@ -1,18 +1,22 @@
 {% render 'partials/head.liquid', title: gift.name %}
 
-<section class="section-also-like">
-    <h3 class="section-title">You may also like</h3>
+<main class="detailpage">
 
-    <ul class="container-carrousel">
-        {% for gift in allGifts%}
-            <li class="item-carrousel">
-                {% include 'partials/giftcard.liquid' gift: gift %}
-            </li>
-        {% endfor %}
+    <section class="section-also-like">
+        <h3 class="section-title">You may also like</h3>
 
-        <li class="item-carrousel placeholder-gift slug"><a href="/" class="index-link description-cadeau">Meer Resulaten</a></li>
-        <li class="item-carrousel placeholder-gift slug"><article class=""></article></li>
-    </ul>
-</section>
+        <ul class="container-carrousel">
+            {% for gift in allGifts%}
+                <li class="item-carrousel">
+                    {% include 'partials/giftcard.liquid' gift: gift %}
+                </li>
+            {% endfor %}
+
+            <li class="item-carrousel placeholder-gift slug"><a href="/" class="index-link description-cadeau">Meer Resulaten</a></li>
+            <li class="item-carrousel placeholder-gift slug"><article class=""></article></li>
+        </ul>
+    </section>
+
+</main>
 
 {% render 'partials/footer.liquid' %}
