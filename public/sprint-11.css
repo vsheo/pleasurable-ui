@@ -427,3 +427,66 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+
+.container-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2em;
+
+
+    .img-carrousel {
+        grid-column: 1;
+        grid-row: 1 / -1;
+    }
+
+    .gift-description, .extra-info, .save-to-give, .where-to-find, .save-to-list, .also-like {
+        grid-column: 2;
+        background-color: #A3A3A3;
+        opacity: 0;
+    }
+
+    .slide-animation {
+        opacity: 1;
+        animation: linear slide-in 1s;
+        /* https://codepen.io/setswon/pen/VJeXXq */
+        animation-timing-function: cubic-bezier(.47,1.64,.41,.8);
+    }
+/* 
+    .extra-info {
+        grid-column: 2;
+        background-color: #A3A3A3;
+    }
+
+    .save-to-give {
+        grid-column: 2;
+        background-color: #A3A3A3;
+    }
+
+    .where-to-find {
+        grid-column: 2;
+        background-color: #A3A3A3;
+    }
+
+    .save-to-list {
+        grid-column: 2;
+        background-color: #A3A3A3;
+    }
+
+    .also-like {
+        grid-column: 2;
+        background-color: #A3A3A3;
+    } */
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateY(500%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
