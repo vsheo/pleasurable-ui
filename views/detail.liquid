@@ -1,3 +1,17 @@
-{% render 'partials/head.liquid', title: gift.name %}
+{% render 'partials/head.liquid'
+  , title: gift.name %}
+
+
+<h2>{{ gift[0].name }}</h2>
+
+<img
+  src=""
+  width="100"
+  height="300">
+
+
+<p>{{ gift[0].description }}</p>
+<p>Prijs: €{{ gift[0].amount }}</p>
+
 
 {% render 'partials/footer.liquid' %}

@@ -127,8 +127,21 @@ async function changeBookmark(listId,giftId) {
 }
 app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
-    const cadeauResponse = await fetch(baseGiftURL + `,description,amount,spotter?filter={"slug":"${slug}"}&limit=1`)
-    const cadeauResponseJSON = await cadeauResponse.json()
+
+const cadeauURL = `https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,slug,id,img,img.id,description,amount,spotter&filter={"slug":"${slug}"}&limit=1`;
+const cadeauResponse = await fetch(cadeauURL);
+const cadeauResponseJSON = await cadeauResponse.json();
+
+console.log("Gevonden cadeau:", cadeauResponseJSON.data[0]);
+
+console.log("Slug uit URL:", slug);
+console.log("Response data:", cadeauResponseJSON.data);
+
+if (cadeauResponseJSON.data.length === 0) {
+  return response.status(404).send("Cadeau niet gevonden of lege array");
+}
+
+  
     response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
 })
 
