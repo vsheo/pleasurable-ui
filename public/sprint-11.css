@@ -337,6 +337,34 @@ header {
     transition: transform 0.3s ease;
 }
 
+  .plus {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  
+  .check {
+    opacity: 0;
+    stroke-dasharray: 30;     
+    stroke-dashoffset: 30;   
+    transition: opacity .3s ease;
+  }
+  
+  .bookmark-icon :hover .plus {
+    opacity: 0;
+  }
+  
+  .bookmark-icon :hover .check {
+    opacity: 1;
+    animation: drawCheck 1s forwards;
+  }
+  
+  @keyframes drawCheck {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
 .bookmark-img .saved {
     display: flex;
     position: absolute;
