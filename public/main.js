@@ -5,20 +5,19 @@ console.log(sections)
 
 // intersection observer aanmaken
 const observer = new IntersectionObserver(entries => {
-    // console.log(entries)
     entries.forEach(entry => {
-        // de class wordt aan de article toegevoegd, of weg gehaald, zodra het eerste gedeelte van de article op beeld komt.
+        // de class wordt aan de section toegevoegd, of weg gehaald, zodra het eerste gedeelte van de article op beeld komt.
         entry.target.classList.toggle("slide-animation", entry.isIntersecting)
         // nadat de article in beeld is gaat het niet meer weg
         if (entry.isIntersecting) observer.unobserve(entry.target)
     })
 }, {
-    // alleen als de helft van de article op beeld past wordt de class aan de article toegevoegd
-    threshold: 0.3,
+    // alleen als 80% van de section al op beeld is wordt de class aan de section toegevoegd
+    threshold: 0.8,
 }
 );
 
 // intersection observer toepassen op elke article
-sections.forEach(article => {
-    observer.observe(article)
+sections.forEach(section => {
+    observer.observe(section)
 })
