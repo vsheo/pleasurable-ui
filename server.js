@@ -125,12 +125,18 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
+
 app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
-    const cadeauResponse = await fetch(baseGiftURL + `,description,amount,spotter?filter={"slug":"${slug}"}&limit=1`)
-    const cadeauResponseJSON = await cadeauResponse.json()
-    response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
-})
+    //extra fields toevoegen door variabele aan te maken
+    const extraFields = 'description,amount,spotter,tags';
+    //de url voor de detailpagina haal de baseGiftURL op en voeg de extraFields toe 
+    const url = `${baseGiftURL},${extraFields}&filter={"slug":"${slug}"}&limit=1`;
+    const cadeauResponse = await fetch(url);
+    const cadeauResponseJSON = await cadeauResponse.json();
+    const gift = cadeauResponseJSON.data[0];
+    response.render('detail.liquid', { gift });
+  });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
