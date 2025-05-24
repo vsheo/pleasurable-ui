@@ -435,3 +435,187 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+/* details you may also like carrousel */
+.section-also-like {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5em;
+
+    @media screen and (min-width: 1280px) {
+        display: grid;
+        grid-template-areas:
+            "title title title"
+            "left carrousel right"
+            "indicator indicator indicator";
+        /* height: 34.5em; */
+    }
+
+    .section-title {
+        grid-area: title;
+        align-self: start;
+        text-wrap: nowrap;
+    }
+
+    .container-carrousel {
+        grid-area: carrousel;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--gift-container-width), 1fr));
+        place-content: center;
+        margin: 0 .5em;
+
+        @media screen and (min-width: 1280px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 26.3em;
+            position: relative;
+            overflow: hidden;
+
+            gap: 4em;
+            margin: 0 .5em;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-marker-group: after;
+            scroll-behavior: smooth;
+
+            &::scroll-button(left), &::scroll-button(right) {
+                content: "→";
+                scale: 1.5;
+                cursor: pointer;
+                padding: 1em;
+                margin: 0 1em;
+                border: 1px solid var(--text-primary-input-color);
+                border-radius: 50%;
+                align-self: center;
+            }
+
+            &::scroll-button(left) {
+                rotate: 180deg;
+            }
+
+            /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
+            &::scroll-button(*):not(:disabled):is(:hover, :active) {
+                scale: 1.6;
+                filter: brightness(1.1);
+            }
+
+            &::scroll-button(*):not(:disabled):active {
+                scale: 1.4;
+            }
+
+            &::scroll-marker-group {
+                grid-area: indicator;
+                display: flex;
+                gap: 0.4em;
+                place-content: center;
+                margin-top: 1em;
+            }
+        }
+
+        .item-carrousel {
+            margin-bottom: 1em;
+            align-self: center;
+            justify-self: center;
+
+            @media screen and (min-width: 1280px) {
+                display: flex;
+                flex: 0 0 20%;
+
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+
+                /* https://scroll-driven-animations.style/demos/cover-flow/css/ */
+                article {
+                    /* scroll animation */
+                    /* Track this element as it intersects the scrollport */
+                    view-timeline-name: --scale-center-li;
+                    view-timeline-axis: x;
+                    
+                    /* Link an animation to the established view-timeline and have it run during the contain phase */
+                    animation: linear center-scale both;
+                    animation-timeline: --scale-center-li;
+                }
+
+                &::scroll-marker {
+                    content: '';
+                    border: 2px solid #898A8D;
+                    height: 1em;
+                    width: 1em;
+                    border-radius: 50%;
+                }
+                
+                &::scroll-marker:target-current {
+                    background: #898A8D;
+                }
+            }
+        }
+
+        .placeholder-gift {
+            min-width: var(--gift-width);
+            height: 20em;
+            background-color: #898A8D;
+            border-radius: var(--border-radius-card);
+            color: #898A8D;
+            user-select: none;
+            position: relative;
+            display: none;
+
+            .index-link {
+                color: white;
+                text-decoration: none;
+                font-size: var(--font-size-text1-detail);
+                /* hele height en width van de container(li) clickable */
+                position: absolute;
+                inset: 0;
+                /* text center */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    color: #212121;
+                }
+            }
+        }
+
+        .placeholder-gift {
+            @media screen and (min-width: 1280px) {
+                display: block;
+            }
+
+            &:first-child {
+                @media screen and (min-width: 1280px) {
+                    /* deze margin is voor een bug */
+                    margin-left: 160em;
+                }
+            }
+        }
+    }
+
+    &::scroll-button(inline-start) {
+        grid-area: left;
+    }
+
+    &::scroll-button(inline-end) {
+        grid-area: right;
+    }
+}
+
+
+
+
+
+
+@keyframes center-scale {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 1.2;
+	}
+	100% {
+		scale: 1;
+	}
+}
