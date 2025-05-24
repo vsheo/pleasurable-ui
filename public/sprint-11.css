@@ -440,5 +440,49 @@ header {
     .section-title {
         display: flex;
         align-items: center;
+        margin-left: 1em;
+    }
+
+    .table-where-find {
+        width: 100%;
+        max-width: 25em;
+        border-spacing: 0 .7em;
+        margin-left: 2em;
+
+        th, td {
+            padding: .2em;
+            text-align: left;
+            border-bottom: 1px solid var(--text-primary-color);
+            position: relative;
+        }
+
+        th {
+            background-color: var(--border-primary-form-color);
+            color: var(--text-primary-color);
+        }
+
+        tr {
+            height: 2em;
+        }
+
+        .tr-link {
+            inset: 0;
+            position: absolute;
+            text-decoration: none;
+            color: var(--text-primary-color);
+            
+            &:hover {
+                color: var(--card-primary-color);
+            }
+        }
+
+        tr:hover {
+            background-color: var(--border-primary-form-color);
+        }
+
+        tr:active {
+            scale: .9;
+            transition: ease-out;
+        }
     }
 }
