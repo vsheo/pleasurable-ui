@@ -125,12 +125,23 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
+// app.get('/cadeau/:slug', async function (request, response) {
+//     const slug = request.params.slug;
+//     const cadeauResponse = await fetch(baseGiftURL + `,description,amount,spotter?filter={"slug":"${slug}"}&limit=1`)
+//     const cadeauResponseJSON = await cadeauResponse.json()
+//     response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
+// })
+
 app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
-    const cadeauResponse = await fetch(baseGiftURL + `,description,amount,spotter?filter={"slug":"${slug}"}&limit=1`)
-    const cadeauResponseJSON = await cadeauResponse.json()
-    response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
-})
+    //de url voor de detailpagina haal de baseGiftURL op en voeg de extraFields toe en haalt maar 1 cadeau op
+    const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
+    const cadeauResponseJSON = await cadeauResponse.json();
+    //haal de cadeau's op waar de img goed in de database staat en haalt er maar 6 op
+    const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6')
+    const allCadeauResponseJSON = await allCadeauResponse.json()
+    response.render('detail.liquid', { gift:cadeauResponseJSON.data[0], allGifts:allCadeauResponseJSON.data });
+  });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
