@@ -429,13 +429,6 @@ header {
 }
 
 /* details you may also like carrousel */
-
-/* .detailpage {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-} */
-
 .section-also-like {
     display: flex;
     flex-direction: column;
@@ -477,23 +470,28 @@ header {
             scroll-behavior: smooth;
 
             &::scroll-button(left), &::scroll-button(right) {
-                content: "";
+                content: "→";
+                scale: 1.5;
                 cursor: pointer;
-                border: none;
-                padding: 2em;
-                width: 6.5em;
-                height: 6.5em;
-                border: 2px solid var(--text-primary-input-color);
+                padding: 1em;
+                margin: 0 1em;
+                border: 1px solid var(--text-primary-input-color);
                 border-radius: 50%;
                 align-self: center;
-                background-color: inherit;
-                background-image: url('assets/carrousel-arrow.svg');
-                background-repeat: no-repeat;
-                background-position: center;
             }
 
             &::scroll-button(left) {
                 rotate: 180deg;
+            }
+
+            /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
+            &::scroll-button(*):not(:disabled):is(:hover, :active) {
+                scale: 1.6;
+                filter: brightness(1.1);
+            }
+
+            &::scroll-button(*):not(:disabled):active {
+                scale: 1.4;
             }
 
             &::scroll-marker-group {
@@ -508,6 +506,7 @@ header {
         .item-carrousel {
             margin-bottom: 1em;
             align-self: center;
+            justify-self: center;
 
             @media screen and (min-width: 1280px) {
                 display: flex;
@@ -527,7 +526,6 @@ header {
                     animation: linear center-scale both;
                     animation-timeline: --scale-center-li;
                 }
-
 
                 &::scroll-marker {
                     content: '';
@@ -551,16 +549,7 @@ header {
             color: #898A8D;
             user-select: none;
             position: relative;
-
-            @media screen and (max-width:1280px) {
-                &:first-child {
-                    display: none;
-                }
-
-                &:last-child {
-                    display: none;
-                }
-            }
+            display: none;
 
             .index-link {
                 color: white;
@@ -576,6 +565,19 @@ header {
 
                 &:hover {
                     color: #212121;
+                }
+            }
+        }
+
+        .placeholder-gift {
+            @media screen and (min-width: 1280px) {
+                display: block;
+            }
+
+            &:first-child {
+                @media screen and (min-width: 1280px) {
+                    /* deze margin is voor een bug */
+                    margin-left: 160em;
                 }
             }
         }
