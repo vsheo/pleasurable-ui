@@ -440,7 +440,7 @@ header {
             "title title title"
             "left carrousel right"
             "indicator indicator indicator";
-        height: 43em;
+        /* height: 34.5em; */
     }
 
     .section-title {
@@ -461,6 +461,9 @@ header {
             display: flex;
             flex-direction: row;
             align-items: center;
+            height: 26.3em;
+            position: relative;
+            overflow: hidden;
 
             gap: 4em;
             margin: 0 .5em;
@@ -602,7 +605,7 @@ header {
 		scale: 1;
 	}
 	50% {
-		scale: 1.3;
+		scale: 1.2;
 	}
 	100% {
 		scale: 1;
