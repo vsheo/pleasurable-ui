@@ -448,10 +448,10 @@ header {
     }
 
     .table-where-find {
-        width: 80%;
-        max-width: 20em;
+        width: 100%;
+        max-width: 30em;
         border-spacing: 0 .7em;
-        margin: 0 2em;
+        margin: 0 1em;
         border-collapse: collapse;
 
         @media screen and (min-width:440px) {
@@ -472,6 +472,7 @@ header {
 
         tr {
             height: 3em;
+            margin-left: .5em;
         }
 
         .tr-link {
