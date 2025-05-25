@@ -476,6 +476,12 @@ header {
     text-align: left;
 }
 
+.style-pic {
+    max-width: 100%;   /* never exceed container width */
+    height: auto;      /* keep aspect ratio */
+    display: block; 
+}
+
 .detail-description {
     font-size: var(--font-size-text1-detail);
     font-weight: var(--font-weight-text1-detail);

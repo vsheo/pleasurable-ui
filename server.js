@@ -141,9 +141,10 @@ console.log("Gevonden cadeau:", cadeauResponseJSON.data[0]);
 if (cadeauResponseJSON.data.length === 0) {
   return response.status(404).send("Cadeau niet gevonden of lege array");
 }
-
-  
-    response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
+response.render('detail.liquid', { 
+    gift: cadeauResponseJSON.data[0],   // het eerste (enige) cadeau
+    gifts: cadeauResponseJSON.data      // de hele array (hier met 1 item)
+  });
 })
 
 
