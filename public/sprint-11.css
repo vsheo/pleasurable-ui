@@ -439,26 +439,48 @@ header {
 
 .errorpage {
     background-color: #F9F2D4;
-    height: calc(100dvh -125px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .svg-error {
+    }
 
     .feedback-error {
+        display: grid;
+        grid-template-areas:
+        "message"
+        "error"
+        "button";
+
         .error-code {
+            grid-area: error;
             font-size: var(--font-size-title1-detail);
             font-weight: var(--font-weight-title1-detail);
             line-height: var(--line-height-title1-detail);
+            width: 7ch;
         }
 
         .error-explained {
+            grid-area: message;
             font-size: var(--font-size-text1-detail);
             font-weight: var(--font-weight-text1-detail);
             line-height: var(--line-height-text1-detail);
             color: var(--text-primary-input-color);
+            margin-bottom: .5em;
         }
 
         .btn-home {
+            grid-area: button;
             color: var(--text-primary-color);
             background-color: #E0B000;
             border: none;
+            margin-top: 2em;
+            padding: .5em;
+
+            &:hover {
+                color: var(--text-secundary-button-color);
+            }
         }
     }
 }
