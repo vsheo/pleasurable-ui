@@ -440,10 +440,22 @@ header {
 .errorpage {
     background-color: #F9F2D4;
     display: flex;
+    flex-direction: column;
+    height: 100dvh;
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+    }
+
     .svg-error {
+        @media screen and (min-width: 1000px) {
+            img {
+                height: 517px;
+                width: 455px;
+            }
+        }
     }
 
     .feedback-error {
@@ -453,12 +465,20 @@ header {
         "error"
         "button";
 
+        @media screen and (min-width: 1000px) {
+            margin-left: 5em;
+        }
+
         .error-code {
             grid-area: error;
-            font-size: var(--font-size-title1-detail);
-            font-weight: var(--font-weight-title1-detail);
-            line-height: var(--line-height-title1-detail);
+            font-size: var(--font-size-title1-error);
+            font-weight: var(--font-weight-title1-error);
+            line-height: var(--line-height-title1-error);
             width: 7ch;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 125px;
+            }
         }
 
         .error-explained {
@@ -468,15 +488,22 @@ header {
             line-height: var(--line-height-text1-detail);
             color: var(--text-primary-input-color);
             margin-bottom: .5em;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 40px;
+            }
         }
 
         .btn-home {
             grid-area: button;
+            text-decoration: none;
             color: var(--text-primary-color);
             background-color: #E0B000;
             border: none;
             margin-top: 2em;
             padding: .5em;
+            text-align: center;
+                max-width: 260px;
 
             &:hover {
                 color: var(--text-secundary-button-color);
