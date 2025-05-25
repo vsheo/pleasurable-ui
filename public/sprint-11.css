@@ -337,6 +337,7 @@ header {
     transition: transform 0.3s ease;
 }
 
+ /*hover niet opgeslagen*/
   .plus {
     opacity: 1;
     transition: opacity .3s ease;
@@ -363,6 +364,38 @@ header {
       stroke-dashoffset: 0;
     }
   }
+
+
+  /*hover opgeslagen*/
+  .plus-2 {
+    opacity: 0;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    transition: opacity 0.3s ease;
+  }
+  
+  .check-2 {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover: laat plusje zien, check verdwijnt */
+  .bookmark-icon:hover .plus-2 {
+    opacity: 1;
+    animation: drawPlus 1s forwards;
+  }
+  
+  .bookmark-icon:hover .check-2 {
+    opacity: 0;
+  }
+  
+  /* Plus animatie */
+  @keyframes drawPlus {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
 
 
 .bookmark-img .saved {
