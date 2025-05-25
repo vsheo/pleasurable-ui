@@ -17,15 +17,15 @@
             <tbody>
                 <tr>
                     <td><a href="#" class="tr-link">Decathlon</a></td>
-                    <td><a href="#" class="tr-link">350,99€</a></td>
+                    <td><a href="#" class="tr-link">{{giftDetails.amount}}</a></td>
                 </tr>
                 <tr>
                     <td><a href="#" class="tr-link">Amazon</a></td>
-                    <td><a href="#" class="tr-link">380,70€</a></td>
+                    <td><a href="#" class="tr-link">{{ giftDetails.amount | plus: 8.49 }}</a></td>
                 </tr>
                 <tr>
                     <td><a href="#" class="tr-link">Ebay</a></td>
-                    <td><a href="#" class="tr-link">350,99€</a></td>
+                    <td><a href="#" class="tr-link">{{ giftDetails.amount | minus: 3.02  }}</a></td>
                 </tr>
             </tbody>
         </table>
