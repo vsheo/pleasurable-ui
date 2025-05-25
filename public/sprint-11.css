@@ -441,13 +441,22 @@ header {
         display: flex;
         align-items: center;
         margin-left: 1em;
+
+        span {
+            margin-left: 1em;
+        }
     }
 
     .table-where-find {
-        width: 100%;
-        max-width: 25em;
+        width: 80%;
+        max-width: 20em;
         border-spacing: 0 .7em;
-        margin-left: 2em;
+        margin: 0 2em;
+        border-collapse: collapse;
+
+        @media screen and (min-width:440px) {
+            margin: 0 5.5em;
+        }
 
         th, td {
             padding: .2em;
@@ -462,13 +471,14 @@ header {
         }
 
         tr {
-            height: 2em;
+            height: 3em;
         }
 
         .tr-link {
             inset: 0;
             position: absolute;
             text-decoration: none;
+            align-self: center;
             color: var(--text-primary-color);
             
             &:hover {
