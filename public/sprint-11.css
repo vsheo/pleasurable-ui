@@ -456,6 +456,16 @@ header {
         place-content: center;
         margin: 0 .5em;
 
+        @supports selector(::-webkit-scrollbar) {
+            &::-webkit-scrollbar {
+                background-color: white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #898a8d72;
+                border-radius: 10px;
+            }
+        }
+
         @media screen and (min-width: 1280px) {
             display: flex;
             flex-direction: row;
@@ -480,6 +490,7 @@ header {
                 cursor: pointer;
                 margin: 0 .4em;
                 border: 1px solid var(--text-primary-input-color);
+                background-color: #898a8d72;
                 border-radius: 50%;
                 align-self: center;
                 text-align: center;
@@ -492,7 +503,7 @@ header {
             /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
             &::scroll-button(*):not(:disabled):is(:hover, :active) {
                 scale: .6;
-                filter: brightness(1.1);
+                filter: brightness(1.2);
             }
 
             &::scroll-button(*):not(:disabled):active {
