@@ -474,13 +474,14 @@ header {
 
             &::scroll-button(left), &::scroll-button(right) {
                 content: "→";
-                scale: 1.5;
+                font-size: 5rem;
+                scale: .5;
                 cursor: pointer;
-                padding: 1em;
-                margin: 0 1em;
+                margin: 0 .4em;
                 border: 1px solid var(--text-primary-input-color);
                 border-radius: 50%;
                 align-self: center;
+                text-align: center;
             }
 
             &::scroll-button(left) {
@@ -489,12 +490,12 @@ header {
 
             /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
             &::scroll-button(*):not(:disabled):is(:hover, :active) {
-                scale: 1.6;
+                scale: .6;
                 filter: brightness(1.1);
             }
 
             &::scroll-button(*):not(:disabled):active {
-                scale: 1.4;
+                scale: .4;
             }
 
             &::scroll-marker-group {
@@ -524,7 +525,7 @@ header {
                     /* Track this element as it intersects the scrollport */
                     view-timeline-name: --scale-center-li;
                     view-timeline-axis: x;
-                    
+
                     /* Link an animation to the established view-timeline and have it run during the contain phase */
                     animation: linear center-scale both;
                     animation-timeline: --scale-center-li;
