@@ -15,7 +15,10 @@
     <h3 class="occasion">Gelegenheid</h3>
     </div>
     <div class="container-occasion">
-    <p class="tags">{{ gift.tags }}</p>
+        {%- assign detailTags = gift.tags | remove: "'" | split: ',' -%}
+        {% for tags in detailTags -%}
+    <p class="tags">{{ tags }}</p>
+{%- endfor %}
     </div>
 </section>
 </main>

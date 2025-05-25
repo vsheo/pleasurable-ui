@@ -516,11 +516,21 @@ img.img-save-detail {
 
 .tags {
     background-color: var(--bg-primary-color);
+    border: 5px solid var(--border-primary-form-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
+    /* width: fit-content;
+    height: fit-content; */
+
 }
 
 .container-occasion {
     background-color: var(--border-primary-form-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     padding: 2em;
     margin: 1em 2em 1em 1em;
 }
