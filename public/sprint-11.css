@@ -445,13 +445,18 @@ header {
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 700px) {
         flex-direction: row;
     }
 
     .svg-error {
-        @media screen and (min-width: 1200px) {
-            img {
+        img {
+            @media screen and (min-width: 800px) {
+                height: 414px;
+                width: 364px;
+            }
+
+            @media screen and (min-width: 1200px) {
                 height: 517px;
                 width: 455px;
             }
@@ -465,8 +470,8 @@ header {
         "error"
         "button";
 
-        @media screen and (min-width: 1000px) {
-            margin-left: 9em;
+        @media screen and (min-width: 700px) {
+            margin-left: 5em;
         }
 
         .error-code {
@@ -475,6 +480,10 @@ header {
             font-weight: var(--font-weight-title1-error);
             line-height: var(--line-height-title1-error);
             width: 7ch;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 90px;
+            }
 
             @media screen and (min-width: 1200px) {
                 font-size: 125px;
@@ -488,6 +497,10 @@ header {
             line-height: var(--line-height-text1-detail);
             color: var(--text-primary-input-color);
             margin-bottom: .5em;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 30px;
+            }
 
             @media screen and (min-width: 1200px) {
                 font-size: 40px;
