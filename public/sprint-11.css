@@ -545,6 +545,11 @@ header {
                 
                 &::scroll-marker:target-current {
                     background: #898A8D;
+                    scale: 1.2;
+                }
+
+                &::scroll-marker:hover {
+                    scale: 1.2;
                 }
             }
         }
