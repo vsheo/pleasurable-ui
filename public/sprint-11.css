@@ -559,6 +559,8 @@ header {
 
             .index-link {
                 color: white;
+                background-color: #898A8D;
+                border-radius: var(--border-radius-card);
                 text-decoration: none;
                 font-size: var(--font-size-text1-detail);
                 /* hele height en width van de container(li) clickable */
