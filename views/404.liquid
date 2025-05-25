@@ -1,1 +1,11 @@
-<h2>404</h2>
+{% render 'partials/head.liquid', title: 'Home' %}
+
+<main class="errorpage">
+    <picture>
+        <source type="image/avif" srcset="/assets/error-face.avif">
+        <source type="image/webp" srcset="/assets/error-face.webp">
+        <img class="bookmark-img" src="/assets/error-face.svg" width="455" height="517" alt="error afbeelding">
+    </picture>
+</main>
+
+{% render 'partials/footer.liquid' %}
