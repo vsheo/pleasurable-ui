@@ -125,12 +125,28 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
+
 app.get('/cadeau/:slug', async function (request, response) {
-    const slug = request.params.slug;
-    const cadeauResponse = await fetch(baseGiftURL + `,description,amount,spotter?filter={"slug":"${slug}"}&limit=1`)
-    const cadeauResponseJSON = await cadeauResponse.json()
-    response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
-})
+    try {
+      const slug = request.params.slug;
+  
+      const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
+      const cadeauResponseJSON = await cadeauResponse.json();
+  
+      if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
+        return response.status(404).render('404.liquid');
+      }
+  
+      const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
+      const allCadeauResponseJSON = await allCadeauResponse.json();
+  
+      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data 
+      });
+    } catch (error) {
+      console.error("Fout bij ophalen cadeau:", error);
+      response.status(404).render('404.liquid');
+    }
+  });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
