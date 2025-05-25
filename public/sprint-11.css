@@ -520,7 +520,7 @@ header {
                 scroll-snap-stop: always;
 
                 /* https://scroll-driven-animations.style/demos/cover-flow/css/ */
-                article {
+                article, .index-link {
                     /* scroll animation */
                     /* Track this element as it intersects the scrollport */
                     view-timeline-name: --scale-center-li;
@@ -531,7 +531,9 @@ header {
                     animation-timeline: --scale-center-li;
                 }
 
-                &::scroll-marker {
+                /* scroll marker voor de 2de tot 1 voor de laatste */
+                /* https://stackoverflow.com/questions/13981111/how-to-select-all-children-except-first-and-last-with-css-selectors#:~:text=li%3Anth%2Dchild(n%2B2)%3Anth%2Dlast%2Dchild(n%2B2)%20%7B%20background%3A%20red%3B%20%7D */
+                &:nth-child(n+2):nth-last-child(n+2)::scroll-marker {
                     content: '';
                     border: 2px solid #898A8D;
                     height: 1em;
@@ -563,7 +565,7 @@ header {
                 position: absolute;
                 inset: 0;
                 /* text center */
-                display: flex;
+                display: inline-flex;
                 justify-content: center;
                 align-items: center;
 
