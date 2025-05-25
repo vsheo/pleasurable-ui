@@ -125,6 +125,7 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
+
 app.get('/cadeau/:slug', async function (request, response) {
     const slug = request.params.slug;
 
@@ -144,6 +145,7 @@ if (cadeauResponseJSON.data.length === 0) {
   
     response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], gift: cadeauResponseJSON.data })
 })
+
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
