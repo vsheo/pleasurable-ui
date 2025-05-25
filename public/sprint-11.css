@@ -435,3 +435,30 @@ header {
     font-size: var(--font-size-title2-home);
     transform: rotate(-2deg);
 }
+
+
+.errorpage {
+    background-color: #F9F2D4;
+    height: calc(100dvh -125px);
+
+    .feedback-error {
+        .error-code {
+            font-size: var(--font-size-title1-detail);
+            font-weight: var(--font-weight-title1-detail);
+            line-height: var(--line-height-title1-detail);
+        }
+
+        .error-explained {
+            font-size: var(--font-size-text1-detail);
+            font-weight: var(--font-weight-text1-detail);
+            line-height: var(--line-height-text1-detail);
+            color: var(--text-primary-input-color);
+        }
+
+        .btn-home {
+            color: var(--text-primary-color);
+            background-color: #E0B000;
+            border: none;
+        }
+    }
+}
