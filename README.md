@@ -1,10 +1,7 @@
-# Pleasurable User Interface
+# Milledoni
 
-Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden.
-
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
-
-
+## Inleiding
+wat was het opdracht (van school & opdrachtgever)
 
 ## Inhoudsopgave
 
@@ -15,16 +12,27 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasur
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+## Beschrijving & gebruik
+per pagina wat gemaakt is
+en wat je op elk pagina kan doen
+Index pagina
+details pagina
+favorieten pagina
+ontwerp keuzes (voor alles)
 
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+## HTML/Liquid
+### Liquid Partials
+### Data vanuit Server
+
+
+## CSS
+### Styleguide
+### nesting
+### carrousel
+
+
 ## server.js
 ### Functies
 In het server.js bestand staan twee functies:
@@ -110,6 +118,17 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 deze functie geeft een array terug. in directus kan je een array meegeven in de fetch URL, dus het enige dat wij moeten doen is de filter schrijven. de data die dan uit de fetch komt heeft alleen de data van cadeau's uit de bookmark lijst
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L58-L59
+
+
+## JavaScript
+### bookmark hover ?
+
+
+## UI states
+### buttons
+### loader
+### error
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
