@@ -1,4 +1,99 @@
-{% render 'partials/head.liquid', title: gift.name %}
+{% render 'partials/head.liquid'
+  , title: gift.name %}
+
+<main class="detail-page">
+
+  <section class="detail-layout">
+
+    <div class="detail-wrapper">
+      <img
+        src="/assets/spotter-img.png"
+        width="100"
+        height="100"
+        class="detail-spotterimages">
+      <p class="detail-spotter">
+        Spotter door {{ gift.spotter }}</p>
+    </div>
+
+
+    <div class="detail-line-first"></div>
+
+    <picture class="detail-picture">
+      <source type="image/avif" srcset="
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=250&height=250 250w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=600&height=600 600w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=1000&height=1000 1000w
+    ">
+      <source type="image/webp" srcset="
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250 250w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=600&height=600 600w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=1000&height=1000 1000w
+    ">
+      <img
+        src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
+        alt="{{ gift.name }}"
+        class="detail-img"
+        sizes="600px, 600vw">
+    </picture>
+
+    {% comment %} <picture class="detail-picture">
+                                    <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=250&height=250">
+                                    <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250">
+                                    <img
+                                      src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}    "
+                                      alt="{{ gift.name }}"
+                                      class="detail-img">
+                        </picture> {% endcomment %}
+
+    <h2 class="detail-title">{{ gift.name }}</h2>
+
+    <div class="detail-info">
+      <div class="detail-wrapper detail-wrapper-second">
+        <img
+          src="/assets/spotter-img.png"
+          width="100"
+          height="100"
+          class="detail-spotterimages">
+        <p class="detail-spotter">
+          Spotter door {{ gift.spotter }}</p>
+
+      </div>
+
+      <div class="detail-line-second"></div>
+
+      <h2 class="detail-title-desktop">{{ gift.name }}</h2>
+
+      <p class="detail-price">
+        <span class="detail-currency">€</span>
+        {{ gift.amount }}</p>
+      <p class="detail-description">{{ gift.description }}</p>
+    </div>
+
+  </section>
+
+</main>
+
+<form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
+{% if bookmarks contains gift.id %}
+<button class="btn-save-to-list" aria-label="verwijder uit bookmarks lijst">
+        <picture>
+            <source type="image/avif" srcset="/assets/saved.avif">
+            <source type="image/webp" srcset="/assets/saved.webp">
+            <img class="img-save-detail" src="/assets/saved.svg" width="41" height="28" alt="opgeslagen">
+        </picture>
+        <p class="tekst-save-detail slug">Verwijder uit lijst</p>
+    </button>
+    {% else %}
+    <button class="btn-save-to-list" aria-label="voeg toe aan bookmarks lijst">
+        <picture>
+            <source type="image/avif" srcset="/assets/notsaved.avif">
+            <source type="image/webp" srcset="/assets/notsaved.webp">
+            <img class="img-save-detail" src="/assets/notsaved.svg" width="45" height="41" alt="niet opgeslagen">
+        </picture>
+        <p class="tekst-save-detail slug">Opslaan in lijst</p>
+        </button>
+      {% endif %}
+</form>
 
 <main class="detailpage">
 
