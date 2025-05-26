@@ -1,7 +1,16 @@
 # Milledoni
 
 ## Inleiding
-wat was het opdracht (van school & opdrachtgever)
+De opdrachtgevers zijn Frederica en Tom. Zij zijn de eigenaren van de website Milledoni.
+Op deze website kunnen gebruikers met behulp van filters het perfecte cadeau vinden.
+
+De huidige versie van de website is verouderd. Daarom hebben zij een designers ingeschakeld om een nieuw ontwerp te laten maken.
+
+Wij hebben deze designs ontvangen en hebben ze omgezet naar een werkende website.
+De vernieuwde versie ziet er nu als volgt uit:
+![image](https://github.com/user-attachments/assets/7dfdd7b1-30a0-469a-9672-8aeb8a336d17)
+
+
 
 ## Inhoudsopgave
 
