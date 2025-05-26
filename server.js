@@ -125,13 +125,31 @@ async function changeBookmark(listId,giftId) {
         });
     }
 }
+
 app.get('/cadeau/:slug', async function (request, response) {
-    const slug = request.params.slug;
-    const cadeauDetailsResponse = await fetch(baseGiftURL + `,description,amount,spotter&filter={"slug":"${slug}"}`)
-    const cadeauDetailsResponseJSON = await cadeauDetailsResponse.json()
-    const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6')
-    const allCadeauResponseJSON = await allCadeauResponse.json()
-    response.render('detail.liquid', { giftDetails: cadeauDetailsResponseJSON.data, allGifts: allCadeauResponseJSON.data })
+    try {
+        const slug = request.params.slug;
+  
+        const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
+        const cadeauResponseJSON = await cadeauResponse.json();
+    
+        if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
+            return response.status(404).render('404.liquid');
+        }
+    
+        const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
+        const allCadeauResponseJSON = await allCadeauResponse.json();
+    
+        response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data });
+    } catch (error) {
+        console.error("Fout bij ophalen cadeau:", error);
+        response.status(404).render('404.liquid');
+    }
+});
+
+// bij een verkeerde link op elk pagina van deze website, wordt de gebruiker naar de error pagina gebracht.
+app.use(function (request, response) {
+    response.status(404).render('404.liquid')
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
