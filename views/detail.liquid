@@ -150,4 +150,27 @@
 
 </main>
 
+
+<main class="detail">
+<button class="btn-save-to-list">
+    <img class="img-save-detail" src="/assets/notsaved.svg" width="45" height="41" alt="niet opgeslagen">
+<p class="tekst-save-detail slug">Opslaan in lijst</p>
+</button>
+
+<div class="divider"></div>
+
+<section class="container-tags">
+    <div class="heading-occasion">
+    <img src="/assets/occasion.svg" width="40" height="40" alt="">
+    <h3 class="occasion">Gelegenheid</h3>
+    </div>
+    <div class="container-occasion">
+        {%- assign detailTags = gift.tags | remove: "'" | split: ',' -%}
+        {% for tags in detailTags -%}
+    <p class="tags">{{ tags }}</p>
+{%- endfor %}
+    </div>
+</section>
+</main>
+
 {% render 'partials/footer.liquid' %}
