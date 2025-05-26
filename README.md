@@ -17,7 +17,7 @@ De vernieuwde versie ziet er nu als volgt uit:
   * [Beschrijving & Gebruik](#Beschrijving-&-Gebruik)
   * [Kenmerken](#kenmerken)
      * [Code conventies](#Code-conventies)
-     * [HTML & Liquid](#HTML-&-Liquid)
+     * [HTML & Liquid](#HTML-en-Liquid)
         * [Liquid Partials](#Liquid-Partials)
         * [Data vanuit Server](#Data-vanuit-Server)
      * [CSS](#CSS)
@@ -36,9 +36,9 @@ De vernieuwde versie ziet er nu als volgt uit:
         * [bookmark hover?](#bookmark-hover?)
         * [Sticky header](#)
      * [UI states](#UI-states)
-        * [UI states: buttons](#UI-states:-buttons)
-        * [UI states: loader](#UI-states:-loader)
-        * [UI states: error](#UI-states:-error)
+        * [UI states buttons](#UI-states---buttons)
+        * [UI states: loader](#UI-states---loader)
+        * [UI states: error](#UI-states---error)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
@@ -70,7 +70,7 @@ https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6
 
 
 
-## HTML & Liquid
+## HTML e Liquid
 ### Liquid Partials
 ### Data vanuit Server
 
@@ -173,11 +173,11 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 
 ## UI states
-### UI states: buttons
-### UI states: loader
+### UI states - buttons
+### UI states - loader
 
 
-### UI states: error
+### UI states - error
 We hebben gezien dat de opdrachtgever inmiddels een design heeft voor de 404 pagina. Tijdens deze sprint hebben we dat gebouwd.
 Het ziet er nu zo uit:
 ![image](https://github.com/user-attachments/assets/c2a1b04b-2f94-4127-ab33-0d3e2bec64e4)
