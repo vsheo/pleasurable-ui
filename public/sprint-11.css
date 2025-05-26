@@ -522,7 +522,6 @@ header {
 
   @media (max-width: 650px) {
 
-
     .detail-img {
         max-width: 425px; 
       } 
@@ -541,17 +540,7 @@ header {
         display: flex;
         flex-direction: column;
     }
-
-    .detail-layout {
-        display: flex;
-        align-items: flex-start;
-        padding: 3em;
-      } 
-
-      /* .detail-img {
-        max-width: 425px; 
-      } */
-
+    
       .detail-info {
         max-width: 500px;
       }
@@ -591,5 +580,9 @@ header {
     .detail-description {
         max-width: clamp(40ch, 90%, 60ch);
     }
+
+    .detail-layout > .detail-wrapper:first-of-type {
+        display: none;
+      } 
     
 } 
