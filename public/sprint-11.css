@@ -358,7 +358,7 @@ header {
     bottom: .2em;
 }
 
-.slug-name {
+.slug {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -497,6 +497,7 @@ img.img-save-detail {
     font-size: var(--font-size-card);
     font-weight: var(--font-weight-card);
     color: var(--text-secundary-button-color);
+    padding: 0;
 }
 
 .container-tags {
