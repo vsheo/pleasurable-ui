@@ -1,3 +1,25 @@
 {% render 'partials/head.liquid', title: gift.name %}
 
+<form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
+{% if bookmarks contains gift.id %}
+<button class="btn-save-to-list" aria-label="verwijder uit bookmarks lijst">
+        <picture>
+            <source type="image/avif" srcset="/assets/saved.avif">
+            <source type="image/webp" srcset="/assets/saved.webp">
+            <img class="img-save-detail" src="/assets/saved.svg" width="41" height="28" alt="opgeslagen">
+        </picture>
+        <p class="tekst-save-detail slug">Verwijder uit lijst</p>
+    </button>
+    {% else %}
+    <button class="btn-save-to-list" aria-label="voeg toe aan bookmarks lijst">
+        <picture>
+            <source type="image/avif" srcset="/assets/notsaved.avif">
+            <source type="image/webp" srcset="/assets/notsaved.webp">
+            <img class="img-save-detail" src="/assets/notsaved.svg" width="45" height="41" alt="niet opgeslagen">
+        </picture>
+        <p class="tekst-save-detail slug">Opslaan in lijst</p>
+        </button>
+      {% endif %}
+</form>
+
 {% render 'partials/footer.liquid' %}

@@ -132,6 +132,7 @@ app.get('/cadeau/:slug', async function (request, response) {
   
       const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
       const cadeauResponseJSON = await cadeauResponse.json();
+      const allBookmarks = await getBookmarks("viresh")
   
       if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
         return response.status(404).render('404.liquid');
@@ -140,13 +141,23 @@ app.get('/cadeau/:slug', async function (request, response) {
       const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
       const allCadeauResponseJSON = await allCadeauResponse.json();
   
-      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data 
-      });
+      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data, bookmarks: allBookmarks });
     } catch (error) {
       console.error("Fout bij ophalen cadeau:", error);
       response.status(404).render('404.liquid');
     }
   });
+
+
+  app.post("/cadeau/:slug/:id", async function (request, response) {
+    const detailSlug = request.params.slug;
+    const giftId = request.params.id;
+
+    await changeBookmark(2,giftId)
+
+    // Redirect terug naar de detail pagina
+    response.redirect(`/cadeau/${detailSlug}`);
+});
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
