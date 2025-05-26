@@ -474,6 +474,10 @@ header {
     text-align: left;
 }
 
+.detail-img {
+    margin:0em 5em 0em 0em 
+}
+
 .detail-picture {
     display: flex;
     align-items: center;
@@ -481,12 +485,13 @@ header {
     object-fit: cover;
     width: 100%;
     padding: 0 16px;
+    margin: 20px auto;
 }
 
 .detail-description {
     font-size: var(--font-size-text1-detail);
     font-weight: var(--font-weight-text1-detail);
-    width: 50ch;
+    max-width: clamp(40ch, 90%, 60ch);
     padding-right: 1.2em;
 }
 
@@ -527,6 +532,7 @@ header {
     .detail-layout {
         display: flex;
         align-items: flex-start;
+        padding: 3em;
       } 
 
       .detail-info {
