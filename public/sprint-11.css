@@ -482,7 +482,7 @@ header {
             scroll-behavior: smooth;
 
             &::scroll-button(left), &::scroll-button(right) {
-                content: "→";
+                content: '';
                 font-size: 5rem;
                 scale: .5;
                 height: 2em;
@@ -490,10 +490,12 @@ header {
                 cursor: pointer;
                 margin: 0 .4em;
                 border: 1px solid var(--text-primary-input-color);
-                background-color: #898a8d72;
+                /* background-color: #898a8d72; */
+                background: #898a8d72 url('/assets/carrousel-arrow.svg') no-repeat center;
+                background-size: 50%;
                 border-radius: 50%;
                 align-self: center;
-                text-align: center;
+                border: 1px solid red;
             }
 
             &::scroll-button(left) {
@@ -503,12 +505,18 @@ header {
             /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
             &::scroll-button(*):not(:disabled):is(:hover, :active) {
                 scale: .6;
-                filter: brightness(1.2);
+                /* filter: brightness(1.2); */
+                
             }
 
             &::scroll-button(*):not(:disabled):active {
                 scale: .4;
             }
+
+             &::scroll-button(*):disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+             }
 
             &::scroll-marker-group {
                 grid-area: indicator;
