@@ -438,7 +438,7 @@ header {
 
 
 .errorpage {
-    background-color: #F9F2D4;
+    background-color: var(--bg-error-color);
     display: flex;
     flex-direction: column;
     height: 100dvh;
@@ -511,7 +511,7 @@ header {
             grid-area: button;
             text-decoration: none;
             color: var(--text-primary-color);
-            background-color: #E0B000;
+            background-color: var(--button-error-color);
             border: none;
             margin-top: 2em;
             padding: .5em;

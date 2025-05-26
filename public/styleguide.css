@@ -63,6 +63,9 @@ body{
 --button-secundary-color: #212121; /*add-button*/
 --box-shadow-add:0px 2.42px 9.69px 0px #0000001A;
 
+/*ERROR PAGINS*/
+--bg-error-color: #F9F2D4;
+--button-error-color: #E0B000;
 
 /*MARK: TEXT*/
 
