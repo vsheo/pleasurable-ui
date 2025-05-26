@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--bg-primary-color);
+}
+
 /* Logo */
 header {
     display: flex;
@@ -13,6 +17,17 @@ header {
     top: 0;
     z-index: 20;
     padding: 1em;
+    position: sticky;
+
+    &.scroll-up {
+        transform: translateY(0);
+        transition: 0.5s;
+    }
+
+    &.scroll-down {
+        transform: translateY(-100%);
+        transition: 0.5s;
+    }
 
     @media screen and (min-width:1000px) {
         display: flex;
@@ -436,9 +451,213 @@ header {
     transform: rotate(-2deg);
 }
 
+/* details you may also like carrousel */
+.section-also-like {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5em;
+
+    @media screen and (min-width: 1280px) {
+        display: grid;
+        grid-template-areas:
+            "title title title"
+            "left carrousel right"
+            "indicator indicator indicator";
+    }
+
+    .section-title {
+        grid-area: title;
+        align-self: start;
+        text-wrap: nowrap;
+    }
+
+    .container-carrousel {
+        grid-area: carrousel;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--gift-container-width), 1fr));
+        place-content: center;
+        margin: 0 .5em;
+
+        @supports selector(::-webkit-scrollbar) {
+            &::-webkit-scrollbar {
+                background-color: white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #898a8d72;
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 20.3em;
+            position: relative;
+            overflow: hidden;
+
+            gap: .5em;
+            margin: 0 .5em;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-marker-group: after;
+            scroll-behavior: smooth;
+
+            &::scroll-button(left), &::scroll-button(right) {
+                content: '';
+                font-size: 5rem;
+                scale: .5;
+                height: 2em;
+                width: 2em;
+                cursor: pointer;
+                margin: 0 .4em;
+                border: 1px solid var(--text-primary-input-color);
+                /* background-color: #898a8d72; */
+                background: #898a8d72 url('/assets/carrousel-arrow.svg') no-repeat center;
+                background-size: 50%;
+                border-radius: 50%;
+                align-self: center;
+            }
+
+            &::scroll-button(left) {
+                rotate: 180deg;
+            }
+
+            /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
+            &::scroll-button(*):not(:disabled):is(:hover, :active) {
+                scale: .6;
+                /* filter: brightness(1.2); */
+                
+            }
+
+            &::scroll-button(*):not(:disabled):active {
+                scale: .4;
+            }
+
+             &::scroll-button(*):disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+             }
+
+            &::scroll-marker-group {
+                grid-area: indicator;
+                display: flex;
+                gap: 0.4em;
+                place-content: center;
+                margin-top: 1em;
+            }
+        }
+
+        .item-carrousel {
+            margin-bottom: 1em;
+            align-self: center;
+            justify-self: center;
+
+            @media screen and (min-width: 1280px) {
+                display: flex;
+                flex: 0 0 20%;
+                scale: .7;
+
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+
+                /* https://scroll-driven-animations.style/demos/cover-flow/css/ */
+                article, .index-link {
+                    /* scroll animation */
+                    /* Track this element as it intersects the scrollport */
+                    view-timeline-name: --scale-center-li;
+                    view-timeline-axis: x;
+
+                    /* Link an animation to the established view-timeline and have it run during the contain phase */
+                    animation: linear center-scale both;
+                    animation-timeline: --scale-center-li;
+                }
+
+                /* scroll marker voor de 2de tot 1 voor de laatste */
+                /* https://stackoverflow.com/questions/13981111/how-to-select-all-children-except-first-and-last-with-css-selectors#:~:text=li%3Anth%2Dchild(n%2B2)%3Anth%2Dlast%2Dchild(n%2B2)%20%7B%20background%3A%20red%3B%20%7D */
+                &::scroll-marker {
+                    content: '';
+                    border: 2px solid #898A8D;
+                    height: 1em;
+                    width: 1em;
+                    border-radius: 50%;
+                }
+                &:first-child {
+                    /* deze margin is voor een bug */
+                    margin-left: 128em;
+                }
+
+                &:last-child {
+                    /* deze margin is voor een bug */
+                    margin-right: 6em;
+                }
+                
+                &::scroll-marker:target-current {
+                    background: #898A8D;
+                    scale: 1.2;
+                }
+
+                &::scroll-marker:hover {
+                    scale: 1.2;
+                }
+            }
+        }
+
+        .placeholder-gift {
+            min-width: var(--gift-width);
+            height: 20em;
+            background-color: #898A8D;
+            border-radius: var(--border-radius-card);
+            color: #898A8D;
+            user-select: none;
+            position: relative;
+            display: none;
+
+            .index-link {
+                color: white;
+                background-color: #898A8D;
+                border-radius: var(--border-radius-card);
+                text-decoration: none;
+                font-size: var(--font-size-text1-detail);
+                /* hele height en width van de container(li) clickable */
+                position: absolute;
+                inset: 0;
+                /* text center */
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    color: #212121;
+                }
+            }
+        }
+
+        .placeholder-gift {
+            @media screen and (min-width: 1280px) {
+                display: block;
+            }
+
+            &:first-child {
+                @media screen and (min-width: 1280px) {
+                    /* deze margin is voor een bug */
+                    margin-left: 130em;
+                }
+            }
+        }
+    }
+
+    &::scroll-button(inline-start) {
+        grid-area: left;
+    }
+
+    &::scroll-button(inline-end) {
+        grid-area: right;
+    }
+}
 
 /* detail */
-
 .detail-layout {  
     margin: 0 auto;
     padding: 3rem;
@@ -618,4 +837,103 @@ header {
         width: 80%;
         justify-items: center;
     }
+}
+
+/* error pagina */
+.errorpage {
+    background-color: var(--bg-error-color);
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
+
+    .svg-error {
+        img {
+            @media screen and (min-width: 800px) {
+                height: 414px;
+                width: 364px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                height: 500px;
+                width: 438px;
+            }
+        }
+    }
+
+    .feedback-error {
+        display: grid;
+        grid-template-areas:
+        "message"
+        "error"
+        "button";
+
+        @media screen and (min-width: 700px) {
+            margin-left: 5em;
+        }
+
+        .error-code {
+            grid-area: error;
+            font-size: var(--font-size-title1-error);
+            font-weight: var(--font-weight-title1-error);
+            line-height: var(--line-height-title1-error);
+            width: 7ch;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 90px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                font-size: 110px;
+            }
+        }
+
+        .error-explained {
+            grid-area: message;
+            font-size: var(--font-size-text1-detail);
+            font-weight: var(--font-weight-text1-detail);
+            line-height: var(--line-height-text1-detail);
+            color: var(--text-primary-input-color);
+            margin-bottom: .5em;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 30px;
+            }
+        }
+
+        .btn-home {
+            grid-area: button;
+            text-decoration: none;
+            color: var(--text-primary-color);
+            background-color: var(--button-error-color);
+            border: none;
+            margin-top: 2em;
+            padding: .5em;
+            text-align: center;
+                max-width: 260px;
+
+            &:hover {
+                color: var(--text-secundary-button-color);
+            }
+        }
+    }
+}
+
+
+
+@keyframes center-scale {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 1.3;
+	}
+	100% {
+		scale: 1;
+	}
 }
