@@ -34,7 +34,7 @@ De vernieuwde versie ziet er nu als volgt uit:
         * [favorieten GET route](#favorieten-GET-route)
      * [JavaScript](#JavaScript)
         * [bookmark hover?](#bookmark-hover?)
-        * [Sticky header](#)
+        * [Sticky header](#Sticky header)
      * [UI states](#UI-states)
         * [UI states buttons](#UI-states---buttons)
         * [UI states: loader](#UI-states---loader)
@@ -171,6 +171,25 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 ## JavaScript
 ### bookmark hover?
 
+### Sticky header
+De header verdwijnt bij scrollen naar beneden en verschijnt weer bij scrollen naar boven. Ik heb dit gedaan zodat de cadeau container op de index pagina de volledige hoogte van het scherm kan gebruiken voor de cadeau's. Voor mobiele apparaten is dit heel handig, omdat het scherm kleiner is. Als de gebruiker ver naar beneden is gescrold, hoeft die niet helemaal terug naar boven om de header weer te zien.
+
+video
+
+Dit heb ik gedaan door de header position: sticky te geven. Hierdoor blijft de header altijd zichtbaar in beeld, ook wanneer JavaScript niet werkt.<br>
+code<br>
+Met JavaScript selecteer ik de header en plaats ik een eventlistener op alle scrollbewegingen<br>
+code<br>
+Met pageYOffset krijg ik hoeveel pixels de pagina verticaal is verschoven<br>
+code<br>
+Als het verschil tussen de huidige en vorige pageYOffset positief is (dus bij scrollen naar beneden), voegen we de class "scroll-down" toe om de header buiten beeld te zetten<br>
+code<br>
+De class "scroll-down" zorgt ervoor dat de header met een transition uit beeld verdwijnt<br>
+code<br>
+Als het verschil tussen de huidige en vorige pageYOffset negatief is (dus bij scrollen omhoog), wordt de header weer zichtbaar gemaakt door de class "scroll-up" toe te voegen<br>
+code<br>
+Als laatste zetten we lastScroll gelijk aan currentScroll. Dit doen we zodat bij de volgende scroll de if statement uitgaat van de huidige scrollpositie, in plaats van altijd vanaf het begin van de pagina (bovenaan) te rekenen<br>
+code
 
 ## UI states
 ### UI states - buttons
