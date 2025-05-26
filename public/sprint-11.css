@@ -335,6 +335,7 @@ header {
     z-index: 1;
     border: 1px solid #212121;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
  /*hover niet opgeslagen*/
