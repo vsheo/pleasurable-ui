@@ -18,6 +18,27 @@ De vernieuwde versie ziet er nu als volgt uit:
   * [Kenmerken](#kenmerken)
      * [Code conventies](#Code-conventies)
      * [HTML & Liquid](#HTML-&-Liquid)
+        * [Liquid Partials](#Liquid-Partials)
+        * [Data vanuit Server](#Data-vanuit-Server)
+     * [CSS](#CSS)
+        * [Styleguide](#Styleguide)
+        * [nesting](#nesting)
+        * [carrousel](#carrousel)
+     * [server.js](#server.js)
+        * [Functies](#Functies)
+           * [getBookmarks functie](#getBookmarks-functie)
+           * [changeBookmark functie](#changeBookmark-functie)
+        * [Index route](#Index-route)
+           * [Index GET route](#Index-GET-route)
+           * [Index POST route](#Index-POST-route)
+        * [favorieten GET route](#favorieten-GET-route)
+     * [JavaScript](#JavaScript)
+        * [bookmark hover?](#bookmark-hover?)
+        * [Sticky header](#)
+     * [UI states](#UI-states)
+        * [UI states: buttons](#UI-states:-buttons)
+        * [UI states: loader](#UI-states:-loader)
+        * [UI states: error](#UI-states:-error)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
@@ -148,7 +169,7 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 
 ## JavaScript
-### bookmark hover ?
+### bookmark hover?
 
 
 ## UI states
