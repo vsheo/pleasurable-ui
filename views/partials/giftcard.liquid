@@ -18,7 +18,12 @@
         </picture>
         {% endif %}
 
-        <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+        {{favoriet_gifts | json}}
+        {% if favoriet_gifts %}
+            <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+            {% else %}
+            <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+        {% endif %}
             {% if bookmarks contains gift.id %}
             <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
                 <picture>
