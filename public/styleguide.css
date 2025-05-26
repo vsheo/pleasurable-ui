@@ -117,6 +117,16 @@ body{
 --line-height-title1-detail:1.12;
 }
 
+.detail-price {
+--font-size-price-detail: 23px;
+--font-weight-price-detail:600;
+--line-height-price-detail: 1.2;
+}  
+
+.detail-line {
+--line-color: #999999;
+}
+
 /*beschrijving*/
 .description-cadeau{
 --font-size-text1-detail:20px;

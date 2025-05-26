@@ -1,4 +1,51 @@
-{% render 'partials/head.liquid', title: gift.name %}
+{% render 'partials/head.liquid'
+  , title: gift.name %}
+
+<main class="detail-page">
+
+  <section class="detail-layout">
+
+    <div class="detail-wrapper">
+      <img
+        src="/assets/spotter-img.png"
+        width="100"
+        height="100"
+        class="detail-spotterimages">
+      <p>spotted by Arthur</p>
+    </div>
+
+
+    <div class="detail-line-first"></div>
+    <picture class="style-pic">
+      <img src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}" alt="{{ gift.name }}">
+    </picture>
+
+    <h2 class="detail-title">{{ gift.name }}</h2>
+
+    <div class="detail-info">
+      <div class="detail-wrapper detail-wrapper-second">
+        <img
+          src="/assets/spotter-img.png"
+          width="100"
+          height="100"
+          class="detail-spotterimages">
+        <p>spotted by Arthur</p>
+
+      </div>
+
+      <div class="detail-line-second"></div>
+
+      <h2 class="detail-title-desktop">{{ gift.name }}</h2>
+
+      <p class="detail-price">
+        <span class="detail-currency">€</span>
+        {{ gift.amount }}</p>
+      <p class="detail-description">{{ gift.description }}</p>
+    </div>
+
+  </section>
+
+</main>
 
 <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
 {% if bookmarks contains gift.id %}
