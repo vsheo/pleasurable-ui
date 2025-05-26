@@ -125,9 +125,17 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 
 ## UI states
-### buttons
-### loader
-### error
+### UI states: buttons
+### UI states: loader
+
+
+### UI states: error
+We hebben gezien dat de opdrachtgever inmiddels een design heeft voor de 404 pagina. Tijdens deze sprint hebben we dat gebouwd.
+Het ziet er nu zo uit:
+![image](https://github.com/user-attachments/assets/c2a1b04b-2f94-4127-ab33-0d3e2bec64e4)
+
+In server.js hebben we ervoor gezorgd dat de gebruiker altijd op deze pagina terecht komt wanneer de URL ongeldig is.
+Wanneer de gebruiker op deze pagina belandt, kan hij makkelijk terug naar de homepagina gaan met de button.
 
 
 ## Installatie
