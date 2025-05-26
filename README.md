@@ -34,7 +34,7 @@ De vernieuwde versie ziet er nu als volgt uit:
         * [favorieten GET route](#favorieten-GET-route)
      * [JavaScript](#JavaScript)
         * [bookmark hover?](#bookmark-hover?)
-        * [Sticky header](#Sticky header)
+        * [Sticky header](#Sticky-header)
      * [UI states](#UI-states)
         * [UI states buttons](#UI-states---buttons)
         * [UI states: loader](#UI-states---loader)
