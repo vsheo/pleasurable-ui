@@ -11,14 +11,39 @@
         width="100"
         height="100"
         class="detail-spotterimages">
-      <p>spotted by Arthur</p>
+      <p class="detail-spotter">
+        Spotter door {{ gift.spotter }}</p>
     </div>
 
 
     <div class="detail-line-first"></div>
-    <picture class="style-pic">
-      <img src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}" alt="{{ gift.name }}">
+
+    <picture class="detail-picture">
+      <source type="image/avif" srcset="
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=250&height=250 250w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=600&height=600 600w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=1000&height=1000 1000w
+    ">
+      <source type="image/webp" srcset="
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250 250w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=600&height=600 600w,
+      https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=1000&height=1000 1000w
+    ">
+      <img
+        src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
+        alt="{{ gift.name }}"
+        class="detail-img"
+        sizes="600px, 600vw">
     </picture>
+
+    {% comment %} <picture class="detail-picture">
+                                    <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=250&height=250">
+                                    <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250">
+                                    <img
+                                      src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}    "
+                                      alt="{{ gift.name }}"
+                                      class="detail-img">
+                        </picture> {% endcomment %}
 
     <h2 class="detail-title">{{ gift.name }}</h2>
 
@@ -29,7 +54,8 @@
           width="100"
           height="100"
           class="detail-spotterimages">
-        <p>spotted by Arthur</p>
+        <p class="detail-spotter">
+          Spotter door {{ gift.spotter }}</p>
 
       </div>
 
