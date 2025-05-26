@@ -440,23 +440,21 @@ header {
 /* detail */
 
 .detail-layout {  
-    max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .detail-spotterimages {
-    width: 30px; 
-    height: 30px;
-    border-radius: 50%;
-    background-color:lightgrey;
+    width: 40px; 
+    height: 40px;
+    border-radius: var(--border-radius-circle);
 }
 
 .detail-wrapper {
     display: flex;
     align-items: center; 
     gap: 16px;     
-    margin: 24px 0;          
+    margin: 15px 0;          
 }
 
 .detail-line, .detail-line-first, .detail-line-second, .detail-line-second-desktop {
@@ -476,19 +474,24 @@ header {
     text-align: left;
 }
 
-.style-pic {
-    max-width: 100%;   /* never exceed container width */
-    height: auto;      /* keep aspect ratio */
-    display: block; 
+.detail-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    width: 100%;
+    padding: 0 16px;
 }
 
 .detail-description {
     font-size: var(--font-size-text1-detail);
     font-weight: var(--font-weight-text1-detail);
+    width: 50ch;
+    padding-right: 1.2em;
 }
 
 .detail-price {
-    font-size: 21px;
+    font-size: var(--font-size-price-detail);
     font-weight: var(--font-weight-price-detail);
     margin: 24px 0; 
 }
@@ -508,11 +511,11 @@ header {
   @media (max-width: 767px) {
     .detail-wrapper-second {
       display: none;
-    }
+    } 
 
     .detail-line-second {
         display: none;
-    }
+    } 
   }
 
 @media (min-width: 768px) {
@@ -523,25 +526,24 @@ header {
 
     .detail-layout {
         display: flex;
-        gap: 2rem;
         align-items: flex-start;
-      }
+      } 
 
-    .detail-info {
+      .detail-info {
         max-width: 600px;
       }
 
       .detail-title {
         display: none;
-      }
+      } 
 
-      .detail-title-desktop {
+     .detail-title-desktop {
         display: block;
-      }
+      } 
 
-      .detail-layout > .detail-wrapper:first-of-type {
+     .detail-layout > .detail-wrapper:first-of-type {
         display: none;
-      }
+      } 
 
       .detail-line-first {
         display: none;
