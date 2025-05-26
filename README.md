@@ -1,18 +1,49 @@
 # Milledoni
 
 ## Inleiding
-wat was het opdracht (van school & opdrachtgever)
+De opdrachtgevers zijn Frederica en Tom. Zij zijn de eigenaren van de website Milledoni.
+Op deze website kunnen gebruikers met behulp van filters het perfecte cadeau vinden.
+
+De huidige versie van de website is verouderd. Daarom hebben zij een designers ingeschakeld om een nieuw ontwerp te laten maken.
+
+Wij hebben deze designs ontvangen en hebben ze omgezet naar een werkende website.
+De vernieuwde versie ziet er nu als volgt uit:
+![image](https://github.com/user-attachments/assets/7dfdd7b1-30a0-469a-9672-8aeb8a336d17)
+
+
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
+  * [Beschrijving & Gebruik](#Beschrijving-en-Gebruik)
   * [Kenmerken](#kenmerken)
+     * [Code conventies](#Code-conventies)
+     * [HTML & Liquid](#HTML-en-Liquid)
+        * [Liquid Partials](#Liquid-Partials)
+        * [Data vanuit Server](#Data-vanuit-Server)
+     * [CSS](#CSS)
+        * [Styleguide](#Styleguide)
+        * [nesting](#nesting)
+        * [carrousel](#carrousel)
+     * [server.js](#server.js)
+        * [Functies](#Functies)
+           * [getBookmarks functie](#getBookmarks-functie)
+           * [changeBookmark functie](#changeBookmark-functie)
+        * [Index route](#Index-route)
+           * [Index GET route](#Index-GET-route)
+           * [Index POST route](#Index-POST-route)
+        * [favorieten GET route](#favorieten-GET-route)
+     * [JavaScript](#JavaScript)
+        * [bookmark hover?](#bookmark-hover?)
+        * [Sticky header](#Sticky-header)
+     * [UI states](#UI-states)
+        * [UI states buttons](#UI-states---buttons)
+        * [UI states: loader](#UI-states---loader)
+        * [UI states: error](#UI-states---error)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving & gebruik
+## Beschrijving en Gebruik
 per pagina wat gemaakt is
 en wat je op elk pagina kan doen
 Index pagina
@@ -22,7 +53,24 @@ ontwerp keuzes (voor alles)
 
 
 ## Kenmerken
-## HTML/Liquid
+## Code conventies
+- Custom properties en classnames
+     - Voor de naamgeving van custom properties en classnames hebben wij een eigen structuur. Het eerste woord (en soms ook het tweede) geeft aan waarvoor de property bedoeld is, en het laatste woord geeft aan wat er wordt aangepast. Bijvoorbeeld: bg-primary. Hier geeft bg aan dat het om de achtergrond gaat, en primary dat het de primaire kleur betreft.
+Zie dit voorbeeld in de code:
+https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6142cc/public/styleguide.css#L35-L36
+- We werken altijd in feature branches.
+     - Voor elk issue maken we een nieuwe branch aan.
+     - Voor we mergen naar de main branch, vragen we eerst om een code review. Alleen wanneer er twee goedgekeurde reviews zijn, mogen we mergen naar main.
+- Pull request
+     - Bij het aanmaken van een pull request vullen we altijd [deze template](https://github.com/vsheo/pleasurable-ui/wiki/pull-request-template) in. Zo zorgen we ervoor dat de rest van het team alle informatie bij elkaar heeft om met de review te starten.
+- Tap index houden we op 4 spaties
+- CSS
+     - Margins en paddings zetten we op één regel, waar mogelijk. Voorbeeld uit de code
+       https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6142cc/public/sprint-11.css#L381
+
+
+
+## HTML e Liquid
 ### Liquid Partials
 ### Data vanuit Server
 
@@ -30,8 +78,35 @@ ontwerp keuzes (voor alles)
 ## CSS
 ### Styleguide
 ### nesting
-### carrousel
 
+
+### carrousel
+de carrousel werkt met alleen CSS
+In HTML heeft het alleen een ul met elk cadeau kaartje als li
+als laatst in het rijtje is er een li met een link terug naar de home pagina voor meer resulataten
+
+in CSS heb ik op de ul dit geplaatst
+```css
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scroll-marker-group: after;
+scroll-behavior: smooth;
+```
+overflow-x: auto; zodat de container horizontaal scrolable is.
+scroll-snap-type: x mandatory; zodat elk altijd 1 li in het midden snapped
+scroll-marker-group: after; zodat er onder de ul indicators komen dt laat zien hoeveel ietems er in de lijst staan en op welke de gebruiker is. het is ook mogelijk om hierop te klikken om naar deze toe te gaan
+scroll-behavior: smooth; zodat de animatie naar de volgende li beter uit ziet
+
+daarna maak ik buttons met CSS om door de carrousel heen te gaan
+```css
+&::scroll-button(left), &::scroll-button(right) {}
+```
+
+op de li heb ik:
+scroll-snap-align: center; zodat de volgende li naar het midden van de container snapped
+::scroll-marker, dit de styling voor de indicator, als de li niet selected is
+::scroll-marker: target-current, deze is voor de li die nu selected/ in het midden is
+scroll-snap-stop: always; dit zorgt ervoor dat het bij de eerst volgende li stopt
 
 ## server.js
 ### Functies
@@ -121,13 +196,40 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 
 ## JavaScript
-### bookmark hover ?
+### bookmark hover?
 
+### Sticky header
+De header verdwijnt bij scrollen naar beneden en verschijnt weer bij scrollen naar boven. Ik heb dit gedaan zodat de cadeau container op de index pagina de volledige hoogte van het scherm kan gebruiken voor de cadeau's. Voor mobiele apparaten is dit heel handig, omdat het scherm kleiner is. Als de gebruiker ver naar beneden is gescrold, hoeft die niet helemaal terug naar boven om de header weer te zien.
+
+video
+
+Dit heb ik gedaan door de header position: sticky te geven. Hierdoor blijft de header altijd zichtbaar in beeld, ook wanneer JavaScript niet werkt.<br>
+code<br>
+Met JavaScript selecteer ik de header en plaats ik een eventlistener op alle scrollbewegingen<br>
+code<br>
+Met pageYOffset krijg ik hoeveel pixels de pagina verticaal is verschoven<br>
+code<br>
+Als het verschil tussen de huidige en vorige pageYOffset positief is (dus bij scrollen naar beneden), voegen we de class "scroll-down" toe om de header buiten beeld te zetten<br>
+code<br>
+De class "scroll-down" zorgt ervoor dat de header met een transition uit beeld verdwijnt<br>
+code<br>
+Als het verschil tussen de huidige en vorige pageYOffset negatief is (dus bij scrollen omhoog), wordt de header weer zichtbaar gemaakt door de class "scroll-up" toe te voegen<br>
+code<br>
+Als laatste zetten we lastScroll gelijk aan currentScroll. Dit doen we zodat bij de volgende scroll de if statement uitgaat van de huidige scrollpositie, in plaats van altijd vanaf het begin van de pagina (bovenaan) te rekenen<br>
+code
 
 ## UI states
-### buttons
-### loader
-### error
+### UI states - buttons
+### UI states - loader
+
+
+### UI states - error
+We hebben gezien dat de opdrachtgever inmiddels een design heeft voor de 404 pagina. Tijdens deze sprint hebben we dat gebouwd.
+Het ziet er nu zo uit:
+![image](https://github.com/user-attachments/assets/c2a1b04b-2f94-4127-ab33-0d3e2bec64e4)
+
+In server.js hebben we ervoor gezorgd dat de gebruiker altijd op deze pagina terecht komt wanneer de URL ongeldig is.
+Wanneer de gebruiker op deze pagina belandt, kan hij makkelijk terug naar de homepagina gaan met de button.
 
 
 ## Installatie
