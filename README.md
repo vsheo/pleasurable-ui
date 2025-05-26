@@ -22,7 +22,7 @@ ontwerp keuzes (voor alles)
 
 
 ## Kenmerken
-##Code conventies
+## Code conventies
 - Custom properties en classnames
      - Voor de naamgeving van custom properties en classnames hebben wij een eigen structuur. Het eerste woord (en soms ook het tweede) geeft aan waarvoor de property bedoeld is, en het laatste woord geeft aan wat er wordt aangepast. Bijvoorbeeld: bg-primary. Hier geeft bg aan dat het om de achtergrond gaat, en primary dat het de primaire kleur betreft.
 Zie dit voorbeeld in de code:
