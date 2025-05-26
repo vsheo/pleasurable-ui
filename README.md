@@ -14,7 +14,7 @@ De vernieuwde versie ziet er nu als volgt uit:
 
 ## Inhoudsopgave
 
-  * [Beschrijving & Gebruik](#Beschrijving-&-Gebruik)
+  * [Beschrijving & Gebruik](#Beschrijving-en-Gebruik)
   * [Kenmerken](#kenmerken)
      * [Code conventies](#Code-conventies)
      * [HTML & Liquid](#HTML-en-Liquid)
@@ -43,7 +43,7 @@ De vernieuwde versie ziet er nu als volgt uit:
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving & Gebruik
+## Beschrijving en Gebruik
 per pagina wat gemaakt is
 en wat je op elk pagina kan doen
 Index pagina
