@@ -14,14 +14,15 @@ De vernieuwde versie ziet er nu als volgt uit:
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
+  * [Beschrijving & Gebruik](#Beschrijving-&-Gebruik)
   * [Kenmerken](#kenmerken)
+     * [Code conventies](#Code-conventies)
+     * [HTML & Liquid](#HTML-&-Liquid)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving & gebruik
+## Beschrijving & Gebruik
 per pagina wat gemaakt is
 en wat je op elk pagina kan doen
 Index pagina
@@ -48,7 +49,7 @@ https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6
 
 
 
-## HTML/Liquid
+## HTML & Liquid
 ### Liquid Partials
 ### Data vanuit Server
 
