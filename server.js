@@ -127,25 +127,37 @@ async function changeBookmark(listId,giftId) {
 }
 
 app.get('/cadeau/:slug', async function (request, response) {
-    const slug = request.params.slug;
-
-const cadeauURL = `https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,slug,id,img,img.id,description,amount,spotter&filter={"slug":"${slug}"}&limit=1`;
-const cadeauResponse = await fetch(cadeauURL);
-const cadeauResponseJSON = await cadeauResponse.json();
-
-console.log("Gevonden cadeau:", cadeauResponseJSON.data[0]);
-
-// console.log("Slug uit URL:", slug);
-// console.log("Response data:", cadeauResponseJSON.data);
-
-if (cadeauResponseJSON.data.length === 0) {
-  return response.status(404).send("Cadeau niet gevonden of lege array");
-}
-response.render('detail.liquid', { 
-    gift: cadeauResponseJSON.data[0],   // het eerste (enige) cadeau
-    gifts: cadeauResponseJSON.data      // de hele array (hier met 1 item)
+    try {
+      const slug = request.params.slug;
+  
+      const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
+      const cadeauResponseJSON = await cadeauResponse.json();
+      const allBookmarks = await getBookmarks("viresh")
+  
+      if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
+        return response.status(404).render('404.liquid');
+      }
+  
+      const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
+      const allCadeauResponseJSON = await allCadeauResponse.json();
+  
+      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data, bookmarks: allBookmarks });
+    } catch (error) {
+      console.error("Fout bij ophalen cadeau:", error);
+      response.status(404).render('404.liquid');
+    }
   });
-})
+
+
+  app.post("/cadeau/:slug/:id", async function (request, response) {
+    const detailSlug = request.params.slug;
+    const giftId = request.params.id;
+
+    await changeBookmark(2,giftId)
+
+    // Redirect terug naar de detail pagina
+    response.redirect(`/cadeau/${detailSlug}`);
+});
 
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
