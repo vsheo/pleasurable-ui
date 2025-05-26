@@ -457,8 +457,8 @@ header {
             }
 
             @media screen and (min-width: 1200px) {
-                height: 517px;
-                width: 455px;
+                height: 500px;
+                width: 438px;
             }
         }
     }
@@ -486,7 +486,7 @@ header {
             }
 
             @media screen and (min-width: 1200px) {
-                font-size: 125px;
+                font-size: 110px;
             }
         }
 
@@ -500,10 +500,6 @@ header {
 
             @media screen and (min-width: 1000px) {
                 font-size: 30px;
-            }
-
-            @media screen and (min-width: 1200px) {
-                font-size: 40px;
             }
         }
 
