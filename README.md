@@ -22,6 +22,23 @@ ontwerp keuzes (voor alles)
 
 
 ## Kenmerken
+##Code conventies
+- Custom properties en classnames
+     - Voor de naamgeving van custom properties en classnames hebben wij een eigen structuur. Het eerste woord (en soms ook het tweede) geeft aan waarvoor de property bedoeld is, en het laatste woord geeft aan wat er wordt aangepast. Bijvoorbeeld: bg-primary. Hier geeft bg aan dat het om de achtergrond gaat, en primary dat het de primaire kleur betreft.
+Zie dit voorbeeld in de code:
+https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6142cc/public/styleguide.css#L35-L36
+- We werken altijd in feature branches.
+     - Voor elk issue maken we een nieuwe branch aan.
+     - Voor we mergen naar de main branch, vragen we eerst om een code review. Alleen wanneer er twee goedgekeurde reviews zijn, mogen we mergen naar main.
+- Pull request
+     - Bij het aanmaken van een pull request vullen we altijd [deze template](https://github.com/vsheo/pleasurable-ui/wiki/pull-request-template) in. Zo zorgen we ervoor dat de rest van het team alle informatie bij elkaar heeft om met de review te starten.
+- Tap index houden we op 4 spaties
+- CSS
+     - Margins en paddings zetten we op één regel, waar mogelijk. Voorbeeld uit de code
+       https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6142cc/public/sprint-11.css#L381
+
+
+
 ## HTML/Liquid
 ### Liquid Partials
 ### Data vanuit Server
