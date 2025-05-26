@@ -78,8 +78,35 @@ https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6
 ## CSS
 ### Styleguide
 ### nesting
-### carrousel
 
+
+### carrousel
+de carrousel werkt met alleen CSS
+In HTML heeft het alleen een ul met elk cadeau kaartje als li
+als laatst in het rijtje is er een li met een link terug naar de home pagina voor meer resulataten
+
+in CSS heb ik op de ul dit geplaatst
+```css
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scroll-marker-group: after;
+scroll-behavior: smooth;
+```
+overflow-x: auto; zodat de container horizontaal scrolable is.
+scroll-snap-type: x mandatory; zodat elk altijd 1 li in het midden snapped
+scroll-marker-group: after; zodat er onder de ul indicators komen dt laat zien hoeveel ietems er in de lijst staan en op welke de gebruiker is. het is ook mogelijk om hierop te klikken om naar deze toe te gaan
+scroll-behavior: smooth; zodat de animatie naar de volgende li beter uit ziet
+
+daarna maak ik buttons met CSS om door de carrousel heen te gaan
+```css
+&::scroll-button(left), &::scroll-button(right) {}
+```
+
+op de li heb ik:
+scroll-snap-align: center; zodat de volgende li naar het midden van de container snapped
+::scroll-marker, dit de styling voor de indicator, als de li niet selected is
+::scroll-marker: target-current, deze is voor de li die nu selected/ in het midden is
+scroll-snap-stop: always; dit zorgt ervoor dat het bij de eerst volgende li stopt
 
 ## server.js
 ### Functies
