@@ -128,7 +128,7 @@ async function changeBookmark(listId,giftId) {
 
 app.get('/cadeau/:slug', async function (request, response) {
     try {
-      const slug = request.params.slug;
+        const slug = request.params.slug;
   
       const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
       const cadeauResponseJSON = await cadeauResponse.json();
@@ -143,10 +143,15 @@ app.get('/cadeau/:slug', async function (request, response) {
   
       response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data, bookmarks: allBookmarks });
     } catch (error) {
-      console.error("Fout bij ophalen cadeau:", error);
-      response.status(404).render('404.liquid');
+        console.error("Fout bij ophalen cadeau:", error);
+        response.status(404).render('404.liquid');
     }
-  });
+});
+
+// bij een verkeerde link op elk pagina van deze website, wordt de gebruiker naar de error pagina gebracht.
+app.use(function (request, response) {
+    response.status(404).render('404.liquid')
+})
 
 
   app.post("/cadeau/:slug/:id", async function (request, response) {
