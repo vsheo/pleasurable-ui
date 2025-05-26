@@ -470,6 +470,67 @@ header {
                 "image save save"
                 "image di di"
                 "image tags  tags";
+        }}
+    }
+.section-where-find {
+    .section-title {
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+
+        span {
+            margin-left: 1em;
+        }
+    }
+
+    .table-where-find {
+        width: 100%;
+        max-width: 30em;
+        border-spacing: 0 .7em;
+        margin: 0 1em;
+        border-collapse: collapse;
+
+        @media screen and (min-width:440px) {
+            margin: 0 5.5em;
+        }
+
+        th, td {
+            padding: .2em;
+            text-align: left;
+            border-bottom: 1px solid var(--text-primary-color);
+            position: relative;
+        }
+
+        th {
+            background-color: var(--border-primary-form-color);
+            color: var(--text-primary-color);
+        }
+
+        tr {
+            height: 3em;
+            margin-left: .5em;
+        }
+
+        .tr-link {
+            inset: 0;
+            position: absolute;
+            text-decoration: none;
+            align-self: center;
+            color: var(--text-primary-color);
+            text-wrap: nowrap;
+            
+            &:hover {
+                color: var(--card-primary-color);
+            }
+        }
+
+        tr:hover {
+            background-color: var(--border-primary-form-color);
+        }
+
+        tr:active {
+            scale: .9;
+            transition: ease-out;
         }
     }
 }
