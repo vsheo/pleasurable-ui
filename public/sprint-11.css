@@ -13,6 +13,17 @@ header {
     top: 0;
     z-index: 20;
     padding: 1em;
+    position: sticky;
+
+    &.scroll-up {
+        transform: translateY(0);
+        transition: 0.5s;
+    }
+
+    &.scroll-down {
+        transform: translateY(-100%);
+        transition: 0.5s;
+    }
 
     @media screen and (min-width:1000px) {
         display: flex;
