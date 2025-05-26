@@ -553,6 +553,11 @@ header {
       
 }
 
+.favorieten-page{
+    background-color: var(--bg-primary-color);
+    height: 100dvh;
+}
+
 .container-person-list{
     display: flex;
     justify-content: center;

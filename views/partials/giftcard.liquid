@@ -18,7 +18,6 @@
         </picture>
         {% endif %}
 
-        {{favoriet_gifts | json}}
         {% if favoriet_gifts %}
             <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
             {% else %}
