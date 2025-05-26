@@ -481,6 +481,7 @@ header {
             text-decoration: none;
             align-self: center;
             color: var(--text-primary-color);
+            text-wrap: nowrap;
             
             &:hover {
                 color: var(--card-primary-color);
