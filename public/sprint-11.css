@@ -485,10 +485,8 @@ header {
 }
 
 .detail-line, .detail-line-first, .detail-line-second, .detail-line-second-desktop {
-    width: 100%; 
-    height: 2px;
-    background-color:#999999;
-    margin: 10px 0; 
+    border: 1px solid #999999;
+    margin: 1em; 
 }
 
 .detail-title, .detail-title-desktop {
@@ -647,6 +645,7 @@ display: flex;
         display: flex;
         align-items: center;
         margin-left: 1em;
+        padding: 1em 0em 1em 0em;
 
         span {
             margin-left: 1em;
@@ -738,12 +737,12 @@ display: flex;
     align-self: center;
     gap: 1em;
     height: 4em;
-    /* width: 20em; */
     width: 90%;
     border: none;
     background-color: var(--button-secundary-color);
     justify-self: center;
     justify-content: center;
+    margin: 4em 0em 2em 0em;
 
     @media screen and (min-width: 742px) {
         width: 660px;
@@ -784,6 +783,7 @@ img.img-save-detail {
     display: flex;
     gap: .5em;
     margin: 0em 0em 0em 2em;
+    padding: 1em 0em 1em 0em;
 }
 
 .occasion {
@@ -799,7 +799,7 @@ img.img-save-detail {
     max-width: 700px;
     min-width: 5em;
     padding: 2em;
-    margin: 1em 2em 1em 1em;
+    margin: 1em 1em 1em 1em;
     align-items: center;
 }
 
@@ -831,6 +831,7 @@ img.img-save-detail {
         grid-area: title;
         align-self: start;
         text-wrap: nowrap;
+        padding: 1em 0em 1em 0em;
     }
 
     .container-carrousel {
