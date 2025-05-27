@@ -119,6 +119,14 @@ https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429
 
 ## CSS
 ### Styleguide
+We hebben het begin een styleguide gemaakt. We hebben allemaal onze gemaakte website en van het design erin gestopt en daar is de styleguide van gemaakt. 
+De styleguide bestaat uit kleuren, border-radius, borders, font-size, font-weight, font-family, line-height en box-shadow. De font wordt ingeladen met @font-face. 
+
+Het is ingedeeld per pagina met een class en als je iets uit de styleguide gebruikt dan moet je var() gebruiken en de class toevoegen aan de HTML waar je de style wilt.
+<img width="608" alt="Scherm­afbeelding 2025-05-27 om 23 26 05" src="https://github.com/user-attachments/assets/3ee8d616-4c8c-4acf-833d-433392e61269" />
+
+
+
 ### nesting
 We hebben besloten om code te nesten, omdat het dan overzichtelijker wordt. Zo kan je zien wat bij wat hoort en kan je sneller en makkelijker dingen aanpassen. 
 
