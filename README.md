@@ -31,6 +31,9 @@ De vernieuwde versie ziet er nu als volgt uit:
         * [Index route](#Index-route)
            * [Index GET route](#Index-GET-route)
            * [Index POST route](#Index-POST-route)
+       * [Detail route](#deatail-route)
+           * [Detail GET route](#Detail-GET-route)
+           * [Detail POST route](#Deatil-POST-route)
         * [favorieten GET route](#favorieten-GET-route)
      * [JavaScript](#JavaScript)
         * [bookmark hover?](#bookmark-hover?)
@@ -168,7 +171,7 @@ Hiervoor gebruiken we:
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L115-L126
 
 ## Index route
-De indexpagina heeft een GET route om alle cadeau's op de homepage te laten zien, en een POST route waarmee de gebruiker cadeau's kan toevoegen aan of verwijderen uit zijn lijsten
+De indexpagina heeft een GET route om alle cadeau's op de homepage te laten zien, en een POST route waarmee de gebruiker cadeau's kan toevoegen aan of verwijderen uit zijn lijsten.
 
 ### Index GET route
 In deze route wordt een fetch URL gebruikt die de name, slug, id en img.id ophaalt. We filteren de data op cadeau's met een img tag, zodat deze bovenaan staan. Deze tag gebruiken we later voor responsive images.
@@ -186,6 +189,27 @@ https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538
 
 Na het uitvoeren van de functie redirecten we de gebruiker terug naar dezelfde pagina.
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L48
+
+## Detail route
+De detailpagina heeft een GET route om alle cadeau's op een eigen detailpagina te laten zien, en een POST route waarmee de gebruiker cadeau's kan toevoegen aan of verwijderen uit zijn lijsten.
+
+### Detail GET route
+In deze route wordt de fetch url gebruikt met daarin name, slug, img en img.id. Daar wordt voor deze route de description, amount, spotter, tags en de slug. Met de slug kan die zien welk cadeau het is. 
+https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L133-L135
+
+Daarbij wordt ook een aparte fetch url gedaan voor de you also like. Daar wordt dezelfde url gebruikt maar dan met als de img niet goed in de database staat voor de responsive images wordt die niet getoond. Er worden maar 6 cadeau’s getoond. 
+https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L141-L142
+
+Er zit een try catch als er iets mis is met de url en de slug niet hetzelfde zijn van een cadeau dan wordt de 404 pagina getoond en als de url alles klopt dan laat die de detailpagina van het cadeau zien. 
+Hetzelfde als er iets mis gaat met de fetch. 
+https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L130-L147
+
+### Detail POST route
+Voor de post op detailpagina wordt de id en de slug van het cadeau, die opgeslagen of niet opgeslagen doorgestuurd. Daarna roepen we de changeBookmark functie aan, waarbij we deze id en de slug gebruiken. Voor nu werken we met een lijst, die we hardcoded meegeven met id: 2.
+https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L158-L161
+
+Na het uitvoeren van de functie redirecten we de gebruiker terug naar dezelfde pagina.
+https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L164
 
 ### favorieten GET route
 Op deze pagina laten we alleen de cadeau's uit een lijst zien. Hiervoor halen we eerst alle cadeau's uit de lijst op met de getBookmarks functie.
