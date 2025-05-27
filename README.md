@@ -15,6 +15,9 @@ De vernieuwde versie ziet er nu als volgt uit:
 ## Inhoudsopgave
 
   * [Beschrijving & Gebruik](#Beschrijving-en-Gebruik)
+     * [Homepagina](#Homepagina)
+     * [Detailpagina](#Detailpagina)
+     * [Favorieten pagina](#Favorieten-pagina)
   * [Kenmerken](#kenmerken)
      * [Code conventies](#Code-conventies)
      * [HTML & Liquid](#HTML-en-Liquid)
@@ -34,7 +37,9 @@ De vernieuwde versie ziet er nu als volgt uit:
        * [Detail route](#deatail-route)
            * [Detail GET route](#Detail-GET-route)
            * [Detail POST route](#Deatil-POST-route)
-        * [favorieten GET route](#favorieten-GET-route)
+       * [Favorieten route](#Favorieten-route)
+          * [Favorieten GET route](#Favorieten-GET-route)
+          * [Favorieten POST route](#Favorieten-POST-route)
      * [JavaScript](#JavaScript)
         * [bookmark hover?](#bookmark-hover?)
         * [Sticky header](#Sticky-header)
@@ -47,6 +52,28 @@ De vernieuwde versie ziet er nu als volgt uit:
   * [Licentie](#licentie)
 
 ## Beschrijving en Gebruik
+
+### Homepagina
+Als je op de website komt, kom je op de homepagina. Je ziet voor desktop aan de linkerkant de chat en aan de rechterkant alle cadeau's. Bovenin staan nog een 2 button naar de favorieten pagina en profile (die is niet gemaakt). 
+Voor mobile en tablet is alles onder elkaar gezet en is de searchbar onderin gezet blijft staan als je scrolt. Voor steeds grotere schermen komt er een rij bij van de cadeau's tot de desktop versie. 
+
+Je kan op de homepagina door de cadeau's heen scrollen en opslaan en niet opslaan (bookmark veranderd). Als je erdoorheen scrolt naar beneden gaat de header weg en als je ohoog scrolt komt die weer in beeld. Je kan op de cadeua's klikken en dan ga je naar de detailpagina van het cadeau waarop je hebt geklikt. 
+ Als je op de searchbar klikt gaat de tekst weg en kan je typen (doet het nog niet). Je kan op de Mijn lijst klikken dan ga je naar de favorieten pagina. 
+
+We hebben besloten om voor mobile en tablet alles onder elkaar te zetten en voor desktop naast elkaar. Zo Is het responsive en goed te zien op alle schermen. Als je naar beneden scrolt gaat de header weg en als je naar boven scrolt komt de header terug. We hebben dit gedaan zodat je meer ruimte hebt voor de cadeau's en is er meer ruimte voor de cadeau's. De website gaat over de cadeua's en moet goed te zien zijn. 
+
+### Detailpagina
+Als je op een cadeau klikt ga je naar de detailpgina van dat cadeau. Je kan daar meer informatie zien over het cadeau, zie je wie het cadeau heeft gespot, waar je het kan kopen en zie je meer cadeua's die je misschien ook leuk vind. Ook op deze pagina kan je het cadeau opslaan en niet opslaan. 
+
+Als je over de tabel van de verschillende winkels waar je het kan kopen gaat zie je waar je muis zit. De achtergrond en de tekstkleur veranderd. Bij wat je misschien leuk ook vind is een carrousel waar je kan zien of je nog verder kan klikken/scrollen de button word lichter als je niet verder kan. De kaartjes worden groter als je daar bent en de marker het rondje onderaan de carrousel wordt grijs. 
+
+### Favorieten pagina
+Als je op de Mijn lijst in de header klikt ga je de favorieten pagina. Je ziet dan de naam van de persoon voor de wie de lijst is (voor nu is het mijn lijst) met een img. Daaronder de cadeau's die opgeslagen zijn. Je kan hier ook de cadeau's uit je lijst halen en dan gaat het cadeua weg van de favorieten pagina. 
+
+Voor mobile is zijn de cadeau's onder elkaar en als de schermen steeds groter worden komt er een rij bij t/m 3 rijen.   
+
+We hebben ervoor gekozen om de favorieten pagina zo te maken, omdat dit het belangrijkste te van de pagina is. We wilde deze pagina wel hebben, omdat we de opgeslagen cadeua's wilde laten zien. 
+
 per pagina wat gemaakt is
 en wat je op elk pagina kan doen
 Index pagina
@@ -75,13 +102,31 @@ https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6
 
 ## HTML e Liquid
 ### Liquid Partials
+We hebben een head.liquid en een footer.liquid in een partial gedaan. Zo kunnen we voor meerdere pagina dezelfde head en footer gebruiken. 
+
+We halen aan het begin van een pagina de head op die een dynamische titel heeft en onderaan halen we de footer op.
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/index.liquid#L1
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/partials/head.liquid#L9
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/index.liquid#L72
+
+We hebben de cadeau’s in een partial gedaan, omdat we de cadeau’s op meerdere plekken gebruiken. Zo hoefden we de cadeau’s niet meerdere keren de schrijven en kon het nu maar met 1 regel code. 
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/index.liquid#L64
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/detail.liquid#L153
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/favorieten.liquid#L12
+
 ### Data vanuit Server
 
 
 ## CSS
 ### Styleguide
 ### nesting
+We hebben besloten om code te nesten, omdat het dan overzichtelijker wordt. Zo kan je zien wat bij wat hoort en kan je sneller en makkelijker dingen aanpassen. 
 
+Het nesten van media queries. 
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/public/sprint-11.css#L297-L310
+
+Het nesten van een container met wat daarin zit. 
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/public/sprint-11.css#L139-L238
 
 ### carrousel
 de carrousel werkt met alleen CSS
@@ -191,7 +236,7 @@ Na het uitvoeren van de functie redirecten we de gebruiker terug naar dezelfde p
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L48
 
 ## Detail route
-De detailpagina heeft een GET route om alle cadeau's op een eigen detailpagina te laten zien, en een POST route waarmee de gebruiker cadeau's kan toevoegen aan of verwijderen uit zijn lijsten.
+De detailpagina heeft een GET route om alle cadeau's op een eigen detailpagina te laten zien, en een POST route waarmee de gebruiker cadeau's kan toevoegen aan of verwijderen uit zijn lijst.
 
 ### Detail GET route
 In deze route wordt de fetch url gebruikt met daarin name, slug, img en img.id. Daar wordt voor deze route de description, amount, spotter, tags en de slug. Met de slug kan die zien welk cadeau het is. 
@@ -211,13 +256,27 @@ https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe
 Na het uitvoeren van de functie redirecten we de gebruiker terug naar dezelfde pagina.
 https://github.com/vsheo/pleasurable-ui/blob/a0ee467f6aa6af029241f1d15d1c90cbebe2d0b0/server.js#L164
 
-### favorieten GET route
+## Favorieten route
+De favorieten pagina heeft een GET route om alle cadeau's die opgeslagen zijn te laten zien en een POST route waarmee de gebruiker cadeau's kan verwijderen uit zijn lijst.
+
+### Favorieten GET route
 Op deze pagina laten we alleen de cadeau's uit een lijst zien. Hiervoor halen we eerst alle cadeau's uit de lijst op met de getBookmarks functie.
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L53-L56
 
 deze functie geeft een array terug. in directus kan je een array meegeven in de fetch URL, dus het enige dat wij moeten doen is de filter schrijven. de data die dan uit de fetch komt heeft alleen de data van cadeau's uit de bookmark lijst
 https://github.com/vsheo/pleasurable-ui/blob/96fc1494ed458254e7fd3bdf6920f073538e62d6/server.js#L58-L59
 
+### Favorieten POST route
+Voor de post op favorieten pagina wordt de id en de name van het cadeau, die opgeslagen of niet opgeslagen doorgestuurd. Daarna roepen we de changeBookmark functie aan, waarbij we deze id en de name gebruiken. Voor nu werken we met een lijst, die we hardcoded meegeven met id: 2.
+
+Na het uitvoeren van de functie redirecten we de gebruiker terug naar dezelfde pagina.
+Met assign favoriet_gifts weet die of die op de favorieten pagina moet blijven. Bij de post is een if else gebruikt om te zien of die een andere action moet pakken en dat gebeurt door favoriet_gifts. Die ook bij de cadeau’s op de favorieten pagina staat. 
+
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/server.js#L66-L67
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/server.js#L72
+
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/partials/giftcard.liquid#L21-L25
+https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/favorieten.liquid#L12
 
 ## JavaScript
 ### bookmark hover?
