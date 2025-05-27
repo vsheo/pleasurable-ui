@@ -1,17 +1,11 @@
-{% render 'partials/head.liquid'
-  , title: gift.name %}
+{% render 'partials/head.liquid', title: gift.name %}
 
 <main class="detail-page">
 
-  <section class="detail-layout">
+  <section class="detail-section-1">
     <div class="detail-wrapper">
-      <img
-        src="/assets/spotter-img.png"
-        width="100"
-        height="100"
-        class="detail-spotterimages">
-      <p class="detail-spotter">
-        Spotter door {{ gift.spotter }}</p>
+      <img src="/assets/spotter-img.png" width="100" height="100" class="detail-spotterimages">
+      <p class="detail-spotter">Spotter door {{ gift.spotter }}</p>
     </div>
 
     <div class="detail-line-first"></div>
@@ -21,16 +15,11 @@
         https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=600&height=600 600w,
         https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=1000&height=1000 1000w
         ">
-        <source type="image/webp" srcset="
-        https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250 250w,
+        <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=250&height=250 250w,
         https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=600&height=600 600w,
         https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=webp&width=1000&height=1000 1000w
         ">
-      <img
-        src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
-        alt="{{ gift.name }}"
-        class="detail-img"
-        sizes="600px, 600vw">
+        <img src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}" alt="{{ gift.name }}" class="detail-img" sizes="600px, 600vw">
     </picture>
 
     <h2 class="detail-title">{{ gift.name }}</h2>
@@ -38,29 +27,26 @@
     <div class="detail-info">
         <div class="detail-wrapper detail-wrapper-second">
             <img src="/assets/spotter-img.png" width="100" height="100" class="detail-spotterimages">
-        <p class="detail-spotter">
-          Spotter door {{ gift.spotter }}
-        </p>
+            <p class="detail-spotter">Spotter door {{ gift.spotter }}</p>
         </div>
-
-      <div class="detail-line-second"></div>
-
-      <h2 class="detail-title-desktop">{{ gift.name }}</h2>
-
-      <p class="detail-price">
-        <span class="detail-currency">€</span>
-        {{ gift.amount }}</p>
-      <p class="detail-description">{{ gift.description }}</p>
+        <div class="detail-line-second"></div>
+        <h2 class="detail-title-desktop">{{ gift.name }}</h2>
+        <p class="detail-price"><span class="detail-currency">€</span>{{ gift.amount }}</p>
+        <p class="detail-description">{{ gift.description }}</p>
     </div>
   </section>
 
     <div class="detail-line-second"></div>
 
     {% comment %} why this gift {% endcomment %}
+    <section class="why-this-gift"> why-this-gift</section>
 
     <div class="detail-line-second"></div>
 
     {% comment %} save to give {% endcomment %}
+    <section class="save-to-give">save-to-give</section>
+
+    <div class="detail-line-second"></div>
 
     <section class="section-where-find">
         <h3 class="section-title">
@@ -68,7 +54,6 @@
 
             <span>Waar je het kunt vinden</span>
         </h3>
-
         <table class="table-where-find">
             <thead>
                 <tr>
@@ -80,18 +65,18 @@
             <tbody>
                 <tr>
                     <td><a href="#" class="tr-link">Decathlon</a></td>
-                    <td><a href="#" class="tr-link">€ {{giftDetails.amount}}</a></td>
-                    <td><a href="#" class="tr-link"><svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"><polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(60,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(90,0) scale(1.25)" fill="url(#half)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
+                    <td><a href="#" class="tr-link">€ {{ gift.amount }}</a></td>
+                    <td><a href="#" class="tr-link stars"><svg width="100" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"><polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(60,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(90,0) scale(1.25)" fill="url(#half)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
                 </tr>
                 <tr>
                     <td><a href="#" class="tr-link">Amazon</a></td>
-                    <td><a href="#" class="tr-link">€ {{ giftDetails.amount | plus: 8.49 }}</a></td>
-                    <td><a href="#" class="tr-link"><svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"> <polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(60,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(90,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
+                    <td><a href="#" class="tr-link">€ {{ gift.amount | plus: 8.49 }}</a></td>
+                    <td><a href="#" class="tr-link stars"><svg width="100" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"> <polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(60,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(90,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
                 </tr>
                 <tr>
                     <td><a href="#" class="tr-link">Ebay</a></td>
-                    <td><a href="#" class="tr-link">€ {{ giftDetails.amount | minus: 3.02  }}</a></td>
-                    <td><a href="#" class="tr-link"><svg width="150" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"> <polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(60,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(90,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
+                    <td><a href="#" class="tr-link">€ {{ gift.amount | minus: 3.02  }}</a></td>
+                    <td><a href="#" class="tr-link stars"><svg width="100" height="30" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="half" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="gold"/><stop offset="50%" stop-color="lightgray"/></linearGradient></defs><g fill="gold"> <polygon transform="scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(30,0) scale(1.25)" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></g><polygon transform="translate(60,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(90,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/><polygon transform="translate(120,0) scale(1.25)" fill="lightgray" points="12,0 15,8 24,9 17,15 19,24 12,19 5,24 7,15 0,9 9,8"/></svg></a></td>
                 </tr>
             </tbody>
         </table>
@@ -99,33 +84,29 @@
 
     <div class="detail-line-second"></div>
 
-    <button class="btn-save-to-list">
-        <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
-        {% if bookmarks contains gift.id %}
+    <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
+    {% if bookmarks contains gift.id %}
         <button class="btn-save-to-list" aria-label="verwijder uit bookmarks lijst">
-                <picture>
-                    <source type="image/avif" srcset="/assets/saved.avif">
-                    <source type="image/webp" srcset="/assets/saved.webp">
-                    <img class="img-save-detail" src="/assets/saved.svg" width="41" height="28" alt="opgeslagen">
-                </picture>
-                <p class="tekst-save-detail slug">Verwijder uit lijst</p>
-            </button>
-            {% else %}
-            <button class="btn-save-to-list" aria-label="voeg toe aan bookmarks lijst">
-                <picture>
-                    <source type="image/avif" srcset="/assets/notsaved.avif">
-                    <source type="image/webp" srcset="/assets/notsaved.webp">
-                    <img class="img-save-detail" src="/assets/notsaved.svg" width="45" height="41" alt="niet opgeslagen">
-                </picture>
-                <p class="tekst-save-detail slug">Opslaan in lijst</p>
-                </button>
-            {% endif %}
-        </form>
-    </button>
+            <picture>
+                <source type="image/avif" srcset="/assets/saved.avif">
+                <source type="image/webp" srcset="/assets/saved.webp">
+                <img class="img-save-detail" src="/assets/saved.svg" width="41" height="28" alt="opgeslagen">
+            </picture>
+            <p class="tekst-save-detail slug">Verwijder uit lijst</p>
+        </button>
+        {% else %}
+        <button class="btn-save-to-list" aria-label="voeg toe aan bookmarks lijst">
+            <picture>
+                <source type="image/avif" srcset="/assets/notsaved.avif">
+                <source type="image/webp" srcset="/assets/notsaved.webp">
+                <img class="img-save-detail" src="/assets/notsaved.svg" width="45" height="41" alt="niet opgeslagen">
+            </picture>
+            <p class="tekst-save-detail slug">Opslaan in lijst</p>
+        </button>
+    {% endif %}
+    </form>
 
-    <p class="tekst-save-detail slug">Opslaan in lijst</p>
-
-    <div class="detail-line-second"></div>
+    {% comment %} <p class="tekst-save-detail slug">Opslaan in lijst</p> {% endcomment %}
 
     <section class="container-tags">
         <div class="heading-occasion">
@@ -134,7 +115,7 @@
         </div>
         <div class="container-occasion">
             {%- assign detailTags = gift.tags | remove: "'" | split: ',' -%}
-            {% for tags in detailTags -%}
+            {% for tags in detailTags limit: 9 -%}
                 <p class="tags">{{ tags }}</p>
             {%- endfor %}
         </div>
@@ -144,20 +125,14 @@
 
     <section class="section-also-like">
         <h3 class="section-title">You may also like</h3>
-
         <ul class="container-carrousel">
-            {% comment %} <li class="item-carrousel placeholder-gift slug"></li> {% endcomment %}
-
+            {%- assign pagina_details = 2 -%}
             {% for gift in allGifts%}
                 <li class="item-carrousel">
-                    {% include 'partials/giftcard.liquid' gift: gift %}
+                    {% include 'partials/giftcard.liquid', favoriet-gifts, gift: gift %}
                 </li>
             {% endfor %}
-
             <li class="item-carrousel placeholder-gift slug"><a href="/" class="index-link description-cadeau">Meer Resulaten</a></li>
         </ul>
     </section>
-
 </main>
-
-{% render 'partials/footer.liquid' %}
