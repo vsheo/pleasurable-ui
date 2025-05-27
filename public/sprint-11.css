@@ -968,20 +968,33 @@ img.img-save-detail {
 .detail-extra-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* margin: 50px 0; */
-    padding: 3em;
+    padding: 2em 1em;
+    gap: 2em;
 }
 
 .detail-section {
     display: flex;
     flex-direction: column;
- 
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 900px;
+    margin-left: auto;
 }
+
+.detail-wrap-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
 
 .detail-subtitles {
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     margin: 10px 0 2px 0;
 }
 
@@ -993,49 +1006,44 @@ img.img-save-detail {
 }
 
 .detail-text {
-    /* max-width: clamp(40ch, 90%, 60ch); */
-    margin: 5px 0 10px 0;
-    text-align: center;
+    max-width: clamp(40ch, 90%, 60ch);
+    margin: 0;
+    /* text-align: center; */
 }
 
 img.detail-illustratie-one, img.detail-illustratie-two {
-    margin: 10px 0 2px 0;
+    margin-bottom: 1em;
     object-fit: contain;
-    width: 100%;
+    width: 80%;
     height: 100px;
+    max-width: 300px;
+    flex-shrink: 0;
 }
 
 
 @media (min-width: 768px) {
     .detail-extra-info {
-        display:flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        gap: 2em;
-        padding: 0 14em;
+        padding: 3em 5vw;
     }
 
     .detail-section {
       flex-direction: row;
-      /* padding: 0 9em; */
-      gap: 1.7rem;
+      align-items: flex-start;
+      text-align: left;
+      margin-left: auto;
+      gap: 0.8em; 
     }
 
     .detail-wrap-info {
-        margin: 10px 0 10px 0;
-    }
-
-
-    .detail-text, .detail-subtitles {
+        align-items: flex-start;
         text-align: left;
-        margin: 0;
+        width: auto;
     }
-
 
     img.detail-illustratie-one, img.detail-illustratie-two {
-        margin: 25px 0 2px 0;
-        object-fit: contain;
-        height: 70px;
+        margin: 0;
+        width: 150px;
+        margin: 0;
     }
 }
 
@@ -1050,13 +1058,15 @@ img.detail-illustratie-one, img.detail-illustratie-two {
 }
 
 @media (min-width: 1200px) {
+
     .detail-extra-info {
-        display:flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        gap: 2em;
-        padding: 0 30em;
+        padding: 3em 5vw;
     }
+
+    img.detail-illustratie-one, img.detail-illustratie-two {
+        width: 180px;
+      }
+    
 }
 
 
