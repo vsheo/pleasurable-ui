@@ -1,7 +1,7 @@
 # Milledoni
 
 ## Inleiding
-De opdrachtgevers zijn Frederica en Tom. Zij zijn de eigenaren van de website Milledoni.
+De opdrachtgevers zijn Frederica en Tom. Zij zijn de eigenaren van de website Milledoni. Ze geloven dat een cadeau mensen dichter bij elkaar brengt.
 Op deze website kunnen gebruikers met behulp van filters het perfecte cadeau vinden.
 
 De huidige versie van de website is verouderd. Daarom hebben zij een designers ingeschakeld om een nieuw ontwerp te laten maken.
