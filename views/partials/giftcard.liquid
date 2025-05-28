@@ -16,12 +16,12 @@
 
         {% comment %} als pagina-favoriet, dan is de gebruiker op de favorieten pagina {% endcomment %}
         {% if pagina_favoriet %}
-        <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+        <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}" class="bookmark-form">
             {% comment %} als pagina, dan is de gebruiker op de details pagina {% endcomment %}
             {% elsif pagina_details %}
-            <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
+            <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}" class="bookmark-form">
                 {% else %}
-                <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+                <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}" class="bookmark-form">
                     {% endif %}
                     {% if bookmarks contains gift.id %}
                     <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
@@ -47,6 +47,7 @@
                                 stroke-linecap="round" />
                         </svg>
                     </button>
+                    <div class="bookmark-loader" hidden></div>
                     {% else %}
                     <button class="bookmark-icon" aria-label="voeg toe aan bookmarks lijst">
                         <svg class="bookmark-img" role="img" aria-label="niet opgeslagen" width="33" height="29"
@@ -71,6 +72,7 @@
                                 stroke-linecap="round" />
                         </svg>
                     </button>
+                    <div class="bookmark-loader" hidden></div>
                 </form>
                 {% endif %}
     </div>
