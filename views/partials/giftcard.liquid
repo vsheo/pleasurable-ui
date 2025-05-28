@@ -18,53 +18,65 @@
         </picture>
         {% endif %}
 
-        <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
-            {% if bookmarks contains gift.id %}
-            <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
-                <svg class="bookmark-img" role="img" aria-label="opgeslagen" width="33" height="29" viewBox="0 0 38 27"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M19.063 6.35938C19.9689 6.35938 20.7036 7.09409 20.7036 8C20.7036 8.90591 19.9689 9.64062 19.063 9.64062H3.06299C2.15708 9.64062 1.42236 8.90591 1.42236 8C1.42236 7.09409 2.15708 6.35938 3.06299 6.35938H19.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
-                    <path
-                        d="M25.063 14.3594C25.9689 14.3594 26.7036 15.0941 26.7036 16C26.7036 16.9059 25.9689 17.6406 25.063 17.6406H3.06299C2.15708 17.6406 1.42236 16.9059 1.42236 16C1.42236 15.0941 2.15708 14.3594 3.06299 14.3594H25.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
-                    <path
-                        d="M12.063 22.3594C12.9689 22.3594 13.7036 23.0941 13.7036 24C13.7036 24.9059 12.9689 25.6406 12.063 25.6406H3.06299C2.15708 25.6406 1.42236 24.9059 1.42236 24C1.42236 23.0941 2.15708 22.3594 3.06299 22.3594H12.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
+        {% comment %} als pagina-favoriet, dan is de gebruiker op de favorieten pagina {% endcomment %}
+        {% if pagina_favoriet %}
+        <form method="post" action="/favorieten/{{ listName }}/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+            {% comment %} als pagina, dan is de gebruiker op de details pagina {% endcomment %}
+            {% elsif pagina_details %}
+            <form method="post" action="/cadeau/{{ gift.slug}}/{{ gift.id}}" data-enhanced="form-{{ gift.id }}">
+                {% else %}
+                <form method="post" action="/{{ gift.id }}" data-enhanced="form-{{ gift.id }}">
+                    {% endif %}
+                    {% if bookmarks contains gift.id %}
+                    <button class="bookmark-icon" aria-label="verwijder uit bookmarks lijst">
+                        <svg class="bookmark-img" role="img" aria-label="opgeslagen" width="33" height="29"
+                            viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.063 6.35938C19.9689 6.35938 20.7036 7.09409 20.7036 8C20.7036 8.90591 19.9689 9.64062 19.063 9.64062H3.06299C2.15708 9.64062 1.42236 8.90591 1.42236 8C1.42236 7.09409 2.15708 6.35938 3.06299 6.35938H19.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
+                            <path
+                                d="M25.063 14.3594C25.9689 14.3594 26.7036 15.0941 26.7036 16C26.7036 16.9059 25.9689 17.6406 25.063 17.6406H3.06299C2.15708 17.6406 1.42236 16.9059 1.42236 16C1.42236 15.0941 2.15708 14.3594 3.06299 14.3594H25.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
+                            <path
+                                d="M12.063 22.3594C12.9689 22.3594 13.7036 23.0941 13.7036 24C13.7036 24.9059 12.9689 25.6406 12.063 25.6406H3.06299C2.15708 25.6406 1.42236 24.9059 1.42236 24C1.42236 23.0941 2.15708 22.3594 3.06299 22.3594H12.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
 
-                    <path class="check-2"
-                        d="M25 6.58621L28.3981 10.1897C28.8061 10.6224 29.4994 10.6055 29.8858 10.1534L36 3"
-                        stroke="black" stroke-width="3" stroke-linecap="round" />
+                            <path class="check-2"
+                                d="M25 6.58621L28.3981 10.1897C28.8061 10.6224 29.4994 10.6055 29.8858 10.1534L36 3"
+                                stroke="black" stroke-width="3" stroke-linecap="round" />
 
-                    <path class='plus-2' d="M30.25 3V12" stroke="black" stroke-width="4.5" stroke-linecap="round" />
-                    <path class='plus-2' d="M25 7.5H35.5" stroke="black" stroke-width="4.5" stroke-linecap="round" />
-                </svg>
-            </button>
-            {% else %}
-            <button class="bookmark-icon" aria-label="voeg toe aan bookmarks lijst">
-                <svg class="bookmark-img" role="img" aria-label="niet opgeslagen" width="33" height="29"
-                    viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M19.063 6.35938C19.9689 6.35938 20.7036 7.09409 20.7036 8C20.7036 8.90591 19.9689 9.64062 19.063 9.64062H3.06299C2.15708 9.64062 1.42236 8.90591 1.42236 8C1.42236 7.09409 2.15708 6.35938 3.06299 6.35938H19.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
-                    <path
-                        d="M25.063 14.3594C25.9689 14.3594 26.7036 15.0941 26.7036 16C26.7036 16.9059 25.9689 17.6406 25.063 17.6406H3.06299C2.15708 17.6406 1.42236 16.9059 1.42236 16C1.42236 15.0941 2.15708 14.3594 3.06299 14.3594H25.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
-                    <path
-                        d="M12.063 22.3594C12.9689 22.3594 13.7036 23.0941 13.7036 24C13.7036 24.9059 12.9689 25.6406 12.063 25.6406H3.06299C2.15708 25.6406 1.42236 24.9059 1.42236 24C1.42236 23.0941 2.15708 22.3594 3.06299 22.3594H12.063Z"
-                        fill="#212121" stroke="#212121" stroke-width="1.28058" />
+                            <path class='plus-2' d="M30.25 3V12" stroke="black" stroke-width="4.5"
+                                stroke-linecap="round" />
+                            <path class='plus-2' d="M25 7.5H35.5" stroke="black" stroke-width="4.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    {% else %}
+                    <button class="bookmark-icon" aria-label="voeg toe aan bookmarks lijst">
+                        <svg class="bookmark-img" role="img" aria-label="niet opgeslagen" width="33" height="29"
+                            viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.063 6.35938C19.9689 6.35938 20.7036 7.09409 20.7036 8C20.7036 8.90591 19.9689 9.64062 19.063 9.64062H3.06299C2.15708 9.64062 1.42236 8.90591 1.42236 8C1.42236 7.09409 2.15708 6.35938 3.06299 6.35938H19.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
+                            <path
+                                d="M25.063 14.3594C25.9689 14.3594 26.7036 15.0941 26.7036 16C26.7036 16.9059 25.9689 17.6406 25.063 17.6406H3.06299C2.15708 17.6406 1.42236 16.9059 1.42236 16C1.42236 15.0941 2.15708 14.3594 3.06299 14.3594H25.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
+                            <path
+                                d="M12.063 22.3594C12.9689 22.3594 13.7036 23.0941 13.7036 24C13.7036 24.9059 12.9689 25.6406 12.063 25.6406H3.06299C2.15708 25.6406 1.42236 24.9059 1.42236 24C1.42236 23.0941 2.15708 22.3594 3.06299 22.3594H12.063Z"
+                                fill="#212121" stroke="#212121" stroke-width="1.28058" />
 
-                    <path class="check"
-                        d="M25 6.58621L28.3981 10.1897C28.8061 10.6224 29.4994 10.6055 29.8858 10.1534L36 3"
-                        stroke="black" stroke-width="3" stroke-linecap="round" />
+                            <path class="check"
+                                d="M25 6.58621L28.3981 10.1897C28.8061 10.6224 29.4994 10.6055 29.8858 10.1534L36 3"
+                                stroke="black" stroke-width="3" stroke-linecap="round" />
 
-                    <path class='plus' d="M30.25 3V12" stroke="black" stroke-width="4.5" stroke-linecap="round" />
-                    <path class='plus' d="M25 7.5H35.5" stroke="black" stroke-width="4.5" stroke-linecap="round" />
-                </svg>
-            </button>
-            {% endif %}
-        </form>
+                            <path class='plus' d="M30.25 3V12" stroke="black" stroke-width="4.5"
+                                stroke-linecap="round" />
+                            <path class='plus' d="M25 7.5H35.5" stroke="black" stroke-width="4.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </form>
+                {% endif %}
     </div>
     <h3 class="gift-name">
         <a class="slug" href="/cadeau/{{ gift.slug | url_encode }}">{{ gift.name }}</a>
