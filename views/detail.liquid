@@ -128,10 +128,9 @@
     <section class="section-also-like">
         <h3 class="section-title">You may also like</h3>
         <ul class="container-carrousel">
-            {%- assign pagina_details = 2 -%}
             {% for gift in allGifts%}
                 <li class="item-carrousel">
-                    {% include 'partials/giftcard.liquid', favoriet-gifts, gift: gift %}
+                    {% include 'partials/giftcard.liquid', gift: gift %}
                 </li>
             {% endfor %}
             <li class="item-carrousel placeholder-gift slug"><a href="/" class="index-link description-cadeau">Meer Resulaten</a></li>
