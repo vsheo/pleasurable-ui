@@ -27,6 +27,7 @@ De vernieuwde versie ziet er nu als volgt uit:
         * [Styleguide](#Styleguide)
         * [nesting](#nesting)
         * [carrousel](#carrousel)
+        * [bookmark hover](#bookmark-hover)
      * [server.js](#server.js)
         * [Functies](#Functies)
            * [getBookmarks functie](#getBookmarks-functie)
@@ -41,7 +42,6 @@ De vernieuwde versie ziet er nu als volgt uit:
           * [Favorieten GET route](#Favorieten-GET-route)
           * [Favorieten POST route](#Favorieten-POST-route)
      * [JavaScript](#JavaScript)
-        * [bookmark hover?](#bookmark-hover?)
         * [Sticky header](#Sticky-header)
      * [UI states](#UI-states)
         * [UI states buttons](#UI-states---buttons)
@@ -163,6 +163,8 @@ scroll-snap-align: center; zodat de volgende li naar het midden van de container
 ::scroll-marker, dit de styling voor de indicator, als de li niet selected is
 ::scroll-marker: target-current, deze is voor de li die nu selected/ in het midden is
 scroll-snap-stop: always; dit zorgt ervoor dat het bij de eerst volgende li stopt
+
+### bookmark hover
 
 ## server.js
 ### Functies
@@ -287,7 +289,6 @@ https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429
 https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/favorieten.liquid#L12
 
 ## JavaScript
-### bookmark hover?
 
 ### Sticky header
 De header verdwijnt bij scrollen naar beneden en verschijnt weer bij scrollen naar boven. Ik heb dit gedaan zodat de cadeau container op de index pagina de volledige hoogte van het scherm kan gebruiken voor de cadeau's. Voor mobiele apparaten is dit heel handig, omdat het scherm kleiner is. Als de gebruiker ver naar beneden is gescrold, hoeft die niet helemaal terug naar boven om de header weer te zien.
