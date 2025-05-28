@@ -967,31 +967,42 @@ img.img-save-detail {
 
 .container {
     padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .row p {
-    order: 1;
-    text-align: left;
-    margin: 0;
+    margin-left: 30px;
   }
   
   .row {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: flex-start;
-    margin-left: 50px;
-    gap: 20px;
+    flex-direction: column;
+    max-width: 90%;
   }
-  
+
+  .row-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+ 
+  }
+
+  .detail-text1 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .row:nth-of-type(3) .detail-text1{
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
   .svg-group,.smiley-group {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
-    margin-right: 0;
-    order: 2;
     align-items: center;
+    margin-left: 5px;
   }
 
   .svg-smileys {
@@ -1015,38 +1026,53 @@ img.img-save-detail {
     display: block;
     margin: 0;
     padding: 0;
-  
+  }
+
+  .detail-lines {
+    height: 2px;
+    background-color: #999999;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   
   @media (min-width: 768px) {
     .container {
-        width: 300px; 
-        margin-right: 200px ;
-      /* display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding-right: 40px; */
+        max-width: 700px; 
+        margin-right: 100px ;
+        margin-left: auto;
     }
   
     .row {
-      justify-content: flex-end;
-      margin-right: 200px;
-      /* width: 100%; */
-      max-width: 1200px;
+      /* justify-content: flex-end; */
     }
 
-    .row > * {
-        flex-shrink: 0;
+    .row-content {
+        /* flex-direction: row-reverse;
+        justify-content: flex-start; */
+        margin-left: 0;
+        margin-right: 50px;
+        width: 350px;
       }
     
-      .svg-group {
-        order: 2;
-      }
-    
-      p {
-        order: 1;
-        text-align: right;
-      }
+    .detail-lines {
+        width: 100%;
+        max-width: 100%;
+        align-self: flex-end;
+    }
+
+    .row:nth-of-type(2) .row-content,
+    .row:nth-of-type(3) .row-content {
+      /* flex-direction: row-reverse; */
+    }
+
+    .row:nth-of-type(2) .detail-text1,
+    .row:nth-of-type(3) .detail-text1 {
+      text-align: left;
+      max-width: clamp(40ch, 90%, 60ch);
+    }
+
   }
   
 
