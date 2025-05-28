@@ -1,5 +1,5 @@
 <article class="gift-card slug">
-    <div class="wrapper-img-bookmark">
+    <div class="wrapper-img-bookmark" style="view-transition-name: gift-{{ gift.id }};">
         {% if gift.img %}
             <picture>
                 <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}?format=avif&width=200&height=200">

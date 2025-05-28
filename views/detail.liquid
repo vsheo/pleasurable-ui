@@ -1,7 +1,7 @@
 {% render 'partials/head.liquid', title: gift.name %}
 
 <section class="container-details">
-    <img src="https://fdnd-agency.directus.app/assets/0109ba59-2fd9-4f72-9e39-4dadd3f0d3fd?format=avif&width=500&height=500" alt="test-img">
+    <img src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}" alt="{{ gift.name }}" class="detail-img" sizes="600px, 600vw" style="view-transition-name: gift-{{ gift.id }};">
 
     <section class="gift-description">
         <h2>new kintsugi</h2>
