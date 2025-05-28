@@ -7,6 +7,46 @@ sections.forEach(section => {
     section.classList.add("JS-hidden")
 })
 
+// view transition
+// https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection
+if ("fetch" in window && "DOMParser" in window) {
+    document.addEventListener("submit", async function (event) {
+        const form = event.target;
+        console.log(form);
+
+        if (!form.hasAttribute("data-enhanced")) {
+            return;
+        }
+
+        event.preventDefault();
+        form.classList.add('loading-state');
+
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: new URLSearchParams(new FormData(form)),
+        });
+
+        const responseText = await response.text();
+
+        const parser = new DOMParser();
+        const responseDOM = parser.parseFromString(responseText, "text/html");
+
+        const newState = responseDOM.querySelector(
+            '[data-enhanced="' + form.getAttribute("data-enhanced") + '"]'
+        );
+
+        form.classList.remove('loading-state');
+
+        // Overschrijf ons formulier met de nieuwe HTML, met of zonder een View Transition, afhankelijk van de browser
+        if (document.startViewTransition) {
+            document.startViewTransition(function() {
+                form.outerHTML = newState.outerHTML
+            })
+        } else {
+            form.outerHTML = newState.outerHTML
+        }
+    });
+}
 
 // intersection observer aanmaken
 const observer = new IntersectionObserver(entries => {

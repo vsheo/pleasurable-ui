@@ -468,6 +468,10 @@ header {
 }
 
 
+@view-transition {
+    navigation: auto;
+}
+
 @keyframes slide-in {
   from {
     transform: translateY(500%);
