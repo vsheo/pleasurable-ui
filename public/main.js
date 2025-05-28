@@ -7,6 +7,26 @@ sections.forEach(section => {
     section.classList.add("JS-hidden")
 })
 
+// intersection observer aanmaken
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        // de class wordt aan de section toegevoegd, of weg gehaald, zodra het eerste gedeelte van de article op beeld komt.
+        entry.target.classList.toggle("slide-animation", entry.isIntersecting)
+        // nadat de article in beeld is gaat het niet meer weg
+        if (entry.isIntersecting) observer.unobserve(entry.target)
+    })
+}, {
+    // alleen als 80% van de section al op beeld is wordt de class aan de section toegevoegd
+    threshold: 0.8,
+}
+);
+
+// intersection observer toepassen op elke article
+sections.forEach(section => {
+    observer.observe(section)
+})
+
+
 // view transition
 // https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection
 if ("fetch" in window && "DOMParser" in window) {
@@ -19,7 +39,7 @@ if ("fetch" in window && "DOMParser" in window) {
         }
 
         event.preventDefault();
-        form.classList.add('loading-state');
+        form.classList.add('loading-state')
 
         const response = await fetch(form.action, {
             method: form.method,
@@ -48,21 +68,25 @@ if ("fetch" in window && "DOMParser" in window) {
     });
 }
 
-// intersection observer aanmaken
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        // de class wordt aan de section toegevoegd, of weg gehaald, zodra het eerste gedeelte van de article op beeld komt.
-        entry.target.classList.toggle("slide-animation", entry.isIntersecting)
-        // nadat de article in beeld is gaat het niet meer weg
-        if (entry.isIntersecting) observer.unobserve(entry.target)
-    })
-}, {
-    // alleen als 80% van de section al op beeld is wordt de class aan de section toegevoegd
-    threshold: 0.8,
-}
-);
 
-// intersection observer toepassen op elke article
-sections.forEach(section => {
-    observer.observe(section)
+// scroll up => header weg
+// scroll down => header terug
+const header = document.querySelector("header");
+
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  let currentScroll = window.pageYOffset;
+    // als de currentScroll een negatief getal is, dan was het een scroll naar beneden. Dus de header gaat uitbeeld
+    if (currentScroll - lastScroll > 0) {
+        header.classList.add("scroll-down");
+        header.classList.remove("scroll-up");
+    }
+    // als het een positief getal is, dan komt de header terug in beeld
+    else
+    {
+        header.classList.add("scroll-up");
+        header.classList.remove("scroll-down");
+    }
+    lastScroll = currentScroll;
 })
+// Als JavaScript uit staat dan is de header altijd in beeld, omdat het position: sticky heeft.

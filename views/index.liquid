@@ -8,10 +8,9 @@
         <h2 class="section-title subtitle-home">Ik zoek een cadeau voor...</h2>
 
         <div class="search-bar">
-            <input type="search" placeholder=""/>
-            <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="afbeelding van een cadeau geven"></button>
-            <span class="placeholder subtitle-search-bar">Beschrijf de persoon</span>
-            <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="afbeelding van een cadeau geven"></button>
+            <input class="subtitle-search-bar" label="typ hier iets wat de persoon omschrijft" type="search" placeholder="Beschrijf de persoon" />
+            <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="microfoon"></button>
+            <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="search button"></button>
         </div>
 
         <div class="section-spotters">
@@ -42,19 +41,21 @@
         <div class="cards-wrapper">
             {% for gift in giftData %}
             {% if forloop.index == 2 %}
-            <a class="register-login-card" href="#"><div class="container-register slug">
-                <p class="text-register text-register gift-saved-given">Maak een cadeau lijst en deel het! </p>
-                
-                <picture>
-                    <source type="image/avif" srcset="/assets/register-login.avif">
-                    <source type="image/webp" srcset="/assets/register-login.webp">
-                    <img class="register-img" src="/assets/register-login.png" width="170" height="170" alt="">
-                </picture>
+            <a class="register-login-card" href="#">
+                <div class="container-register slug">
+                    <p class="text-register text-register gift-saved-given">Maak een cadeau lijst en deel het! </p>
 
-                <p class="heading-register subtitle-search-bar my-list" href="#">maak een lijst!</p>
-            </div></a>
+                    <picture>
+                        <source type="image/avif" srcset="/assets/register-login.avif">
+                        <source type="image/webp" srcset="/assets/register-login.webp">
+                        <img class="register-img" src="/assets/register-login.png" width="170" height="170" alt="">
+                    </picture>
+
+                    <p class="heading-register subtitle-search-bar my-list" href="#">maak een lijst!</p>
+                </div>
+            </a>
             {% endif %}
-            {% include 'partials/giftcard.liquid' %}
+                {% include 'partials/giftcard.liquid' %}
             {% endfor %}
         </div>
 
@@ -63,6 +64,3 @@
 </main>
 
 {% render 'partials/footer.liquid' %}
-
-
-
