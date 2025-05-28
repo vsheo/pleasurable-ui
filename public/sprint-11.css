@@ -353,8 +353,46 @@ header {
     cursor: pointer;
 }
 
+.bookmark-form {
+    /* https://cssloaders.github.io/ */
+    .bookmark-loader {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(100, 100, 100, 0.349);
+
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 1em;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .bookmark-loader::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #F6F5F5;
+        animation: rotate 1s linear infinite, prixClipFix 10s linear infinite;
+        inset: 5px;
+    }
+}
+
+/* loading state voor de bookmark icon. Deze class wordt toegevoegd aan de form. de button gaat op display none, en de loader gaat op display block. */
+.loading-state {
+    button {
+        display: none;
+    }
+
+    .bookmark-loader {
+        display: block;
+    }
+}
+
  /*hover niet opgeslagen*/
-  .plus {
+.plus {
     opacity: 1;
     transition: opacity .3s ease;
   }
@@ -500,7 +538,6 @@ header {
     transform: rotate(-2deg);
 }
 
-
 /* detail pagina layout */
 .detail-page {
     @media (min-width: 1000px) {
@@ -508,8 +545,6 @@ header {
         flex-direction: column;        
     }
 }
-
-
 
 
 /* detail */
@@ -1209,4 +1244,20 @@ img.img-save-detail {
 	100% {
 		scale: 1;
 	}
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes prixClipFix {
+    0%,
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
 }
