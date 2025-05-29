@@ -176,7 +176,6 @@ Het is ingedeeld per pagina met een class en als je iets uit de styleguide gebru
 <img width="608" alt="Scherm­afbeelding 2025-05-27 om 23 26 05" src="https://github.com/user-attachments/assets/3ee8d616-4c8c-4acf-833d-433392e61269" />
 
 
-
 ### nesting
 We hebben besloten om code te nesten, omdat het dan overzichtelijker wordt. Zo kan je zien wat bij wat hoort en kan je sneller en makkelijker dingen aanpassen. 
 
@@ -186,33 +185,68 @@ https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429
 Het nesten van een container met wat daarin zit. 
 https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/public/sprint-11.css#L139-L238
 
+
 ### carrousel
-de carrousel werkt met alleen CSS
-In HTML heeft het alleen een ul met elk cadeau kaartje als li
-als laatst in het rijtje is er een li met een link terug naar de home pagina voor meer resulataten
+De carrousel werkt volledig met CSS, zonder JavaScript.
+In de HTML bestaat deze uit een ul element, waarbij elk cadeau kaartje als een li wordt weergegeven.
+Helemaal aan het einde van de lijst staat een extra li met een link terug naar de homepage, zodat de gebruiker meer resultaten kan bekijken.
 
-in CSS heb ik op de ul dit geplaatst
-```css
-overflow-x: auto;
-scroll-snap-type: x mandatory;
-scroll-marker-group: after;
-scroll-behavior: smooth;
-```
-overflow-x: auto; zodat de container horizontaal scrolable is.
-scroll-snap-type: x mandatory; zodat elk altijd 1 li in het midden snapped
-scroll-marker-group: after; zodat er onder de ul indicators komen dt laat zien hoeveel ietems er in de lijst staan en op welke de gebruiker is. het is ook mogelijk om hierop te klikken om naar deze toe te gaan
-scroll-behavior: smooth; zodat de animatie naar de volgende li beter uit ziet
+Op de mobiele en tablet versie van de website wordt de carrousel vervangen door een grid.
+Deze grid past zich automatisch aan(er worden nieuwe kolommen toegevoegd zodra er voldoende ruimte is)
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L929-L935
 
-daarna maak ik buttons met CSS om door de carrousel heen te gaan
-```css
-&::scroll-button(left), &::scroll-button(right) {}
-```
+#### carrousel ul
+Voor de desktopversie krijgt de carrousel container (de ul) de volgende CSS properties:
+- ```overflow-x: auto;```: Zorgt ervoor dat de container horizontaal scrollbaar is
+- ```scroll-snap-type: x mandatory;```: Hiermee worden de li elementen horizontaal gesnapped tijdens het scrollen (de li vanzelf naar een bepaalde positie toe gaat).
+- ```scroll-marker-group: after;```: dit zorgt ervoor dat er later een indicator komt voor elke li, op de indicator kan ook geklikt worden om direct naar het bijbehorende li te scrollen
+- ```scroll-behavior: smooth;```: Zorgt voor een smooth scroll animatie wanneer de gebruiker door de carrousel gaat
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L957-L960
 
-op de li heb ik:
-scroll-snap-align: center; zodat de volgende li naar het midden van de container snapped
-::scroll-marker, dit de styling voor de indicator, als de li niet selected is
-::scroll-marker: target-current, deze is voor de li die nu selected/ in het midden is
-scroll-snap-stop: always; dit zorgt ervoor dat het bij de eerst volgende li stopt
+Daarnaast gebruiken we de volgende CSS pseudo-elementen:
+- ```::scroll-button(left)```
+- ```::scroll-button(right)```
+
+Deze knoppen worden gebruikt om door de carrousel te navigeren.
+Wanneer op de rechter knop ```::scroll-button(right)``` wordt geklikt, scrollt de carrousel automatisch naar het eerstvolgende li element m.b.v. scroll snapping.
+De bijbehorende indicator verschuift ook mee naar rechts om de bijbehorende li positie aan te geven.
+Zodra het einde van de lijst is bereikt, krijgt de knop een lagere opacity om visueel aan te geven dat er niet verder gescrold kan worden.
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L962
+
+Het pseudo-element ```::scroll-button``` heeft verplicht de CSS property ```content: ""``` nodig, zonder content wordt het element niet weergegeven.
+
+Ik heb geprobeerd om met Unicode in de content property pijltjes te maken.
+Maar het was lastig om de pijlen in het midden te krijgen vanwege de line height.
+
+Uiteindelijk heb ik ervoor gekozen om een SVG als background image te gebruiken voor de buttons.
+De content property heb ik toen leeg gelaten, zodat de background image wel zichtbaar is.
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L972-L975
+
+De hover en active states voor de scroll buttons heb ik gemaakt m.b.v. [deze CodePen](https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100)
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L982-L991
+
+Het laatste pseudo element dat we nodig hebben op de ul is ```::scroll-marker-group```.
+Met dit pseudo element kunnen we de positie van de indicator cirkels (de scroll markers) bepalen binnen de carrousel container.
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L998
+
+#### carrousel li
+Op elk li element in de carrousel gebruiken we de volgende CSS properties:
+- ```scroll-snap-align: center;```: zorgt ervoor dat het li element altijd in het midden van de container komt wordt wanneer er gescrold wordt.
+- ```scroll-snap-stop: always;```: dit zorgt ervoor dat scroll snap stopt bij de eerst volgende li element
+
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L1017-L1018
+
+Daarna gebruiken we de pseudo class ```::scroll-marker {```
+Hiermee kunnen we de indicatoren (de scroll markers) zelf stylen.
+Ik heb deze gebruikt om de indicatoren de vorm van cirkeltjes te geven, zodat ze duidelijk zichtbaar zijn als navigatiepunten binnen de carrousel.
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L1034
+
+Om de indicatoren interactiever te maken, heb ik het volgende toegepast:
+- ```target-current {``` Om de indicator van het li element dat in het midden staat iets groter te maken
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L1051
+- en ```hover {``` Om ervoor te zorgen dat de indicator wat groter wordt wanneer de gebruiker er overheen hovert
+https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L1056
+
 
 ### bookmark hover
 
