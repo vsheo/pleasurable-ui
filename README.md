@@ -375,24 +375,28 @@ https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429
 ## JavaScript
 
 ### Sticky header
-De header verdwijnt bij scrollen naar beneden en verschijnt weer bij scrollen naar boven. Ik heb dit gedaan zodat de cadeau container op de index pagina de volledige hoogte van het scherm kan gebruiken voor de cadeau's. Voor mobiele apparaten is dit heel handig, omdat het scherm kleiner is. Als de gebruiker ver naar beneden is gescrold, hoeft die niet helemaal terug naar boven om de header weer te zien.
+De header verdwijnt wanneer de gebruiker naar beneden scrolt en verschijnt weer bij het scrollen naar boven.
+Ik heb dit gedaan zodat de cadeau container op de index pagina de volledige hoogte van het scherm kan gebruiiken voor het tonen van de cadeau's.
+Dit is vooral handig op mobiele apparaten, waar het scherm kleiner is.
+Als de gebruiker ver naar beneden heeft gescrold, hoeft die niet helemaal terug naar boven om de header opnieuw te zien/gebruiken.
 
-video
+https://github.com/user-attachments/assets/82b6eaa0-a61a-4b1e-a80c-c5af7a450cd1
 
 Dit heb ik gedaan door de header position: sticky te geven. Hierdoor blijft de header altijd zichtbaar in beeld, ook wanneer JavaScript niet werkt.<br>
-code<br>
-Met JavaScript selecteer ik de header en plaats ik een eventlistener op alle scrollbewegingen<br>
-code<br>
+https://github.com/vsheo/pleasurable-ui/blob/f7d15290db6fda9990ec46f81010a58499090dea/public/sprint-11.css#L12-L19
+Met JavaScript selecteer ik de header en plaats ik een eventlistener op alle scroll bewegingen<br>
+https://github.com/vsheo/pleasurable-ui/blob/f7d15290db6fda9990ec46f81010a58499090dea/public/main.js#L40)
 Met pageYOffset krijg ik hoeveel pixels de pagina verticaal is verschoven<br>
-code<br>
+https://github.com/vsheo/pleasurable-ui/blob/f7d15290db6fda9990ec46f81010a58499090dea/public/main.js#L43-L44
 Als het verschil tussen de huidige en vorige pageYOffset positief is (dus bij scrollen naar beneden), voegen we de class "scroll-down" toe om de header buiten beeld te zetten<br>
-code<br>
+https://github.com/vsheo/pleasurable-ui/blob/94ca1dda67a1ac4c7125ea528c18403afea865b2/public/main.js#L42-L46
 De class "scroll-down" zorgt ervoor dat de header met een transition uit beeld verdwijnt<br>
-code<br>
+https://github.com/vsheo/pleasurable-ui/blob/94ca1dda67a1ac4c7125ea528c18403afea865b2/public/sprint-11.css#L21-L29
 Als het verschil tussen de huidige en vorige pageYOffset negatief is (dus bij scrollen omhoog), wordt de header weer zichtbaar gemaakt door de class "scroll-up" toe te voegen<br>
-code<br>
+https://github.com/vsheo/pleasurable-ui/blob/94ca1dda67a1ac4c7125ea528c18403afea865b2/public/main.js#L48-L52
 Als laatste zetten we lastScroll gelijk aan currentScroll. Dit doen we zodat bij de volgende scroll de if statement uitgaat van de huidige scrollpositie, in plaats van altijd vanaf het begin van de pagina (bovenaan) te rekenen<br>
-code
+https://github.com/vsheo/pleasurable-ui/blob/94ca1dda67a1ac4c7125ea528c18403afea865b2/public/main.js#L53
+
 
 ## UI states
 ### UI states - buttons
