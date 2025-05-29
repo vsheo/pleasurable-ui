@@ -258,6 +258,28 @@ op die timeline plaats ik de keyframe animation
 https://github.com/vsheo/pleasurable-ui/blob/6772b5369f522796ef6eb3db80695bff77461716/public/sprint-11.css#L1024-L1026
 
 ### bookmark hover
+We hebben op de bookmark-button twee hover-effecten toegepast op de SVG's: één voor de opgeslagen status en één voor wanneer het item nog niet is opgeslagen. Als het item is opgeslagen, wordt er bij hover een plus-teken getekend. Als het item nog niet is opgeslagen, verschijnt er een vinkje (checkmark).
+In beide SVG's hebben de <path>-elementen voor het plus-teken en het vinkje een eigen class. Voor de opgeslagen versie zijn dat .plus-2 en .check-2, en voor de niet-opgeslagen versie .plus en .check.
+
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/views/partials/giftcard.liquid#L21
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/views/partials/giftcard.liquid#L26
+
+Met CSS worden deze paden zichtbaar gemaakt of verborgen met opacity. Een waarde van 1 maakt het pad zichtbaar, 0 maakt het onzichtbaar. Via transition geven we aan hoe lang het duurt voordat de opacity verandert.
+Staat bij de path die al getoond wordt.
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L395-L396
+
+De stroke-dasharray maakt van het path een lijn van 30 eenheden, daarna een gat, en dat gaat steeds opnieuw. Met de stroke-dashoffset schuift de hele lijn buiten beeld, omdat die even groot is als de stroke-dasharray. Daardoor is die onzichtbaar.
+Staat op de path die bij de hoevr getoond wordt. 
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L401-L402
+
+Bij hover verandert de opacity, en met animation wordt het juiste svg path getekend. De animatie heet drawPlus, duurt 1 seconde, en blijft op het eindresultaat staan dankzij forwards. In de @keyframes wordt stroke-dashoffset op 0 gezet, zodat het path steeds meer zichtbaarder wordt
+Path met hover die getoond werd. 
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L407
+Path met de hoevr die getoond wordt. 
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L411-L412
+Keyframes
+https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L415-L419
+
 
 ## server.js
 ### Functies
