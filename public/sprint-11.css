@@ -13,7 +13,6 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-primary-color);
-    /* position: sticky; */
     top: 0;
     z-index: 20;
     padding: 1em;
@@ -968,7 +967,6 @@ img.img-save-detail {
                 cursor: pointer;
                 margin: 0 .4em;
                 border: 1px solid var(--text-primary-input-color);
-                /* background-color: #898a8d72; */
                 background: #898a8d72 url('/assets/carrousel-arrow.svg') no-repeat center;
                 background-size: 50%;
                 border-radius: 50%;
@@ -982,7 +980,6 @@ img.img-save-detail {
             /* https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100 */
             &::scroll-button(*):not(:disabled):is(:hover, :active) {
                 scale: .6;
-                /* filter: brightness(1.2); */
                 
             }
 
@@ -1078,7 +1075,6 @@ img.img-save-detail {
                 /* hele height en width van de container(li) clickable */
                 position: absolute;
                 inset: 0;
-                /* text center */
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
