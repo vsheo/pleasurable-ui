@@ -32,9 +32,6 @@ if ("fetch" in window && "DOMParser" in window) {
 }
 
 
-
-
-
 // scroll up => header weg
 // scroll down => header terug
 const header = document.querySelector("header");
@@ -42,12 +39,12 @@ const header = document.querySelector("header");
 let lastScroll = 0;
 window.addEventListener("scroll", () => {
   let currentScroll = window.pageYOffset;
-    // als de currentScroll een negatief getal is, dan was het een scroll naar beneden. Dus de header gaat uitbeeld
+    // als het verschil tussen currentScroll en lastScroll een positief getal is, dan was het een scroll naar beneden. Dus de header gaat uitbeeld
     if (currentScroll - lastScroll > 0) {
         header.classList.add("scroll-down");
         header.classList.remove("scroll-up");
     }
-    // als het een positief getal is, dan komt de header terug in beeld
+    // als dat niet waar is, dan was het een scroll naar boven
     else
     {
         header.classList.add("scroll-up");
