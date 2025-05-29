@@ -1,8 +1,9 @@
 # Milledoni
 
 ## Inleiding
-De opdrachtgevers zijn Frederica en Tom. Zij zijn de eigenaren van de website Milledoni. Ze geloven dat een cadeau mensen dichter bij elkaar brengt.
-Op deze website kunnen gebruikers met behulp van filters het perfecte cadeau vinden.
+De opdrachtgevers zijn Frederica en Ton. Zij zijn de eigenaren van de website Milledoni.
+Zij geloven dat een cadeau mensen dichter bij elkaar brengt.
+Op de website kunnen gebruikers de tijd nemen om, met behulp van filters en een AI zoekfunctie, het perfecte cadeau te vinden.
 
 De huidige versie van de website is verouderd. Daarom hebben zij een designers ingeschakeld om een nieuw ontwerp te laten maken.
 
@@ -58,14 +59,37 @@ Als je op de website komt, kom je op de homepagina. Je ziet voor desktop aan de 
 Voor mobile en tablet is alles onder elkaar gezet en is de searchbar onderin gezet blijft staan als je scrolt. Voor steeds grotere schermen komt er een rij bij van de cadeau's tot de desktop versie. 
 
 Je kan op de homepagina door de cadeau's heen scrollen en opslaan en niet opslaan (bookmark veranderd). Als je erdoorheen scrolt naar beneden gaat de header weg en als je ohoog scrolt komt die weer in beeld. Je kan op de cadeua's klikken en dan ga je naar de detailpagina van het cadeau waarop je hebt geklikt. 
- Als je op de searchbar klikt gaat de tekst weg en kan je typen (doet het nog niet). Je kan op de Mijn lijst klikken dan ga je naar de favorieten pagina. 
+Als je op de searchbar klikt gaat de tekst weg en kan je typen (doet het nog niet). Je kan op de Mijn lijst klikken dan ga je naar de favorieten pagina. 
 
 We hebben besloten om voor mobile en tablet alles onder elkaar te zetten en voor desktop naast elkaar. Zo Is het responsive en goed te zien op alle schermen. Als je naar beneden scrolt gaat de header weg en als je naar boven scrolt komt de header terug. We hebben dit gedaan zodat je meer ruimte hebt voor de cadeau's en is er meer ruimte voor de cadeau's. De website gaat over de cadeua's en moet goed te zien zijn. 
 
-### Detailpagina
-Als je op een cadeau klikt ga je naar de detailpgina van dat cadeau. Je kan daar meer informatie zien over het cadeau, zie je wie het cadeau heeft gespot, waar je het kan kopen en zie je meer cadeua's die je misschien ook leuk vind. Ook op deze pagina kan je het cadeau opslaan en niet opslaan. 
+Dit is een demo van alle interacties op de home pagina:
 
-Als je over de tabel van de verschillende winkels waar je het kan kopen gaat zie je waar je muis zit. De achtergrond en de tekstkleur veranderd. Bij wat je misschien leuk ook vind is een carrousel waar je kan zien of je nog verder kan klikken/scrollen de button word lichter als je niet verder kan. De kaartjes worden groter als je daar bent en de marker het rondje onderaan de carrousel wordt grijs. 
+https://github.com/user-attachments/assets/ee9a30c6-d053-4718-8e2d-8d9642ff15e0
+
+Hier zie je de home pagina op verschillende scherm breedtes:
+
+https://github.com/user-attachments/assets/df28cb80-db84-4bd2-8af7-f2c195500ee9
+
+
+
+
+### Detailpagina
+Als je op een cadeau klikt ga je naar de detailpgina van dat cadeau. Je kan daar meer informatie zien over het cadeau, zie je wie het cadeau heeft gespot, waar je het kan kopen en zie je meer cadeau's die je misschien ook leuk vind. Ook op deze pagina kan je het cadeau opslaan en niet opslaan. 
+
+Als je over de tabel van de verschillende winkels waar je het kan kopen gaat zie je waar je muis zit. De achtergrond en de tekstkleur veranderd.
+Bij ‘You may also like’ staat een carrousel waarin je meer cadeau's kunt zien. De buttons aan de zijkanten wordt lichter wanneer je niet verder kunt scrollen.
+De kaartjes in de carrousel worden groter wanneer ze in het midden staan, en de marker (het bolletje onderaan de carrousel) kleurt dan grijs.
+Wanneer je over een marker hovert, wordt deze iets groter.
+
+Dit is een demo van alle interacties op de detail pagina:
+
+https://github.com/user-attachments/assets/ced0c728-2627-4bcb-b87a-d5d69a440a62
+
+Hier zie je de detail pagina op verschillende scherm breedtes:
+
+https://github.com/user-attachments/assets/30d69415-3d6c-4668-b0db-06b35807a396
+
 
 ### Favorieten pagina
 Als je op de Mijn lijst in de header klikt ga je de favorieten pagina. Je ziet dan de naam van de persoon voor de wie de lijst is (voor nu is het mijn lijst) met een img. Daaronder de cadeau's die opgeslagen zijn. Je kan hier ook de cadeau's uit je lijst halen en dan gaat het cadeua weg van de favorieten pagina. 
@@ -73,6 +97,11 @@ Als je op de Mijn lijst in de header klikt ga je de favorieten pagina. Je ziet d
 Voor mobile is zijn de cadeau's onder elkaar en als de schermen steeds groter worden komt er een rij bij t/m 3 rijen.   
 
 We hebben ervoor gekozen om de favorieten pagina zo te maken, omdat dit het belangrijkste te van de pagina is. We wilde deze pagina wel hebben, omdat we de opgeslagen cadeua's wilde laten zien. 
+
+Hier zie je de homepage op verschillende scherm breedtes:
+
+https://github.com/user-attachments/assets/4a0c99ef-3177-44d7-b15c-9d621b73eb73
+
 
 per pagina wat gemaakt is
 en wat je op elk pagina kan doen
