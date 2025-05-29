@@ -7,12 +7,6 @@
 
         <h2 class="section-title subtitle-home">Ik zoek een cadeau voor...</h2>
 
-        {% comment %} <div class="search-bar">
-            <input class="subtitle-search-bar" type="search" placeholder="Beschrijf de persoon" />
-            <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="microfoon"></button>
-            <button class="btn-search"><img class="svg" src="/assets/btn-search.svg" alt="search button"></button>
-        </div> {% endcomment %}
-
         <div class="search-bar">
             <input class="subtitle-search-bar" label="typ hier iets wat de persoon omschrijft" type="search" placeholder="Beschrijf de persoon" />
             <button class="btn-mic"><img class="svg" src="/assets/mic-search.svg" alt="microfoon"></button>
@@ -61,7 +55,7 @@
                 </div>
             </a>
             {% endif %}
-            {% include 'partials/giftcard.liquid' %}
+                {% include 'partials/giftcard.liquid' %}
             {% endfor %}
         </div>
 
