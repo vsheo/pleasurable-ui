@@ -191,6 +191,8 @@ De carrousel werkt volledig met CSS, zonder JavaScript.
 In de HTML bestaat deze uit een ul element, waarbij elk cadeau kaartje als een li wordt weergegeven.
 Helemaal aan het einde van de lijst staat een extra li met een link terug naar de homepage, zodat de gebruiker meer resultaten kan bekijken.
 
+https://github.com/user-attachments/assets/76d9010c-3349-4832-b670-00219476e63a
+
 Op de mobiele en tablet versie van de website wordt de carrousel vervangen door een grid.
 Deze grid past zich automatisch aan(er worden nieuwe kolommen toegevoegd zodra er voldoende ruimte is)
 https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L929-L935
@@ -223,7 +225,7 @@ De content property heb ik toen leeg gelaten, zodat de background image wel zich
 https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L972-L975
 
 De hover en active states voor de scroll buttons heb ik gemaakt m.b.v. [deze CodePen](https://codepen.io/web-dot-dev/pen/PwoRRwe?editors=1100)
-https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L982-L991
+https://github.com/vsheo/pleasurable-ui/blob/6772b5369f522796ef6eb3db80695bff77461716/public/sprint-11.css#L981-L988
 
 Het laatste pseudo element dat we nodig hebben op de ul is ```::scroll-marker-group```.
 Met dit pseudo element kunnen we de positie van de indicator cirkels (de scroll markers) bepalen binnen de carrousel container.
@@ -247,6 +249,13 @@ https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c113
 - en ```hover {``` Om ervoor te zorgen dat de indicator wat groter wordt wanneer de gebruiker er overheen hovert
 https://github.com/vsheo/pleasurable-ui/blob/6259ce4f98b636cae8880c53c260525c11321192/public/sprint-11.css#L1056
 
+#### carrousel animatie
+Om ervoor te zorgen dat het volgende li element met een scale animatie naar het midden beweegt, gebuikt ik een keyframe animatie die het li element op 50% wat groter maakt en op 100% terug laat gaan naar ```scale: 1;```
+https://github.com/vsheo/pleasurable-ui/blob/6772b5369f522796ef6eb3db80695bff77461716/public/sprint-11.css#L1233-L1243
+Daarna maak ik een custom property aan om een timeline te maken voor de scroll beweging van het li element in de carrousel.
+https://github.com/vsheo/pleasurable-ui/blob/6772b5369f522796ef6eb3db80695bff77461716/public/sprint-11.css#L1020-L1022
+op die timeline plaats ik de keyframe animation
+https://github.com/vsheo/pleasurable-ui/blob/6772b5369f522796ef6eb3db80695bff77461716/public/sprint-11.css#L1024-L1026
 
 ### bookmark hover
 
