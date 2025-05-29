@@ -819,8 +819,6 @@ img.img-save-detail {
 
 /* Detail */
 
-/* Mobile first */
-
 .detail-layout {
     padding: 1rem;
   }
@@ -840,13 +838,17 @@ img.img-save-detail {
   
   .detail-picture {
     margin: 1rem 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
+    /* max-width: 500px; */
+    object-fit: cover;
   }
   
   .detail-img {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
     display: block;
+    object-fit: cover;
+    height: 400px;
   }
   
   .detail-title {
@@ -854,7 +856,6 @@ img.img-save-detail {
     line-height: var(--line-height-title1-detail);
     margin: 1rem 0 0.5rem;
     margin-bottom: 0;
-    
   }
   
   .detail-price {
@@ -871,57 +872,58 @@ img.img-save-detail {
     font-size: var(--font-size-text1-detail);
     font-weight: var(--font-weight-text1-detail);
     max-width: clamp(40ch, 90%, 60ch);
-
   }
   
-  /* Tablet en groter */
   @media (min-width: 768px) {
     .detail-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 960px;
-      /* row-gap: 2em; */
       margin: 0 auto;
       padding: 2rem;
+      column-gap: 2rem;
       align-items: start;
+
+      grid-template-areas:
+      "detail-picture spotter"
+      "detail-picture detail-line"
+      "detail-picture detail-text";
+      grid-auto-rows: min-content;
     }
   
     .detail-picture {
-      grid-column-start: 1;
-      grid-column-end: 2; 
-      /* margin: 0; */
-      max-width: 100%;
+      grid-area: detail-picture;
+      /* justify-self: start; */
+      width: 100%;
       gap: 1em;
-      margin-right: 2rem;
       align-self: start; 
-      margin-top :0;
+      margin :0;
     } 
   
-    /* De rechter kant als een kolom */
-    .spotter-wrapper,
-    .detail-line-first,
+/* 
     .detail-title,
     .detail-price,
-    .detail-description,
-    .detail-text-block {
-      grid-column-start: 2;
-      grid-column-end: 3; 
-      /* margin: 0.5rem 0; */
-    }
+    .detail-description {
+        grid-column: auto; 
+    } */
   
     .spotter-wrapper {
-        align-self: start; 
-      margin-bottom: 1rem;
+     grid-area: spotter; 
+     margin-bottom: 1rem;
+     display: flex;
+     align-items: center;
+     align-self: start;
     }
   
     .detail-line-first {
+      grid-area: detail-line;
       margin: 0 0 1rem 0;
     }
-  
-    /* .detail-price,
-    .detail-description {
-      margin: 0;
-    } */
+
+    .detail-text-block {
+        grid-area: detail-text;
+      }
+
   }
 
 .favorieten-page{
