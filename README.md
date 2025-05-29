@@ -129,7 +129,7 @@ https://github.com/vsheo/pleasurable-ui/blob/81b449b11213ad8e77e94495eae7a38efc6
 
 
 
-## HTML e Liquid
+## HTML en Liquid
 ### Liquid Partials
 We hebben een head.liquid en een footer.liquid in een partial gedaan. Zo kunnen we voor meerdere pagina dezelfde head en footer gebruiken. 
 
@@ -141,9 +141,30 @@ https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429
 We hebben de cadeau’s in een partial gedaan, omdat we de cadeau’s op meerdere plekken gebruiken. Zo hoefden we de cadeau’s niet meerdere keren de schrijven en kon het nu maar met 1 regel code. 
 https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/index.liquid#L64
 https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/detail.liquid#L153
-https://github.com/vsheo/pleasurable-ui/blob/200abb3da14b2de42d2c3bdfe5dab0aa429f9ba7/views/favorieten.liquid#L12
+https://github.com/vsheo/pleasurable-ui/blob/5c34c9757fa5cc6271bd544fb9600d6e61007bba/views/favorieten.liquid#L11
 
 ### Data vanuit Server
+In server.js hebben we voor elke pagina een GET en een POST route. Per pagina geven we alleen de data mee die nodig is om die specifieke pagina te tonen.
+
+Hieronder zie je een voorbeeld van de GET route voor de index pagina.
+Om de cadeau kaartjes weer te geven, hebben we de volgende gegevens nodig:
+- name: de naam of titel van het cadeau kaartje
+- slug: wordt gebruikt voor de redirect naar de detail pagina
+- id: wordt gebruikt om het cadeau op te slaan in een bookmark lijst
+- img en img.id: voor het tonen van responsive afbeeldingen vanuit Directus
+
+De URL met deze tags gebruiken we als basis URL voor alle pagina's
+
+https://github.com/vsheo/pleasurable-ui/blob/5c34c9757fa5cc6271bd544fb9600d6e61007bba/server.js#L26-L39
+
+
+Dit is een voorbeeld van de GET route voor de favorietenpagina.
+Op deze pagina moeten we weten welke cadeaus door de gebruiker zijn gebookmarked.
+
+Daarom voegen we aan de basis URL een filter toe.
+Deze filter zorgt ervoor dat alleen de data wordt opgehaald van de cadeaus die zijn opgeslagen. Zo laden we alleen de relevante informatie die nodig is om de favorieten lijst weer te geven.
+
+https://github.com/vsheo/pleasurable-ui/blob/5c34c9757fa5cc6271bd544fb9600d6e61007bba/server.js#L89-L93
 
 
 ## CSS
