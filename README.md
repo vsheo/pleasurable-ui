@@ -409,7 +409,63 @@ https://github.com/vsheo/pleasurable-ui/blob/94ca1dda67a1ac4c7125ea528c18403afea
 
 ## UI states
 ### UI states - buttons
+
+
 ### UI states - loader
+We hebben een loader toegevoegd aan de bookmark button.
+Wanneer erop geklikt wordt, verandert de opacity van de knop en verschijnt er een loader in beeld.
+Deze loader blijft draaien totdat het cadeau succesvol is opgeslagen in de bookmark lijst.
+
+https://github.com/user-attachments/assets/8b10b1c0-e04e-4b1d-aabc-a6f5c8c8ac1b
+
+Normaal wordt de pagina automatisch refreshed wanneer er een form submit wordt in de browser.
+Wij wilden dit juist voorkomen om de gebruikerservaring op de website te verbeteren.
+Bijvoorbeeld:
+Een gebruiker voegt ergens onderaan de pagina een cadeau toe aan zijn bookmark lijst.
+Dit veroorzaakt een pagina refresh, waardoor de gebruiker weer helemaal bovenaan de pagina terecht komt.
+Hierdoor verliest hij zijn zoek resultaten en zijn positie op de website.
+
+Om dit te voorkomen, gebruiken we een client side fetch om de form die submit wordt op te vangen.
+Met behulp van een DOMParser voegen we daarna de nieuwe informatie toe aan de pagina, zonder de pagina te refreshen.
+
+Als eerste gebruiken we een if statement om te controleren of de browser dit ondersteunt.
+Als dat het geval is, voegen we een eventlistener toe voor het submit event op de pagina.
+Het form element waarop de submit plaatsvindt, slaan we op in een variabele.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L1-L4
+
+We gebruiken het data-enhanced attribuut op het form element.
+Op de pagina zijn er veel cadeaus, dit attribuut helpt ons om na het verzenden van het form met fetch het juiste form element in de DOM terug te vinden.
+later gebruiken wij dit attribuut samen met de DOMParser om het juiste element te selecteren en de nieuwe HTML in te laden op de positie van dit element.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/views/partials/giftcard.liquid#L18
+
+In JavaScript controleren we of het formulier het data-enhanced attribuut heeft.
+Als dat niet het geval is, doet deze code niets met deze form submit en wordt de form op de standaard manier verwerkt.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L7-L9
+
+Normaal gesproken zou de browser op dit moment de pagina refreshen om de nieuwe HTML voor de bookmark te laten zien.
+Wij stopen dit met ```preventDefault()```.
+In plaats daarvan starten we een loader door een class toe te voegen aan het formulier.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L11-L12
+
+De loading-state class wordt toegevoegd aan het form element.
+Met CSS nesting selecteert deze class de button binnen de form element en zet deze op display: none.
+Tegelijkertijd wordt de loader zichtbaar gemaakt door deze op display: block te zetten.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/sprint-11.css#L383-L391
+
+Daarna voeren we een client-side fetch uit.
+De fetch wordt uitgevoerd met de URL die staat in het action-attribuut van het formulier.
+de response van de fetch zetten we daarna om in tekst.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L14-L19
+
+Daarna zetten we de tekst om naar HTML met behulp van de DOMParser.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L21-L22
+
+De responseDOM bevat de HTML code van de hele pagina, maar wij hebben maar een klein gedeelte daarvan nodig.
+Met behulp van het data-enhanced attribuut zoeken we in de nieuwe DOM(responseDOM) naar het element dat dezelfde data-enhanced attribuut heeft.
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L24-L26
+
+Nu kunnen we de loader stoppen en het formulier vervangen door de nieuwe HTML
+https://github.com/vsheo/pleasurable-ui/blob/0f8d0124e73256e7b90d7f42e2821038520dae9a/public/main.js#L28-L30
 
 
 ### UI states - error
