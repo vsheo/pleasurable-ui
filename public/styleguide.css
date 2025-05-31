@@ -126,6 +126,10 @@ body{
 --line-height-price-detail: 1.2;
 }  
 
+.detail-currency {
+--font-weight-price-currency: normal;    
+}
+
 /*beschrijving*/
 .description-cadeau{
 --font-size-text1-detail:20px;
