@@ -968,12 +968,13 @@ img.img-save-detail {
 .container {
     padding: 20px;
     margin-left: 30px;
+    width: 400px;
   }
   
   .row {
     display: flex;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .row-content {
@@ -982,7 +983,8 @@ img.img-save-detail {
     justify-content: flex-end;
     align-items: center;
     gap: 5px;
- 
+    width: 100%;
+    margin: 0 auto;
   }
 
   .detail-text1 {
@@ -1033,38 +1035,31 @@ img.img-save-detail {
     background-color: #999999;
     width: 100%;
     max-width: 100%;
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 20px;
   }
   
   @media (min-width: 768px) {
     .container {
-        max-width: 700px; 
-        margin-right: 100px ;
-        margin-left: auto;
-    }
-  
-    .row {
-      /* justify-content: flex-end; */
+        max-width: 470px; 
+        margin: 0 auto;
     }
 
     .row-content {
-        /* flex-direction: row-reverse;
-        justify-content: flex-start; */
         margin-left: 0;
-        margin-right: 50px;
-        width: 350px;
+        margin-right: 60px;
+        max-width: 470px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     
     .detail-lines {
-        width: 100%;
-        max-width: 100%;
-        align-self: flex-end;
-    }
-
-    .row:nth-of-type(2) .row-content,
-    .row:nth-of-type(3) .row-content {
-      /* flex-direction: row-reverse; */
+        width: 470px;
+        margin-left: auto;
+        margin-right: 60px; 
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .row:nth-of-type(2) .detail-text1,
@@ -1074,6 +1069,29 @@ img.img-save-detail {
     }
 
   }
+
+  @media (min-width: 1024px) {
+    .container {
+        max-width: 490px; 
+        margin-left: auto;
+        margin-right: 60px;
+      }
+
+     .row-content {
+       justify-content: flex-end; 
+       max-width: 490px;
+       transform: scale(1.1);
+       transform-origin: top right;
+     } 
+
+     .detail-lines {
+        width: 490px;
+        transform: scale(1.1);
+        transform-origin: top right;
+      }
+    
+  }
+
   
 
 .favorieten-page{
