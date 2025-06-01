@@ -285,6 +285,9 @@ https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df8
 Keyframes
 https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L415-L419
 
+https://github.com/user-attachments/assets/64eb9f96-6de0-491b-bce0-ae6c7d78381e
+
+
 
 ## server js
 ### Functies
