@@ -30,7 +30,9 @@
         src="https://fdnd-agency.directus.app/assets/{{ gift.img.id }}"
         alt="{{ gift.name }}"
         class="detail-img"
-        sizes="600px, 600vw">
+        sizes="600px, 600vw"
+        style="view-transition-name: gift-img-{{ gift.id }}"
+        data-view-transition-name="gift-img-{{ gift.id }}">
     </picture>
 
     <h2 class="detail-title">{{ gift.name }}</h2>

@@ -19,3 +19,57 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 })
 // Als JavaScript uit staat dan is de header altijd in beeld, omdat het position: sticky heeft.
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    async function loadPage(url, addToHistory = true) {
+      if (!document.startViewTransition) {
+        if (addToHistory) {
+          window.location.href = url;
+        } else {
+          window.location.replace(url);
+        }
+        return;
+      }
+  
+      const response = await fetch(url);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const newDoc = parser.parseFromString(html, 'text/html');
+  
+      const newMain = newDoc.querySelector('main');
+      const currentMain = document.querySelector('main');
+  
+      document.startViewTransition(() => {
+        currentMain.replaceWith(newMain);
+        window.scrollTo(0, 0);
+        if (addToHistory) {
+          window.history.pushState({}, '', url);
+        }
+      });
+    }
+  
+    document.querySelectorAll('a.slug[href^="/cadeau/"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        loadPage(link.href, true);
+      });
+    });
+  
+    window.addEventListener('popstate', () => {
+      loadPage(window.location.href, false);
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1097,3 +1097,16 @@ img.img-save-detail {
 		scale: 1;
 	}
 }
+
+
+
+@view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(gift-img-*),
+::view-transition-new(gift-img-*) {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
