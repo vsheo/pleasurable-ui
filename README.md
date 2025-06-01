@@ -34,7 +34,7 @@ QR-code naar de live site:<br>
         * [nesting](#nesting)
         * [carrousel](#carrousel)
         * [bookmark hover](#bookmark-hover)
-     * [server.js](#server.js)
+     * [server.js](#server-js)
         * [Functies](#Functies)
            * [getBookmarks functie](#getBookmarks-functie)
            * [changeBookmark functie](#changeBookmark-functie)
@@ -286,7 +286,7 @@ Keyframes
 https://github.com/vsheo/pleasurable-ui/blob/78f523a71726449eca50b6009949ab36df84a328/public/sprint-11.css#L415-L419
 
 
-## server.js
+## server js
 ### Functies
 In het server.js bestand staan twee functies:
 - getBookmarks: haalt alle cadeau's op uit een lijst.
