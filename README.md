@@ -12,6 +12,11 @@ De vernieuwde versie ziet er nu als volgt uit:
 ![image](https://github.com/user-attachments/assets/7dfdd7b1-30a0-469a-9672-8aeb8a336d17)
 
 
+[live site](https://pleasurable-ui-oaun.onrender.com/)<br>
+QR-code naar de live site:<br>
+<img src="https://github.com/user-attachments/assets/b410db59-ce64-415f-9558-3dc5cbb78ed0" width="300" />
+
+
 
 ## Inhoudsopgave
 
