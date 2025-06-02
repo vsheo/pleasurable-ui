@@ -48,6 +48,40 @@ app.post("/:id", async function (request, response) {
     response.redirect("/");
 });
 
+// details GET
+app.get('/cadeau/:slug', async function (request, response) {
+    try {
+        const slug = request.params.slug;
+  
+      const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
+      const cadeauResponseJSON = await cadeauResponse.json();
+      const allBookmarks = await getBookmarks("viresh")
+  
+      if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
+        return response.status(404).render('404.liquid');
+      }
+  
+      const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
+      const allCadeauResponseJSON = await allCadeauResponse.json();
+  
+      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data, bookmarks: allBookmarks });
+    } catch (error) {
+        console.error("Fout bij ophalen cadeau:", error);
+        response.status(404).render('404.liquid');
+    }
+});
+
+// details POST
+app.post("/cadeau/:slug/:id", async function (request, response) {
+    const detailSlug = request.params.slug;
+    const giftId = request.params.id;
+
+    await changeBookmark(2,giftId)
+
+    // Redirect terug naar de detail pagina
+    response.redirect(`/cadeau/${detailSlug}`);
+});
+
 // favorieten GET
 app.get("/favorieten/:name", async function (request, response) {
     const listName = request.params.name;
@@ -126,44 +160,10 @@ async function changeBookmark(listId,giftId) {
     }
 }
 
-app.get('/cadeau/:slug', async function (request, response) {
-    try {
-        const slug = request.params.slug;
-  
-      const cadeauResponse = await fetch(`${baseGiftURL},description,amount,spotter,tags&filter={"slug":"${slug}"}`);
-      const cadeauResponseJSON = await cadeauResponse.json();
-      const allBookmarks = await getBookmarks("viresh")
-  
-      if (!cadeauResponseJSON.data || cadeauResponseJSON.data.length === 0) {
-        return response.status(404).render('404.liquid');
-      }
-  
-      const allCadeauResponse = await fetch(baseGiftURL + '&filter={"img": {"_nnull":"true"}}&sort=-img&limit=6');
-      const allCadeauResponseJSON = await allCadeauResponse.json();
-  
-      response.render('detail.liquid', { gift: cadeauResponseJSON.data[0], allGifts: allCadeauResponseJSON.data, bookmarks: allBookmarks });
-    } catch (error) {
-        console.error("Fout bij ophalen cadeau:", error);
-        response.status(404).render('404.liquid');
-    }
-});
-
 // bij een verkeerde link op elk pagina van deze website, wordt de gebruiker naar de error pagina gebracht.
 app.use(function (request, response) {
     response.status(404).render('404.liquid')
 })
-
-
-  app.post("/cadeau/:slug/:id", async function (request, response) {
-    const detailSlug = request.params.slug;
-    const giftId = request.params.id;
-
-    await changeBookmark(2,giftId)
-
-    // Redirect terug naar de detail pagina
-    response.redirect(`/cadeau/${detailSlug}`);
-});
-
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80

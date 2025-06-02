@@ -7,9 +7,8 @@
     </section>
 
     <div class="saved-gift-list">
-        {%- assign favoriet_gifts = 1 -%}
         {% for gift in bkmgifts %}
-        {% include 'partials/giftcard.liquid' , favoriet-gifts%}
+            {% include 'partials/giftcard.liquid', gift: gift %}
         {% endfor %}
     </div>
 </main>
