@@ -855,20 +855,6 @@ img.img-save-detail {
     margin: 20px auto;
 }
   
-  /* .detail-picture {
-    padding-right: 3em;
-    width: 100%;
-    max-width: 250px;
-    object-fit: cover;
-  }
-  
-  .detail-img {
-    width: 100%; 
-    display: block;
-    object-fit: cover;
-    height: 380px;
-  /* }  */
-  
   .detail-title {
     font-weight: var(--font-weight-title1-detail);
     line-height: var(--line-height-title1-detail);
@@ -922,12 +908,6 @@ img.img-save-detail {
   .detail-img {
     height: 400px;
   }
-/* 
-    .detail-title,
-    .detail-price,
-    .detail-description {
-        grid-column: auto; 
-    } */
   
     .spotter-wrapper {
      grid-area: spotter; 
