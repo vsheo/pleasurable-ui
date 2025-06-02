@@ -965,6 +965,13 @@ img.img-save-detail {
     
 } 
 
+.detail-title1 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    max-width: 100%;
+    text-transform: uppercase; 
+  }
+
 .container {
     padding: 20px;
     margin-left: 30px;
@@ -1042,6 +1049,8 @@ img.img-save-detail {
   
   @media (min-width: 768px) {
     .container {
+        padding-left: 0;
+        padding-right: 0;
         max-width: 470px; 
         margin: 0 auto;
     }
@@ -1075,6 +1084,16 @@ img.img-save-detail {
         max-width: 490px; 
         margin-left: auto;
         margin-right: 60px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .detail-title1 {
+        text-align: left;
+        max-width: 490px;
+        margin: 0 0 15px 0;
+        transform: scale(1.1);
+        transform-origin: top right;
       }
 
      .row-content {
